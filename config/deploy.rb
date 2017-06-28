@@ -1,8 +1,11 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'miterra'
-set :repo_url, 'git@github.com:actbold/miterra.git'
+#set :application, 'miterra'
+#set :repo_url, 'git@github.com:actbold/miterra.git'
+set :application, 'Proyecto2'
+set :repo_url, 'git@github.com:Alfo92/Proyecto2.git'
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
