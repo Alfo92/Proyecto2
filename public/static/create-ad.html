@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Mi terra</title>
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- formstyler -->
+	<script type="text/javascript" src="js/jquery.formstyler.js"></script>
+	<script type="text/javascript">
+		(function($) {
+		$(function() {
+			$('input, select').styler();
+		});
+		})(jQuery);
+
+	</script>
+	
+	<!-- datepicker -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript">
+	  $(function() {
+		$( "#date" ).datepicker({
+		  defaultDate: "+1w",
+		  numberOfMonths: 1,
+		  onClose: function( selectedDate ) {
+			$( "#to1" ).datepicker( "option", "minDate", selectedDate );
+		  }
+		});
+		$( "#date-2" ).datepicker({
+		  defaultDate: "+1w",
+		  numberOfMonths: 1,
+		  onClose: function( selectedDate ) {
+			$( "#to1" ).datepicker( "option", "minDate", selectedDate );
+		  }
+		});
+	  });
+	</script>
+	
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="container">
+				<!-- navigation -->
+				 <nav>
+					  <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+					  </div>
+					  <div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="buy.html">Buy</a></li>
+							<li><a href="sell.html">Sell</a></li>
+							<li><a href="rent.html">Rent</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						<ul class="navbar-right">
+							<li class="visible-sm-block"><a href="#" title="Sign In"><span class="glyphicon glyphicon-user"></span></a></li>
+							<li class="hidden-sm"><a href="#">Sign In</a><span>or</span><a href="#">Join</a></li>						
+						</ul>
+					  </div><!--/.nav-collapse -->
+				  </nav>
+				<!-- /navigation -->
+			</div>
+		</header>
+		<!-- /header -->
+		<div class="container">
+			<div class="padding-block">
+				<!-- search-block -->
+				<div class="search-block">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="wrap">
+								<p>
+									<span class="sprites i-search"></span>
+									<input type="text" placeholder="Address, Neighborhood, or ZIP">
+								</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 text-center">
+							<a href="#">My Homes</a>
+							<a href="#">My Searches</a>
+							<div class="user-mini">
+								<div class="name">Marwin Maxwell</div>
+								<div class="wrap-photo"><img src="img/content/user-mini.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /search-block -->
+				<!-- panel -->
+				<div class="panel panel-default create-ad">
+					<div class="panel-heading">
+						<h3>Text and Links</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-5">
+								<div id="started-left">
+									<div class="box">
+										<h4>Connect MiTerra Page</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<p class="wrap">
+											<select name="" id="">
+												<option value="">Select...</option>
+												<option value="">ActBold Media Group</option>
+											</select>
+											<button class="plus"></a></button>
+										</p>
+										<p>or <a href="#">Turn Off News Feed Ads</a></p>
+									</div>
+									<div class="box">
+										<p><label>Headline:</label> <a href="#" class="sprites i-inform"></a><span class="pull-right">2</span></p>
+										<input type="text" placeholder="ActBold - Bold Digital">
+									</div>
+									<div class="box">
+										<p><label>Text:</label> <a href="#" class="sprites i-inform"></a><span class="pull-right">48</span></p>
+										<textarea name="" id="" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></textarea>
+									</div>
+									<div class="box">
+										<p><label>Call To Action</label> (optional) <a href="#" class="sprites i-inform"></a></p>
+										<select name="" id="">
+											<option value="">Select...</option>
+											<option value="">No Button</option>
+										</select>
+									</div>
+									<div class="box">
+									<p><a href="#" class="wrap">Show Advenced Options</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-7">
+								<div id="create-right">
+									<h4>Add Preview and Placements</h4>
+									<!-- /panel-group -->
+									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+										<div class="panel">
+											<div class="panel-title" role="tab" id="headingOne">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Desctop News Feed</a>
+												<a href="#" class="pull-right"><span class="sprites i-close-micro"></span>remove</a>
+											</div>
+											<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+												<div class="preview-block">
+													<div class="wrap-photo pull-left"><img src="img/content/user-mini.png" alt=""></div>
+													<p class="name">Marwin Maxwell</p>
+													<p class="status">Sponsored</p>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+													<div class="block">
+														<div class="row">
+															<div class="col-sm-4"><img src="img/content/preview-block.png" alt="" class="img-responsive center-block"></div>
+															<div class="col-sm-8">
+																<h4>Act Bold - Bold Digital</h4>
+																<p><a href="#">www.actbold.com</a></p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel">
+											<div class="panel-title" role="tab" id="headingTwo">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Mobile News Feed</a>
+												<a href="#" class="pull-right"><span class="sprites i-close-micro"></span>remove</a>
+											</div>
+											<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											</div>
+										</div>
+										<div class="panel">
+											<div class="panel-title" role="tab" id="headingThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Right Column</a>
+												<a href="#" class="pull-right"><span class="sprites i-close-micro"></span>remove</a>
+											</div>
+											<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											</div>
+										</div>
+										<div class="panel">
+											<div class="panel-title" role="tab" id="headingFour">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Right Column</a>
+												<a href="#" class="pull-right"><span class="sprites i-close-micro"></span>remove</a>
+											</div>
+											<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											</div>
+										</div>
+									</div>
+									<!-- /panel-group -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /panel -->
+				<p class="text-center"><input type="checkbox">By submitting this listing, you agree to MiTerra <a href="#">Data License</a></p>
+				<!-- buttons-wrap -->
+				<div class="buttons-wrap text-center">
+					<p>
+						<a href="#"><span class="sprites i-left-arrow"></span>Back</a>
+						<a class="btn-default" href="#" >Submit</a>
+					</p>
+				</div>
+				</form>
+				<!-- /buttons-wrap -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1 copyright">© 2014</div>
+					<div class="col-sm-7">
+						<ul class="list-inline footer-nav">
+							<li><a href="about.html">About</a></li>
+							<li><a href="terms.html">Terms of Use</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="social list-inline">
+							<li>Follow us</li>
+							<li><a href="#" class="sprites i-twitter"></a></li>
+							<li><a href="#" class="sprites i-faceboock"></a></li>
+							<li><a href="#" class="sprites i-google"></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+		<!-- /footer -->
+</body>
+</html>

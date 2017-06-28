@@ -1,0 +1,30 @@
+  <!-- steps -->
+   <div id="steps" class="text-center">
+    <ul class="list-inline nav-justified">
+      <li <%= active_class(1,step) %>>
+        <p><%=t 'listings.header.listing_address'%></p>
+        <div><span class="wrapper"><span class="circle">1</span></span></div>
+      </li>
+      <li <%= active_class(2,step) %>>
+        <p><%=t 'listings.header.photos'%></p>
+        <div><span class="wrapper"><span class="circle">2</span></span></div>
+      </li>
+      <li id="step3-li" <%= active_class(3,step) %>>
+        <p><%=t 'listings.header.review_submit'%></p>
+        <div><span class="wrapper"><span class="circle">3</span></span></div>
+      </li>
+    </ul>
+    <p><%= t("listings.header.step_#{step}_header") %></p>
+  </div>
+  <!-- /steps -->
+
+<% if @listing.errors.any? %>
+   <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <ul>
+         <% @listing.errors.full_messages.each do |msg| %>
+         <li><%= msg %></li>
+         <% end %>
+      </ul>
+   </div>
+<% end %>

@@ -1,0 +1,207 @@
+<%= form_for(@listing, validate: true, html: {class: 'validate form-listing', autocomplete: :off}) do |f| %>
+    <%= f.hidden_field :step, value: 1 %>
+    <%= f.hidden_field :latitude %>
+    <%= f.hidden_field :longitude %>
+    <!-- panel -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-sm-5"><h3><%= t('listings.header.listing_address') %></h3></div>
+          <div class="col-sm-7"></div>
+        </div>
+      </div>
+      <div class="panel-body address-panel">
+        <div class="row">
+          <div class="col-sm-4">
+            <p>
+              <label class="city"><%= t(".city:") %></label>
+              <%= f.text_field :city, :class => "geocode validate[required]" %>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p>
+              <label><%= t(".state:") %></label>
+              <%= f.select(:state, states_for_country("PY"), {include_blank: true}, :class => "geocode validate[required] py-states") %>
+              <%= f.select(:state, states_for_country("US"), {include_blank: true}, :class => "geocode validate[required] us-states") %>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p>
+              <label><%= t(".country:") %></label>
+              <%= f.select(:country, [[t(".country.py"), "PY"], [t(".country.us"), "US"]], {}, :class => "geocode validate[required]") %>
+            </p>
+          </div>
+          <div class="col-sm-12">
+            <p>
+              <label><%= t(".address:") %></label>
+              <%= f.text_field :address1, class: 'validate[required]' %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body map-panel" onload="GetMap();">
+        <div class="row">
+          <p class="col-sm-12 text-center">
+            <i class="middle fa fa-info-circle fa-2x green-text"></i> <%= t('listings.header.map_title') %>
+          </p>
+          <div class="col-sm-12">
+            <div class="map address-picker" style="position:relative; height:500px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /panel -->
+    <!-- buttons-wrap -->
+    <div class="buttons-wrap text-center">
+      <p>
+        <label><%= t(".property_type") %>:</label>
+        <%= f.select(:type, options_for_select(ListingType.all.collect.sort_by { |l| l.SortValue }.collect { |l| [t(l.name.classify), l.name.classify] }, selected: @listing.type), {prompt: t('.address')}, style: 'height: 38px;') %>
+      </p>
+    </div>
+    <!-- /buttons-wrap -->
+    <!-- open-block -->
+    <div class="collapse" id="open-block">
+      <!-- success-block -->
+      <div class="success-block" >
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="title green-text"><%= t(".success!") %></div>
+          </div>
+          <div class="col-sm-10"><p class="green-text"><%= t(".please_enter_the_listing_infor") %> </p></div>
+        </div>
+      </div>
+      <!-- /success-block -->
+      <!-- error-block
+      <div class="bg-danger success-block ">
+        <div class="row">
+          <div class="col-sm-2"><div class="title green-text">Oops</div></div>
+          <div class="col-sm-10"><p class="green-text"> You need to ensure the address is found on the map.</p></div>
+        </div>
+      </div>
+       /error-block -->
+      <!-- panel -->
+      <%= f.fields_for :properties do |p| %>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3><%= t(".listing_information") %></h3>
+            </div>
+            <div class="panel-body">
+              <%= render partial: "new_apartment", locals: {f: f, p: p} %>
+              <%= render partial: "new_house", locals: {f: f, p: p} %>
+              <%= render partial: "new_duplex", locals: {f: f, p: p} %>
+              <%= render partial: "new_land", locals: {f: f, p: p} %>
+              <%= render partial: "new_commercial", locals: {f: f, p: p} %>
+              <%= render partial: "new_warehouse", locals: {f: f, p: p} %>
+              <%= render partial: "new_office", locals: {f: f, p: p} %>
+              <%= render partial: "new_farm", locals: {f: f, p: p} %>
+            </div>
+          </div>
+      <% end %>
+      <!-- /panel -->
+      <!-- buttons-wrap -->
+      <div class="buttons-wrap text-center">
+        <p>
+          <%= f.submit t(".Next"), class: 'btn btn-success', id: 'new-listing' %>
+        </p>
+      </div>
+      <!-- /buttons-wrap -->
+    </div>
+    <!-- /open-block -->
+<% end %>
+
+<script type="text/javascript">
+
+    function refreshMap(){
+        var query = $('#listing_address1').val() + " " + $('#listing_city').val() + ", " + $('#listing_state').val() + ", " + $('#listing_country').val();
+        MakeGeocodeRequest(query);
+    }
+
+    function validate_price() {
+        listing_price_list = document.getElementsByName('listing[list_price]');
+        for (position = 0; position < listing_price_list.length; position++) {
+            listing_price_list[position].value = listing_price_list[position].value.replace(/,/g, '');
+        }
+    }
+
+    $('#listing_type').on('change', function () {
+        $('#open-block').collapse();
+        $('.listing_types').hide();
+        $('.listing_types input, .listing_types select').attr('disabled', 'disabled');
+        $('#new_' + $(this).val().toLowerCase()).show().find('input,select').removeAttr('disabled');
+    });
+
+
+    listing_price_type = document.getElementsByName('listing[properties][price_type]');
+    for (position = 0; position < listing_price_type.length; position++) {
+      /*listing_price_type[position].addEventListener("change", function(){
+       list_price_hidden =  document.getElementsByName('listing[price_type]');
+       for (position_h = 0; position_h < list_price_hidden.length; position_h++) {
+       list_price_hidden[position_h].value = this.value;
+       }
+       },false);
+       listing_price_type[position].onblur = function(){
+       list_price_hidden =  document.getElementsByName('listing[price_type]');
+       for (position_h = 0; position_h < list_price_hidden.length; position_h++) {
+       list_price_hidden[position_h].value = this.value;
+       }
+       };*/
+
+        listing_price_type[position].onchange = function () {
+            list_price_hidden = document.getElementsByName('listing[price_type]');
+            for (position_h = 0; position_h < list_price_hidden.length; position_h++) {
+                list_price_hidden[position_h].value = this.value;
+            }
+        };
+    }
+
+
+    <% if @listing.type.present? %>
+    $('#listing_type').change();
+    <% end %>
+
+
+    function validateAddress() {
+        //TODO: validate address
+        //data-toggle="collapse" href="#open-block" aria-expanded="false" aria-controls="open-block"
+        $('#open-block').collapse();
+    }
+    $(function () {
+
+        var country = $('#listing_country').val();
+        if(country == 'US'){
+            $('select.py-states').attr('disabled', true).hide();
+        }else{
+            $('select.us-states').attr('disabled', true).hide();
+        }
+
+        maskMoney();
+
+        $('select[name="listing[listing_type]"]').on('change', function () {
+            var show, hide;
+            if ($(this).val() == 'rent') {
+                show = '.rent-only';
+                hide = '.sale-only';
+            } else {
+                show = '.sale-only';
+                hide = '.rent-only';
+            }
+            $(hide).hide();
+            $(show).show();
+
+        });
+
+        $('.address-panel input.geocode, .address-panel select.geocode').on('blur', function () {
+            refreshMap();
+        });
+
+        SetupMapForNewListing();
+        $(window).keydown(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                //refreshMap();
+                return false;
+            }
+        });
+    });
+</script>

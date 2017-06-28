@@ -1,0 +1,30 @@
+<!-- callback -->
+<% message_placeholder = defined?(listing) ? t(".hi_i_found_your_listing_on_mi", address:listing.short_address)  : t(".hi_i_found_you_on_miterra") %>
+
+<div class="callback">
+  <h3><%= t(".contact_agent") %></h3>
+  <p><strong><%= link_to "#{agent.name}", account_agent_path(agent) %></strong>
+    <span><strong><%= t('.phone') %>: <%= agent.phone_number %></strong></span>
+  </p>
+  <br>
+  <%= form_for Message.new, remote:true do |f| %>
+    <p><%= f.hidden_field :to_id, value:agent.id  %><%= f.hidden_field :listing_id, value:@listing.try(:id) %></p>
+
+    <p><%= f.text_field :from_name, placeholder: t(".your_name"), required:true, value: current_user.try(:name)   %></p>
+    <p><%= f.text_field :from_email, placeholder: t(".your_email"), required:true, value: current_user.try(:email) %></p>
+    <p><%= f.text_field :from_phone, placeholder: t(".your_phone"), required:true, value: current_user.try(:phone_number) %></p>
+    <p><%= f.text_area :message, placeholder: message_placeholder, required:true %></p>
+    <p><%= f.submit t('.send_message'), class: 'btn btn-success btn-block', data: {disable_with: t('.sending_message')}, disabled: !current_user %></p>
+    <% if !current_user %> 
+      <p class="alert alert-info" role="alert">
+        <span class="glyphicon glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          <%= link_to t(".sign"), new_user_registration_path%>
+          <%= t(".not_logged_msg", agent: agent.name) %>     
+      </p>
+    <% end %>   
+  <% end %>
+  <div style="display:none;" id="message_sent_success">
+    <div class="alert alert-success" role="alert"><%= t(".message_sent!") %></div>
+  </div>
+</div>
+<!-- /callback -->

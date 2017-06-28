@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: views
+#
+#  id            :integer          not null, primary key
+#  viewable_type :string(255)
+#  viewable_id   :integer
+#  ip_address    :string(255)
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  viewable_type: MyString
+  viewable_id: 1
+  ip_address: MyString
+
+two:
+  viewable_type: MyString
+  viewable_id: 1
+  ip_address: MyString

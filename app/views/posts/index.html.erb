@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="posts-header">
+    <h2 class="green-text">
+      <%= t('.all_news') %>
+    </h2>
+    <%= link_to t('.new'), new_post_path, id: 'new-post', class: 'btn btn-success btn-sm' %>
+  </div>
+  <hr>
+  <div id="search">
+    <%= render 'posts/search', search: @search %>
+  </div>
+  <div id="list">
+    <%= render 'posts/list', posts: @posts %>
+  </div>
+
+</div>

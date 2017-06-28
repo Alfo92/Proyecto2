@@ -1,0 +1,18 @@
+<%= search_form_for @q, url: real_state_directory_index_path, remote: true, html: {id: 'real-state-form'} do |f| %>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <%= link_to real_state_directory_index_path, remote: true, class: 'btn btn-md ' do %>
+            <i class="fa fa-times"></i>
+          <% end %>
+        </div>
+        <%= f.text_field :name_cont, class: 'form-control' %>
+        <div class="input-group-addon search">
+          <button type="submit" class="btn btn-md btn-success">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+<% end %>

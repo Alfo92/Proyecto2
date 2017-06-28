@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Viewable type:</strong>
+  <%= @view.viewable_type %>
+</p>
+
+<p>
+  <strong>Viewable:</strong>
+  <%= @view.viewable_id %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @view.ip_address %>
+</p>
+
+<%= link_to 'Edit', edit_view_path(@view) %> |
+<%= link_to 'Back', views_path %>

@@ -1,0 +1,29 @@
+<div id="leads" role="tabpanel" class="tab-pane" >
+  <!-- listing-title -->
+  <h1 class="listing-title">
+    <span class="sprites i-listing"></span>
+    <%= t(".my_leads") %>
+  </h1>
+  <!-- /listing-title -->
+  <!-- listing-block -->
+  <div class="listing-inform">
+    <p><strong><%= t("account.agent.listings.summary") %></strong> <%= t("account.agent.listings.as_of") %> <%=l Date.today %></p>
+    <hr>
+    <!-- panel-listing -->
+    <div class="panel panel-default panel-listing">
+      <div class="panel-body">
+        <% current_user.received_messages.each do |message| %>
+        <div class="row">
+          <%= render partial:'message', locals:{message:message} %>
+        </div>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <p>
+          <span class="sprites i-view"></span><%=current_user.views_count %> <%= t(".profile_views") %>
+        </p>
+      </div>
+    </div>
+    <!-- /panel-listing -->
+  </div>
+</div>

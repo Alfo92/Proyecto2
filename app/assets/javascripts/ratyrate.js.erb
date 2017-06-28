@@ -1,0 +1,76 @@
+$.fn.raty.defaults.half = false;
+$.fn.raty.defaults.halfShow = true;
+$.fn.raty.defaults.path = "/assets";
+$.fn.raty.defaults.cancel = false;
+
+function initOneStar(elem){
+    var $readonly = (elem.attr('data-readonly') == 'true');
+    var $half     = (elem.attr('data-enable-half') == 'true');
+    var $halfShow = (elem.attr('data-half-show') == 'true');
+    var $single   = (elem.attr('data-single') == 'true');
+    var $cancel   = (elem.attr('data-cancel') == 'true');
+    elem.raty({
+        score: function() {
+            var customRate = elem.attr('data-target-score');
+            if( isBlank(customRate) ){
+                return elem.attr('data-rating')
+            }else{
+                return customRate;
+            }
+        },
+        number: function() {
+            return elem.attr('data-star-count')
+        },
+        half:        $half,
+        halfShow:    $halfShow,
+        single:      $single,
+        path:        elem.attr('data-star-path'),
+        starOn:      elem.attr('data-star-on'),
+        starOff:     elem.attr('data-star-off'),
+        starHalf:    elem.attr('data-star-half'),
+        cancel:      $cancel,
+        cancelPlace: elem.attr('data-cancel-place'),
+        cancelHint:  elem.attr('data-cancel-hint'),
+        cancelOn:    elem.attr('data-cancel-on'),
+        cancelOff:   elem.attr('data-cancel-off'),
+        noRatedMsg:  elem.attr('data-no-rated-message'),
+        round:       elem.attr('data-round'),
+        space:       elem.attr('data-space'),
+        target:      elem.attr('data-target'),
+        targetText:  elem.attr('data-target-text'),
+        targetType:  elem.attr('data-target-type'),
+        targetFormat: elem.attr('data-target-format'),
+        targetScoret: elem.attr('data-target-score'),
+        readOnly: $readonly,
+        click: function(score, evt) {
+            var _this = this;
+            if (score == null) { score = 0; }
+            elem.trigger('rated', score)
+            $.post('<%= Rails.application.class.routes.url_helpers.rate_path %>',
+                    {
+                        score: score,
+                        dimension: elem.attr('data-dimension'),
+                        id: elem.attr('data-id'),
+                        klass: elem.attr('data-classname')
+                    },
+                    function(data) {
+                        if(data) {
+                            // success code goes here ...
+
+                            if ($(_this).attr('data-disable-after-rate') == 'true') {
+                                $(_this).raty('set', { readOnly: true, score: score });
+                            }
+                        }
+                    });
+        }
+    });
+}
+
+function initstars(){
+  $(".star").each(function() {
+    initOneStar($(this));
+  });
+};
+
+$(document).ready(initstars);
+$(document).on('page:change',initstars);

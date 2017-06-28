@@ -1,0 +1,45 @@
+<div class="container">
+  <h2 class="green-text">
+    <%= t('.title') %>
+  </h2>
+
+
+  <hr>
+  <div class="row">
+    <div id="list" class="col-md-12">
+      <%= render 'list_news', posts: @posts %>
+    </div>
+    <div id="paginator" class="col-md-12 text-right ">
+      <%= paginate @posts, params: {q: params[:q]}, remote: true %>
+    </div>
+  </div>
+
+  <div>
+    <a class="go-to-top" title="<%= t('go_to_top') %>">
+      <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
+    </a>
+  </div>
+
+</div>
+
+
+<script type="text/javascript">
+  $(function() {
+    goToTop();
+
+    var approachingBottomOfPage, loadNextPageAt;
+    loadNextPageAt = 200;
+
+    approachingBottomOfPage = function() {
+      return document.documentElement.clientHeight + $(document).scrollTop() + loadNextPageAt > document.body.offsetHeight;
+    };
+
+    $(window).scroll(function() {
+      console.log(approachingBottomOfPage());
+      if (approachingBottomOfPage()) {
+        $('#paginator .next a').click();
+      }
+    });
+
+  });
+</script>

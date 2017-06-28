@@ -1,0 +1,167 @@
+<div class="container">
+  <div class="padding-block">
+    <%= render :partial => "steps", locals: {step: 2}  %>
+    <%= form_for(@listing, as: :listing, url:listing_path(@listing)) do |f| %>
+    <%= f.hidden_field :step, value: 2 %>
+    <!-- panel -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><%= t(".add_property_photos") %></h3>
+      </div>
+      <div class="panel-body">
+        <p><%= t(".remember,_the_higher_the_quali") %></p>
+
+        <div id="uploader">
+          <div id="upload_drop">
+            <ul id="listing_thumbs">
+              <% @listing.listing_photos.each do |lp| %>
+              <li data-id="<%=lp.id%>">
+                <div>
+                  <img src="<%= lp.file.url(:thumb) %>">
+                  <%= link_to 'x', "#", class: 'btn btn-xs btn-danger remove', onclick: "deletePhoto(event, #{lp.listing_id}, #{lp.id});" %>
+                </div>
+              </li>
+              <% end %>
+            </ul>
+            <% if @listing.listing_photos.empty? %>
+            <div class="noselection">
+              <%= t(".drop_pictures_here") %>
+            </div>
+            <% end %>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <label for="#upload_drop" style="font-size: 18px;"><%= t(".upload_from_your_computer") %></label>
+        <p>
+          <strong><%= t(".note") %>:</strong> <%= t(".drag_photos_to_rearrange_their") %>
+          <div id="filelist"><%= t(".your_browser_doesn't_have_flas") %>
+          </div>
+        </p>
+        <hr>
+      </div>
+    </div>
+    <!-- buttons-wrap -->
+    <div class="buttons-wrap text-center">
+      <p>
+        <a href="<%= step1_listing_path(@listing) %>" class="dark-text"><span class="sprites i-left-arrow"></span><%= t(".back") %></a>
+        <%= link_to t('.continue'), step3_listing_path(@listing), class: 'btn btn-success' %>
+      </p>
+    </div>
+    <% end %>
+    <!-- /buttons-wrap -->
+  </div>
+</div>
+
+<script type="text/javascript">
+
+var uploader = new plupload.Uploader({
+  runtimes : 'html5,flash,silverlight,html4',
+  drop_element : "upload_drop",
+  browse_button : 'upload_drop',
+  dragdrop : true,
+  container: document.getElementById('uploader'),
+  url : "<%= listing_photos_path(@listing) %>",
+  flash_swf_url : '/assets/plupload/Moxie.swf',
+  file_data_name: 'listing_photo[file]',
+  silverlight_xap_url : '/assets/plupload/Moxie.xap',
+  filters : {
+    max_file_size : '10mb',
+    mime_types: [
+    {title : "Image files", extensions : "jpg,gif,png"}
+    ]
+  },
+  multipart_params: {
+    "authenticity_token" : '<%= form_authenticity_token %>'
+  },
+  init: {
+    PostInit: function() {
+      document.getElementById('filelist').innerHTML = '';
+    },
+
+    FilesAdded: function(up, files) {
+      plupload.each(files, function(file) {
+          '<div class="addedFile" id="' + file.id + '">' + file.name + '<a href="#" id="' + file.id + '" class="removeFile"></a>' + '</div>'
+        document.getElementById('filelist').innerHTML += '<div class="addedFile" id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + '<a href="#" id="' + file.id + '" class="removeFile"></a>' + ')  <b></b></div>';
+      });
+      uploader.start();
+    },
+    FileUploaded: function(up, file,info) {
+
+      var response = JSON.parse(info.response);
+      var li = "<li class='ui-sortable-handle' data-id='"+response.id+"'><div><img src='"+response.thumb_url+"'><a href='x' class='btn btn-xs btn-danger remove' onclick='deletePhoto(event, 0, " + response.id + " );'>x</a></div></li>";
+//      li += '<div class="plupload_file_action"><div class="plupload_action_icon ui-icon ui-icon-circle-minus"> </div></div>';
+      $('.noselection').hide();
+      $('#listing_thumbs').append(li);
+    },
+    UploadProgress: function(up, file) {
+      document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+    },
+
+    Error: function(up, err) {
+      if (err.code == "-200"){
+        location.reload();
+      }else{
+        alert(err.code + ": " + err.message);
+      //document.getElementById('console').innerHTML += "\nError #" + err.code + ": " + err.message;
+      }
+    }
+  }
+});
+
+uploader.init();
+
+$(function() {
+    //In Safari Browser, the popstate event happens inmediatly after
+    //access this page, and, redirect to step1. Next var avoid redirection
+    var safariCounter;
+    if(navigator.vendor ==  "Apple Computer, Inc."){
+      safariCounter = 0;
+    }else{
+      safariCounter = 1;
+    }
+    if (window.history && window.history.pushState) {        
+        $(window).on('popstate', function() {            
+            if(safariCounter==0){ 
+              safariCounter=safariCounter+1;                        
+            }else{
+              var hashLocation = location.hash;
+              var hashSplit = hashLocation.split("#!/");
+              var hashName = hashSplit[1];
+
+              if (hashName !== '') {
+                  var hash = window.location.hash;
+                  if (hash === '') {
+                    window.location.replace(Routes.step1_listing_path(<%= @listing.id %>));
+                  }
+              }
+            }              
+        });
+        window.history.pushState({}, null, Routes.step2_listing_path(<%= @listing.id %>));        
+    }
+
+
+  $( "#listing_thumbs" ).sortable({update:function(event, ui) {
+    var array={};
+
+    $('#listing_thumbs li').each(function(index){
+      array["listing[listing_photos_attributes]["+$(this).data('id')+"][id]"] = $(this).data('id');
+      array["listing[listing_photos_attributes]["+$(this).data('id')+"][sort_order]"] = index;
+
+    });
+    $.ajax({
+      url: "<%=listing_path(@listing)%>",
+      type: 'PUT',    
+      data: array,
+      dataType:"json",
+      success: function(data) {
+        console.log(data);
+      }
+    });
+  }});
+  $( "#listing_thumbs" ).disableSelection();
+  $("label[for='#upload_drop']").on('click', function(){
+      $("#upload_drop").click();
+  });
+});
+</script>

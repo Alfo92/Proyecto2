@@ -1,0 +1,30 @@
+<div class="row">
+
+  <% users.each do |user| %>
+      <div class="col-xs-12 col-sm-6">
+        <div class="row agent">
+          <div class="col-xs-4" style="border-right: 1px solid #eeeeee;">
+            <div class="wrap-image text-center">
+              <%= link_to account_agent_path(user.agent_profile) do %>
+                <%= image_tag user.avatar.url(:medium), class:"img-rounded center-block img-avatar", style: 'max-width: 100%; width: 110px; height: auto;' %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-xs-8">
+            <p class="green-text">
+              <%= link_to account_agent_path(user.agent_profile) do %>
+                <strong>
+                  <%= user.name ? user.name.titleize : user.name %>
+                </strong>
+                (<%= t(user.type ? user.type.downcase : user.type) %>)
+              <% end %>
+            </p>
+            <p><%= user.email %></p>
+            <p><%= user.phone_number %></p>
+          </div>
+        </div>
+      </div>
+  <% end %>
+
+</div>
+

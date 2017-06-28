@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>MiTerra.com - <%= t("content.index.find_your_new_home")%></title>
+  <%= yield :social_networks %>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "jquery.validationEngine-#{I18n.locale}", 'data-turbolinks-track' => true %>
+    <!--[if IE 8]>
+        <style type="text/css" media="screen">
+            .home-listing .callback p span{float: none;}
+            #new_user .checkbox label{padding: 0;}
+            #search-page .listing-mini{padding: 12px 30px 0;}
+            .visible-sm-block{margin: -47px -20px 0;}
+        </style>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script type="text/javascript">
+    I18n.locale = "<%= I18n.locale %>";
+    (function($) {
+      $(function() {
+        initDatepicker();
+        $('input, select').not(":file").not('.no-styler input, .no-styler select').styler({
+          filePlaceholder: '<%= t(".no_file_chosen") %>',
+          fileBrowse: '<%= t(".choose_file") %>',
+          selectPlaceholder: '<%= t(".select...") %>'});
+      });
+    })(jQuery);
+  </script>
+
+  <%= render partial:"layouts/third_party_scripts" %>
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>
+    var languageMapping = {es: 'es_LA', en: 'en_US'};
+    var selectedLanguage = languageMapping[I18n.locale];
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1314896315219946',
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/" + selectedLanguage + "/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <div id="wrap">
+    <%= render partial: 'layouts/header' %>
+    <%= yield %>
+  </div>
+  <%= render partial:'layouts/footer' %>
+
+
+</body>
+</html>
+
+
+<script type="text/javascript" charset="utf-8">
+  showMessages(<%= flash.to_json.html_safe %>);
+  maskMoney();
+</script>

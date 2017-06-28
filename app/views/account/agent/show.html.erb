@@ -1,0 +1,115 @@
+<%= user = @user
+    render 'account/meta_tags', user: @user
+%>
+<div class="container">
+  <!-- back -->
+  <div class="back"><p></p></div>
+  <!-- /back -->
+  <div class="row">
+    <div class="col-sm-9">
+      <!-- agent-info -->
+      <div id="agent-info">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="wrap-image">
+              <p><%= image_tag @user.avatar.url(:medium), class: "img-rounded img-responsive center-block" %></p></div>
+          </div>
+          <div class="col-sm-8">
+            <!-- description -->
+            <div class="agent-description">
+              <p class="name"><%= @user.name %></p>
+
+              <!-- TODO: overall rating -->
+              <div class="general-rate-container">
+                <%= render 'account/rate_property', rate_property: 'general', agent_profile: @user.agent_profile, readonly: true %>
+              </div>
+
+              <p><strong><%= t(".phone") %>: </strong> <%= @user.phone_number %></p>
+              <p><strong><%= t(".specialties") %>:</strong> <%= show_specialties(@user) %></p>
+
+              <p>
+                <a href="#" class="green-text">
+                  <span class="sprites i-share-green"></span>
+                  <%= t('.share_this_agent') %>
+                </a>
+              </p>
+              <div class="text-center">
+                <%= social_share_button_tag @user.name, url: account_agent_url(@user), image: @user.avatar.url(:large), desc: @user.about %>
+              </div>
+              <%= render partial: "shared/share_this", locals: {title: t(".share_profile", possesive_name: @user.name.possessivize, name: @user.name)} %>
+            </div>
+            <!-- /description -->
+          </div>
+        </div>
+        <section>
+          <h2><%= t(".about") %> <%= @user.name %></h2>
+          <p><%= @user.about %></p>
+        </section>
+
+        <div class="rate-container">
+          <% 
+            # Inside rate partial, @user var is setted to current_user for some unknown reason
+            # For this, we save it in temp var, and set again after render rate partial
+            user_temp = @user 
+          %>
+          <%= render 'account/rate', agent_profile: @user.agent_profile %>
+          <% @user = user_temp %>
+        </div>
+      </div>
+      <!--/agent-info -->
+    </div>
+    <div class="col-sm-3">
+      <% if @user.can_send_message? %>
+        <%= render partial: 'listings/send_message_form', locals: {agent: @user} %>
+      <% end %>        
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div id="search-page">
+
+        <section>
+          <h2 class="green-text">
+            <%= t('.user_available_listings', user: (locale == :es) ? @user.first_name : @user.first_name.try(:possessivize)) %>
+          </h2>
+          <div class="row">
+            <% @user.listings.first(5).each do |listing| %>
+                <div class="col-xs-12 col-sm-6">
+                  <%= render 'listings/search_mini', listing: listing %>
+                  <br>
+                </div>
+            <% end %>
+          </div>
+        </section>
+
+        <% if @user.listings.sold.count > 0 %>
+            <section>
+              <h2 class="green-text">
+                <%= locale == :es ? @user.first_name : @user.first_name.possessivize %> <%= t(".sold_listings") %>
+              </h2>
+              <div class="row sold">
+                  <% @user.listings.sold.first(5).each do | listing| %>
+                    <div class="col-xs-12 col-sm-6 <%= "#{locale}-#{Listing::LISTING_TYPE[listing.listing_type]}" %>">
+                      <%= render 'listings/search_mini', listing: listing %>
+                      <br>
+                    </div>
+                  <% end %>
+              </div>
+            </section>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $(document).on('click', '.star img', function () {
+            setTimeout(function () {
+                $.ajax({url: '<%= account_agent_path(user.agent_profile) %>', dataType: 'script'});
+            }, 10)
+        });
+    });
+</script>

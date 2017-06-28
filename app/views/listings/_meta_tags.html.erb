@@ -1,0 +1,16 @@
+<% content_for :social_networks do %>
+    <% image = listing.primary_photo ? listing.primary_photo.xlarge_url : listing.listing_photos.first.try(:xlarge_url) %>
+    <!--Facebook, Google +-->
+    <meta property="fb:app_id" content="1314896315219946" />
+    <meta property="og:image" content="<%= image %>" />
+    <meta property="og:description" content="<%= listing.short_address %>" />
+    <meta property="og:url"content="<%= listing_url(listing) %>" />
+    <meta property="og:title" content="<%= listing.quick_look %>" />
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MiTerraOnline">
+    <meta name="twitter:creator" content=="@MiTerraOnline">
+    <meta name="twitter:title" content="<%= listing.quick_look %>">
+    <meta name="twitter:description" content="<%= listing.short_address %>">
+    <meta name="twitter:image" content="<%= image %>">
+<% end %>

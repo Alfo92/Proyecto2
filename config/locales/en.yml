@@ -1,0 +1,973 @@
+en:
+  es: SP
+  en: EN
+  unnamed_road: Unnamed Road
+  country_code: US
+  go_to_top: Go to Top
+  enumerize:
+    user:
+      language:
+        es: Spanish
+        en: English
+  time:
+    formats:
+      default: "%m/%d/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+  datetime:
+    formats:
+      default: "%m/%d/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"    
+
+  Apartment: Apartment
+  CommercialBuilding: Commercial
+  Farm: Farm
+  House: House
+  Land: Land
+  Office: Office
+  Search: Search
+  Warehouse: Warehouse
+  Subdivision: Subdivision
+  Fieldstay: Fieldstay
+  Cottage: Cottage
+  Duplex: Duplex
+
+  account:
+    agent:
+      index:
+        feature_a_listing: Feature a listing
+        my_leads: My Leads
+        my_listings: My Listings
+        profile: Profile
+        saved_listings: Saved Listings
+      leads:
+        my_leads: My Leads
+        profile_views: profile views
+      listings:
+        add_listings: Add Listings
+        as_of: as of
+        for_rent: For Rent
+        for_sale: For Sale
+        my_listings: My Listings
+        property_views: property views
+        sold: Sold
+        sold_rented: Sold/Rented
+        summary: Summary
+        toggle_navigation: Toggle navigation
+      no_reviews_yet: No Reviews Yet
+      profile:
+        current_password: Current Password
+        email: Email
+        email_addresses: Email Addresses
+        name: Name
+        new_password: New Password
+        password: Password
+        password_confirmation: Password Confirmation
+        phone_number: Phone Number
+        language: Language
+        update: Update
+        view_profile: View Profile
+        choose_file: change profile photo
+        no_file_chosen: no file chosen
+        type: Account Type
+        my_account: My Account
+        sure: Are you sure?.
+        destroy_my_account: Delete     
+        destroy_my_account_msg: Are you sure?. If you delete your account, you will no longer be able to log in.
+        disable_my_account: Disable
+        disable_my_account_msg: Are you sure?. If you deactivate your account you will lose all your privileges
+        enable_my_account: Enable
+        enable_my_account_msg: Do you want to activate your account?
+      show:
+        about: About
+        phone: Phone
+        responsiveness: Responsiveness
+        skill_ratings: Skill Ratings
+        sold_listings: Sold listings
+        specialties: Specialties
+        user_available_listings: "%{user}'s Available Listings'"
+        share_this_agent: Share This Agent
+        share_profile: Share %{possesive_name} profile
+        average: Avg
+      small_listing:
+        photo: Photo
+        price: Price
+        add_photos: Add photos
+        are_you_sure_you_want_to_delet: Are you sure you want to delete this listing?
+        are_you_sure_you_want_to_mark: Are you sure you want to mark this listing as sold?
+        congratulations_on_selling_you: Congratulations on selling your %{listing_type}!
+        congratulations_on_renting_you: Congratulations on renting your %{listing_type}!
+        ask_sell_price: How much was the listing sold for?
+        ask_rent_price: How much was the listing rented for?
+
+        delete_listing: Delete Listing
+        edit_listing: Edit Listing
+        edit_listing_detail: Edit listing detail
+        mark_listing_as_sold: Mark Listing as Sold
+        promote_listing: Promote listing
+        save_listing: Save Listing
+
+    rate_property:
+      average: Avg
+      honesty: Honesty & Integrity
+      knowledge: Local Knowledge
+      expertise: Process Expertise
+      agile_response: Speed and Agility in Response
+      negotiation: Negotiation
+      general: General
+
+    consumer:
+      index:
+        user_since: User from
+        Homebuyer: Home buyer
+        in: in
+        edit_profile: Edit profile
+        view_your_public_profile: Show public profile
+        save_profile: Save profile
+        account_settings: Account Configuration
+        email: Email
+        password: Password
+        new_password: New password
+        password_confirmation: Confirm password
+        phone_number: Phone number
+        saved_listings: Saved listings
+        prohibited_this_record_from_being_saved: prohibited this item from being saved
+        profile: Profile
+
+      saved_listing:
+        property_type: Property Type
+  agent: Seller
+  both: Seller & Buyer
+  buyer: Buyer
+  content:
+    index:
+      buy_your_miterra: About us?
+      city: City
+      find_a: Find a
+      find_your_miterra: How to use MiTerra?
+      find_your_new_home: Find your place
+      learn_more: Learn More
+      read_more: Read More
+      next: Next
+      previous: Previous
+      search: SEARCH
+      select: Select
+      sell_your_miterra: News MiTerra
+      ubication: Place
+      city: City
+      search_200_more_agent_listed_homes_for_sale_updated_every_15_30_minutes: It is very easy to use the portal of MiTerra only have to register with an email or facebook then you can upload your property free, filling a questionnaire related to it and ready. Fast and easy!
+      get_in_person_guidance_at_each_step_from_your_local_MiTerra_agent: We are a technology company that seeks to simplify the search for information by means of a platform with real estate data in Paraguay for all customers. We seek to generate the best service and for this we invest in the development of an application and a Web site, with an American company located in California.
+      picture_perfect_debut_online_marketing_to_all_the_right_buyers_for_a_1_5_listing_fee: All the news, notes and events of last moment on the property real estate of Paraguay.
+    about:
+      who_we_are_title: ¿who we are?
+      who_we_are_body: We are a technology company that seeks to simplify the search for information by means of a platform with real estate data in Paraguay for all customers. We seek to generate the best service and for this we invest in the development of an application and a Web site, with an American company located in California. In MiTerra.com the user can obtain specific information, complete and enjoy a wide variety of properties and reviews on them and make a successful decision. The platform is useful for the seller, without having an investment you can publish the property you want, put in rent or sale in a fast and effective way. We intend to be the shortest and most dynamic way between the buyer and the real estate vendor.
+      mission_title: Mission
+      mission_body: We seek to innovate by means of technology, providing a real estate platform that boost the commercial relationship between sellers and buyers and thus be at the forefront in this field and be an important factor in the increase in the generation of real estate businesses in our country and the world.
+      vision_title: Vision
+      vision_body: To promote the national and international Real estate industry using a technological contribution thus benefitting the users and prospering the company in quality and dynamism for the greater and better generation of real estate businesses.
+      values_title: Values
+      values_body: Innovation, Quality, Development, Honesty, Responsibility, Efficiency
+    privacy:
+      privacy_policy_title: Privacy Policy
+      privacy_policy_body: '<p>These Privacy Policies are an integral part of the General Terms and Conditions of www.miterra.com (MiTerra.com). By accepting the General Terms and Conditions the user accepts the policies contained herein.</p> <p>As a normal part of our activity, we collect and, in some cases, disclose information about our users and visitors to our website. These Privacy Policies describe the information that MiTerra.com collects about its users and visitors and what can be done with such information. It is very important that the users and visitors of this website know the privacy policy because completing the consultation forms and / or browsing are giving consent for MiTerra.com to use the data and personal information according to the policies that follow Are detailed.</p><p>The privacy and proper use of the information of the users is of vital importance for MiTerra.com; In this sense, are used computer security mechanisms of reasonable effectiveness for the protection of this information.</p>'
+      confidentiality_title: Confidentiality
+      confidentiality_body: '<p>Once you have registered, completed the inquiry forms and / or browsed on your website, MiTerra.com will not sell, rent or share the Personal Information except in the ways established in these policies. Notwithstanding this, the user expressly consents that MiTerra.com transfers all or part of the Personal Information to any of the companies controlled, controlling and / or linked to Rectora SAE, in any way and at the time, manner and conditions that Consider pertinent, being able to use this information for any business unit of Rectora SAE We are prepared to do everything in our power to protect the privacy of the personal information that users give us. It may happen that under legal provisions, court orders MiTerra.com is obliged to disclose information to the authorities or third parties, or it may happen that third parties can access personal information or data transmissions; In these cases MiTerra.com will not be responsible for the disclosed information.-</p>'
+      cookie_title: Cookie Policies
+      cookie_body: "<p>The user and visitor of the www.miterra.com website knows and accepts that MiTerra.com may use a tracking system through the use of cookies (the 'Cookies'). Cookies are small files that are installed on the hard drive, with a limited duration in time that help to customize the services. We also offer certain functionalities that are only available through the use of Cookies. The Cookies are used in order to know the interests and behavior as Internet users of those who visit or are users of our Website and in this way, better understand their needs and interests and give them a better service or provide related information. We will also use the information obtained through the Cookies to analyze the pages navigated by the visitor or user, the searches made, improve our commercial and promotional initiatives, show advertising or promotions, banners of interest, news on the Real State market, Our services and customize them.</p><p>We also use the Cookies so that the user does not have to enter his password so frequently during a browsing session, also to post and verify the registrations and the activity of the user, always aiming at the installation of Cookies, the benefit of the user That receives it, and will not be used for other purposes outside of MiTerra.com. </p><p>It is established that the installation, permanence and existence of the Cookies on the user's computer depends on its exclusive will and can be removed from your computer when the user so wishes. To know how to remove Cookies from the system it is necessary to check the Help section of the browser.</p><p>In addition, cookies or other similar systems installed by third parties may be found on certain pages of our website. For example, when browsing a page created by a user, there may be a Cookie located on that page.</p><p>It is expressly stated that these Terms and Conditions are related to the use of Cookies by this site and not the use of Cookies by third parties. MiTerra.com does not control the use of Cookies by third parties.</p>"
+      info_title: What we do with the information
+      info_body: "<p>In order to use MiTerra.com services, the user must provide certain information (personal information), such as email address, telephone number, address, etc. Having to provide it in a complete and accurate manner; MiTerra.com can corroborate this information by accessing public information, credit risk information centers, for which we are expressly authorized. MiTerra.com will treat this information confidentially.</p> <p>MiTerra.com is expressly authorized to transmit the information provided by the user or visitor to the companies that offer their products and services in this website, not being responsible for the treatment that these third parties give to said information.</p> <p>MiTerra.com can automatically store the activity of visitors and users within the website. Such information may include the URL from which they come (whether or not on our website), what URLs they access next (whether or not on our website), which browsers they are using, and their IP addresses. Also the pages visited, searches made, among other information can be stored and retained.</p> <p>Depending on the authorization granted MiTerra.com you can: <br> <ul> <li>Generate contact instances between companies offering their products and services and stakeholders, potential customers and customers. For these cases, MiTerra.com may provide the personal data of interested parties, potential clients and customers to service providers solely for the purpose of providing information relating to the products and services offered.</li> <li>Use the information to improve the internal processes of MiTerra.com that allow to detect interests, needs and provide information related to them, being able to use them to improve our commercial strategies, personalize offers and services.</li> <li>Send information or e-mail messages about new services.</li> <li>Show advertising or promotions, banners of interest to our users, in addition to the information expressly authorized in the preferences.</li> <li>Send our newsletter.</li> <li>Contact with those who publish the information generating a redirection of the queries and / or requests that the user makes.</li> <li>Send information or messages by short text messages (SMS) to the cell phone supplied by the user to MiTerra.com. The SMS may contain (but not be limited to) information about MiTerra.com services and other obligations acquired by the use of such services.</li> <li>In the event that MiTerra.com organizes contests or promotions, the winners expressly authorize to disseminate their names, personal data and images and those of their families, by the means and in the forms that they deem appropriate, for advertising and / or promotional purposes , Without any right to compensation.</li> <li>Share personal information (including e-mail address) with service providers or outsourcing companies that contribute to improving or facilitating operations through MiTerra.com, undertaking to request from these companies or suppliers the commitment of Ensure the privacy of our user's data, using mechanisms that comply with reasonable security standards. MiTerra.com is not responsible for the improper use of the Personal Information of the user made by these companies or Internet sites.</li> </ul> </p>"
+      underage_title: Underage
+      underage_body: "<p> The services offered on this website are only for legal adults who have legal capacity to hire, should minors abstain or unable to provide personal data to be included in our databases.-</p>"
+      personal_data_title: Access, cancellation and correction of personal data
+      personal_data_body: '<p>According to current regulations, MiTerra.com guarantees the right of users to access, cancel and update their Personal Information, including their e-mail address. The holder of the personal data has the right to exercise the right of access to them for free at intervals of not less than six months, unless a legitimate interest to that effect is established. This right can be exercised via Internet by contacting us at the following address: info@miterra.com by entering your data you expressly consent to the processing of your data by MiTerra.com for the purposes indicated above.</p><p> Users guarantee and respond, in any case, the truthfulness, accuracy, validity and authenticity of the Personal Information provided, and undertake to keep it duly updated.</p><p>MiTerra.com may at any time modify the terms and conditions of these Privacy and Confidentiality Policies and / or e-mail sending practices. If we decide to introduce any material changes to our Privacy Policy, we will notify you by posting an updated version of the Policies in this section or by sending an e-mail or informing it on the main page or other sections of the site to keep you updated on the changes Performed.</p>'
+
+  rent: Rent
+  sale: Sale
+  select: Select
+  seller: Seller
+  confirm_password: Confirmar contraseña
+  name: Name
+  Name: Name
+  phone_number: Phone number
+  type: Account type
+  already_have_an_account_login_now:  Already have and account? Login now
+  parking: Parking
+  furnished: Furnished
+  sewage: sewage
+  roadway: Roadway
+  bedrooms: Bedrooms
+  bathrooms: Bathrooms
+  amenities: Amenities
+  payment_options: Payment options
+  house_type: House type
+  year_built: Built year
+  building_state: Building state
+  square_meters: Square meters
+  price_type: Price in
+  square_meters_lot: m<sup>2</sup> of Land
+  service_area: Service area
+  short_description: Listing subtitle
+  monthly_expenses: Expenses /month
+  floor: Floor
+  "square_meters_communal": "m<sup>2</sup> communal"
+  location_description: Location description
+  other_info: Other info
+  front_meters: Front meters
+  back_meters: back meters
+  commercial_state: Commercial state
+  property_name: Property name
+  commercial_use: Commercial use
+  hectors: Hectors
+  pasture_hectors: Pasture hectors
+  grass_type: Grass type
+  included_crops: included crops
+  plantations: Plantations
+  annual_rainfall: Annual rainfall
+  included_livestock: included livestock
+  enhancements: Enhancements
+  condominium_name: Condominium name
+  condominium_desc: Condominium description
+  square_meters_build: m<sup>2</sup> build
+  square_meters_built: m<sup>2</sup> built
+  square_meters_land: m<sup>2</sup> of Land
+  parking_number: Parking number
+  neighborhood: Neighborhood
+  square_meters_build: m<sup>2</sup> build
+  duplex_state: Status
+  field_stay_use: Field/Stay use
+  developed_hectares: Developed hectares
+  hectares_reservations: Reservations hectares
+  access: Access
+  front_square_meters: Front square meters
+  back_square_meters: Back square meters
+  on_site_construction: On site construction
+  electricity: Electricity
+  water: Water
+  nearby_centers: Nearby centers
+  office_state: Status
+  buid_square_meters: m<sup>2</sup> build
+  field_square_meters: Field square meters
+  subdivision_company: Company
+  division_name: Division name
+  subdivision_number: Subdivision number
+  service_description: Service description
+  subdivision_use: Subdivision use
+  building_name: Building name
+  land_stay_use: Land/Stay use
+  land_name: Land name
+  land_description: Land description
+  ubication_description: Ubication description
+
+  activerecord:
+    models:
+      post: New
+    attributes:
+      user:
+        type: Account Type
+      post:
+        title: URL
+  date:
+    formats:
+      default: '%m/%d/%Y'
+      short: '%b %d'
+  devise:
+    sessions:
+      new:
+        forgot_your_password?: Forgot your password?
+        sign_in: Sign in
+        sign_up: Sign up
+        remember_me: Remember me
+        dont_have_an_account_yet_join_now: Don't have an account yet? Join now
+        type: Account Type
+        please_sign_in: Please sign in
+        email: Email
+        email_address: Email address
+        password: Password
+        already_have_an_account_login_now:  Already have an account? Login now
+        phone_number: Phone number
+        confirm_password: Confirm password
+        choose_file: choose profile photo
+
+    registrations:
+      new:
+        sign_in: Sign in
+        sign_up: Sign up
+        already_have_an_account_login_now:  Already have an account? Login now
+        name: Name
+        email_address: Email address
+        password: Password
+        confirm_password: Confirm password
+        phone_number: Phone number
+        type: Account type
+        choose_file: choose profile photo
+      edit:
+        edit: Edit
+        back: Back
+        cancel_my_account: Cancel my account
+        unhappy_question: Unhappy?
+        sure: Are you sure?
+    passwords:
+      new:
+        "forgot_your_password?": "Forgot your password?"
+        send_me_reset_password_instructions: Send me the instructions
+      edit:
+        change_your_password: Change your password
+        change_my_password: Change my password
+    shared:
+      links:
+        log_in: Log in
+        sign_up: Sign up
+        sign_in_with_Facebook: Sign in with Facebook
+        "didnt_receive_confirmation_instructions?": "Did not receive confirmation instructions?"
+        "didnt_receive_unlock_instructions?": "Did not receive unlock instructions?"
+
+  users:
+    set_language:
+      success: Language changed successfully
+      error: Error on try to update language
+      not_supported: Language not supported
+    destroy:
+      success: Your account has been deleted
+      error: Failed to delete your account
+    disable:
+      success: Your account has been disabled
+      error: Failed to disable your account 
+      info: You must activate your account to be able to publish
+    enable:
+      success: Your account has been enabled
+      error: Failed to enable your account    
+  layouts:
+    application:
+      choose_file: Update profile photo
+      no_file_chosen: no file chosen
+      select: Select
+      select...: Select...
+    header:
+      about: About Us
+      blog: News MiTerra
+      buy: Buy
+      join: Join
+      my_account: My Account
+      rent: Rent
+      sell: Sell
+      directory: Directory
+      sign_in: Sign In
+      sign_out: Sign out
+      posts: Manage News
+      or: or
+    registration:
+      login_with_facebook: Sign in with Facebook
+      already_have_an_account?: Already have an account?
+      confirm_password: Confirm Password
+      dont_have_an_account_yet?: Don't have an account yet?
+      email: Email
+      email_address: Email Address
+      join_now: Join Now
+      name: Name
+      or: or
+      password: Password
+      phone_number: Phone Number
+      register: Register
+      sign_in: Sign In
+      submit: Submit
+      choose_file: chage profile photo
+      no_file_chosen: no file chosen
+      type: Account Type
+      complete_form: Complete register
+      password_confirmation: Password confirmation
+      remember_me: Remember me
+    footer:
+      about: About Us
+      terms_of_use:  Terms of Use
+      privacy_policy: Privacy Policy
+      follow_us: Follow Us
+      news: News MiTerra
+  registrations:
+    update:
+      success: Cambios guardados exitosamente
+      error: No se ha podido guardar los cambios. %{errors}
+  listings:
+    for_rent: For Rent
+    for_sale: For Sale
+    sell: Sale
+    rent: Rent
+    select: Select
+    dollars: Dolar
+    dolares: Dolar
+    guarani: Guaranies
+    header:
+      listing_address: Listing Address
+      map_title: Use the map to get the exact location
+      photos: Add Photos
+      review_submit: Review & Submit
+      step_1_header: Please provide the listing address below. Once we verify the address, you can continue with the submission process.
+      step_2_header: More photos generate more exposure for your your listings.
+      step_3_header: ''
+    index:
+      city: City
+      results: results
+      feature: Feature
+      from: From
+      to: To
+      property_type: Property
+      listing: Listing
+      featured_listings: Featured Listings
+      search: Search
+    mortgage_calculator:
+      amount_to_be_financed: Amount to be Financed
+      annual_interest_rate: Annual Interest rate
+      calculate: CALCULATE
+      down_payment: Down Payment
+      finance_calculator: FINANCE CALCULATOR
+      loan_term_(months): Loan Term (months)
+      monthly_payment: Monthly Payment
+    new: &listing_form
+      select: Seleccionar
+      'address:': 'Address:'
+      check_address: Check Address
+      'city:': 'City:'
+      'country:': 'Country:'
+      don't_publicy_display_listing: Dont publicy display listing address
+      listing_information: Listing information
+      'neighborhood:': 'Neighborhood:'
+      please_enter_the_listing_infor: Please enter the listing information below. The more information you provide in the description the more likely you will receive better offers.
+      property_type: Property Type
+      'state:': 'State:'
+      success!: Success!
+      'zip:': 'ZIP:'
+      Next: Next
+      country:
+        py: Paraguay
+        us: United States
+    form:
+      <<: *listing_form
+
+    new_apartment:
+      currency: Currency
+      location_description: Location Description
+      other_info: Other info
+      amenities: Amenities
+      bathrooms: Bathrooms
+      bedrooms: Bedrooms
+      'bedrooms:': 'Bedrooms:'
+      building_name: Building Name
+      building_state: Building State
+      buy: Buy
+      common_m<sup>2</sup>: Common m<sup>2</sup>
+      date_listed: Date Listed
+      description: Description
+      enter_the_web_address_where_co: Enter the Web address where consumers can find more information about this specific property
+      floor: Floor
+      furnished: Furnished
+      home_facts: Home Facts
+      listing_type: Listing Type
+      m<sup>2</sup>: m<sup>2</sup>
+      monthly_expenses: Monthly Expenses
+      parking: Parking
+      payment_options: Payment Options
+      price: Price
+      property_listing_url: Property listing URL
+      rent: Rent
+      rooms: Rooms
+      select: Select
+      select...: Select...
+      sell: Sell
+      service_area: Service Area
+      short_description: Short Description (eg. 4br, 3ba (1partial), 1,900 sqft)
+      year_built: Year Built
+      payment_options_placeholder: ex cash only, monthly
+      building_state_placeholder: ex new, renewed...
+      amenities_placeholder: ex pool, gym, nursery, none
+      bedrooms_placeholder: ex 2, 3, etc
+      bathrooms_placeholder:  ex 2, 3
+      parking_placeholder: ex 2 vehicles, none, etc
+      description_placeholder: ex Grill, Living, Bedroom and bathroom service, Utility room, Kitchen with dining area, furnished, service area
+      location_description_placeholder: ex Supermarket Spain in steps, Goethe School Zone, Minutes from Sanatorio La Costa
+      short_description_placeholder: ex 3 bedroom apartment, brand new, neighborhood Ikua Sati
+      other_info_placeholder: ex Minimum rental 1 year
+
+    new_commercial:
+      listing_type: Listing Type
+      currency: Currency
+      price: Price
+      date_listed: Date Listed
+      front_m: Front Meters
+      back_m: Back Meters
+      commercial_state: State
+      location_description: Location Description
+      other_info: Other info
+      a/c: A/C
+      amenities: Amenities
+      back_m<sup>2</sup>: Back m<sup>2</sup>
+      ceiling_type: Ceiling Type
+      commercial_use: Commercial Use
+      description: Description
+      electricity: Electricity
+      floor: Floor
+      floor_type: Floor Type
+      front_m<sup>2</sup>: Front m<sup>2</sup>
+      home_facts: Home Facts
+      m<sup>2</sup>: m<sup>2</sup>
+      monthly_expenses: Monthly Expenses
+      nearby_centers: Nearby Centers
+      parking: Parking
+      payment_options: Payment Options
+      property_listing_url: Property listing URL
+      road: Road
+      shopping_center_name: Shopping Center Name
+      short_description: Short Description
+      water: Water
+      year_built: Year Built
+
+      shopping_center_name_placeholder: ex Shopping Zuni, Paseo Carmelitas, etc.
+      commercial_state_placeholder: ex New, Needs repairs, Recently refurbished, Etc
+      amenities_placeholder: ex Parking for 30 vehicles, common toilets, security, etc.
+      description_placeholder: ex prepared for hardware, local gastronomy, local in night walk
+      location_description_placeholder: ex Area Shopping Jesuitas Plaza, Paseo Carmelitas Area, etc.
+      short_description_placeholder: ex Commercial premises in Paseo nocturno, clientele formed
+      other_info_placeholder: ex It is negotiated furniture of the local apart, rent minimum 3 years
+
+    new_farm:
+      property_name: Property Name
+      listing_type: Listing Type
+      currency: Currency
+      price: Price
+      date_listed: Date Listed
+      payment_options: Payment Options
+      property_type: Property Type
+      annual_rainfall: Annual Rainfall (cc)
+      price_type: Price Type
+      description: Description
+      enhancements: Enhancements
+      description_placeholder: ex Improvements made, Type of Grass, crops included, plantations, animals included etc
+      short_description_placeholder: ex Rural field offer
+      enter_the_web_address_where_co: Enter the Web address where consumers can find more information about this specific property
+      included_animals: Included Animals
+      property_listing_url: Property listing URL
+      road: Road
+      short_description: Offer 240 ha
+      property_name_placeholder: ex Property name
+      hectors_placeholder: ex 240 ha
+      annual_rainfall_placeholder: ex 3000mm
+      payment_options_placeholder: ex contado
+      hectors: Hectors
+    new_house:
+      listing_type: Listing Type
+      currency: Currency
+      price: Price
+      date_listed: Date Listed
+      neighborhood: Neighborhood
+      condominium_name: Condominium name
+      condominium_desc: Condominium description
+      house_state: House state
+      parking_number: Parking Number
+      bedrooms: Bedrooms
+      house_desc: House description
+      location_description: Location Description
+      short_description: Listing subtitle
+      other_info: Other info
+      price_type: Price Type
+      amenities: Amenities
+      bathrooms: Bathrooms
+      building_state: Building State
+      enter_the_web_address_where_co: Enter the Web address where consumers can find more information about this specific property
+      furnished: Furnished
+      home_facts: Home Facts
+      house_m<sup>2</sup>: House m<sup>2</sup>
+      lot_size_m<sup>2</sup>: Lot Size m<sup>2</sup>
+      parking: Parking
+      payment_options: Payment Options
+      property_listing_url: Property listing URL
+      road: Road
+      rooms: Rooms
+      service_area: Service Area
+      sewage: Sewage
+      type_of_house: Type of House
+      year_built: Year Built
+      square_meters_built: m<sup>2</sup> Built
+      square_meters_land: Land m<sup>2</sup>
+
+      neighborhood_placeholder: ex Los Laureles, Ikua Sati, etc.
+      condominium_name_placeholder: ex Parana Country Club
+      condominium_desc_placeholder: ex amenities, barbecue, etc.
+      house_desc_placeholder: ex Grill, Living, Bedroom and bathroom service, Swimming pool, Utility room, Kitchen with dining area
+      location_description_placeholder: ex Benchmarks, Shopping Area Multiplaza
+      short_description_placeholder: ex House for sale in Los Laureles
+      other_info_placeholder: ex Offer price per trip
+      house_state_placeholder: ex New, Needs repairs, Newly renovated
+      parking_number_placeholder: ex 2 vehicles, etc.
+      payment_options_placeholder: ex Own financing 130 months, 60 months, counted plan
+      bedrooms_placeholder: ex 2, 3, etc
+      bathrooms_placeholder:  ex 2, 3
+
+    new_duplex:
+      listing_type: Listing Type
+      currency: Currency
+      price: Price
+      date_listed: Date Listed
+      neighborhood: Neighborhood
+      condominium_name: Condominium name
+      condominium_desc: Condominium description
+      square_meters_built: m<sup>2</sup> Built
+      square_meters_land: Land m<sup>2</sup>
+      duplex_state: Duplex State
+      parking_number: Parking Number
+      bedrooms: Bedrooms
+      duplex_desc: Duplex description
+      location_description: Location Description
+      short_description: Listing subtitle
+      other_info: Other info
+      amenities: Amenities
+      bathrooms: Bathrooms
+      building_state: Building State
+      enter_the_web_address_where_co: Enter the Web address where consumers can find more information about this specific property
+      furnished: Furnished
+      home_facts: Home Facts
+      house_m<sup>2</sup>: House m<sup>2</sup>
+      lot_size_m<sup>2</sup>: Lot Size m<sup>2</sup>
+      parking: Parking
+      payment_options: Payment Options
+      property_listing_url: Property listing URL
+      road: Road
+      rooms: Rooms
+      service_area: Service Area
+      sewage: Sewage
+      type_of_house: Type of House
+      year_built: Year Built
+
+      neighborhood_placeholder: ex Los Laureles, Ikua Sati, etc.
+      condominium_name_placeholder: ex Parana Country Club
+      condominium_desc_placeholder: ex amenities, barbecue, etc.
+      duplex_state_placeholder: ex New, Needs repairs, Newly renovated
+      parking_number_placeholder: ex 2 vehicles, etc.
+      duplex_desc_placeholder: ex Grill, Living, Bedroom and bathroom service, Swimming pool, Utility room, Kitchen with dining area
+      location_description_placeholder: ex Benchmarks, Shopping Area Multiplaza
+      short_description_placeholder: ex House for sale in Los Laureles
+      other_info_placeholder: ex Offer price per trip
+      payment_options_placeholder: ex Own financing 130 months, 60 months, counted plan
+      bedrooms_placeholder: ex 2, 3, etc
+      bathrooms_placeholder:  ex 2, 3
+
+    new_land:
+      listing_type: Listing Type
+      currency: Currency
+      price: Price
+      date_listed: Date Listed
+      land_stay_use: Landstay use
+      land_name: Land Name
+      land_description: Land Description
+      ubication_description: Ubication Description
+      other_info: Other Info
+      back_m<sup>2</sup>: Back m<sup>2</sup>
+      commercial_use: Commercial Use
+      construction: Construction
+      description: Description
+      electricity: Electricity
+      enter_the_web_address_where_co: Enter the Web address where consumers can find more information about this specific property
+      front_m<sup>2</sup>: Front m<sup>2</sup>
+      lot_size_m<sup>2</sup>: Lot Size m<sup>2</sup>
+      nearby_centers: Nearby Centers
+      payment_options: Payment Options
+      property_listing_url: Property listing URL
+      road: Road
+      short_description: Short Description
+      water: Water
+
+      payment_options_placeholder: ex Own financing 130 months, 60 months, counted plan
+      land_stay_use_placeholder: ex Agricultural machinery, Livestock, Reforestation, etc.
+      land_name_placeholder: ex Fraccion Ikua Orange, Las Mercedes, etc
+      land_description_placeholder: ex Calle Empedrada, Electric Light, Services etc
+      commercial_use_placeholder: ex property for lot, logistic park, Residence, Service station, supermarket, shopping center, etc.
+      construction_placeholder: ex small house with 2 bedrooms, workshop shed, etc.
+      description_placeholder: ex high ground, trees, low ground, quarry, etc.
+      ubication_description_placeholder: ex Property of 4 hectares in urbanized area for subdivision or closed neighborhood.
+      short_description_placeholder: ex Property of 4 hectares in urbanized area for subdivision or closed neighborhood.
+      other_info_placeholder: ex One property in the area, opportunity.
+
+    new_office:
+      bathrooms: Bathrooms
+      listing_type: Listing Type
+      currency: Currency
+      price: Price
+      date_listed: Date Listed
+      office_state: Office State
+      front_m: Front meters
+      back_m: back meters
+      location_description: Location Description
+      other_info: Other Info
+      amenities: Amenities
+      building_name: Building Name
+      building_state: Building State
+      ceiling_type: Ceiling Type
+      commercial_use: Commercial Use
+      common_m<sup>2</sup>: Common m<sup>2</sup>
+      description: Description
+      enter_the_web_address_where_co: Enter the Web address where consumers can find more information about this specific property
+      floor: Floor
+      floor_type: Floor Type
+      monthly_expenses: Monthly Expenses
+      nearby_centers: Nearby Centers
+      office_facts: Office Facts
+      office_m<sup>2</sup>: Office m<sup>2</sup>
+      parking: Parking
+      payment_options: Payment Options
+      property_listing_url: Property listing URL
+      road: Road
+      short_description: Short Description
+      year_built: Year Built
+      m<sup>2</sup>: m<sup>2</sup>
+
+      building_name_placeholder: ex Shopping Zuni, Paseo Carmelitas, etc.
+      office_state_placeholder: ex New, Needs repairs, Recently refurbished, Etc
+      amenities_placeholder: ex Parking for 30 vehicles, common toilets, security, etc.
+      description_placeholder: ex private bathroom, Divisories for 4 desks, reception, etc.
+      location_description_placeholder: ex Zona Shopping del Sol, Centro Asuncion, etc.
+      short_description_placeholder: ex Office for sale at the well in front of the Shopping del Sol
+      other_info_placeholder: ex The offices are projected to rent in 20
+      bathrooms_placeholder: ex 2, 3, etc
+
+    new_warehouse:
+      location_description: Location Description
+      other_info: Other info
+      bathrooms: Bathrooms
+      listing_type: Listing Type
+      currency: Currency
+      price: Price
+      date_listed: Date Listed
+      payment_options: Payment Options
+      parking_number: Parking Number
+      a/c: A/C
+      amenities: Amenities
+      back_m<sup>2</sup>: Back m<sup>2</sup>
+      building_state: Building State
+      ceiling_type: Ceiling Type
+      commercial_use: Commercial Use
+      common_m<sup>2</sup>: common m<sup>2</sup>
+      complex_name: Complex Name
+      description: Description
+      electricity: Electricity
+      enter_the_web_address_where_co: Enter the Web address where consumers can find more information about this specific property
+      floor_type: Floor Type
+      front_m<sup>2</sup>: Front m<sup>2</sup>
+      m<sup>2</sup>: m<sup>2</sup>
+      monthly_expenses: Monthly Expenses
+      nearby_centers: Nearby Centers
+      parking: Parking
+      property_listing_url: Property listing URL
+      road: Road
+      short_description: Short Description
+      warehouse_facts: Warehouse Facts
+      water: Water
+      year_built: Year Built
+      build_m<sup>2</sup>: m<sup>2</sup> Built
+      field_m<sup>2</sup>: m<sup>2</sup> of Field
+
+      building_state_placeholder: ex New, Needs repairs, Newly renovated
+      parking_number_placeholder: ex 2 vehicles, etc.
+      description_placeholder: ex kitchen, bedroom, security booth
+      location_description_placeholder: ex near Puerto Fenix, GICAL
+      short_description_placeholder: ex Shed of 600 m2, strategic location near the ports
+      other_info_placeholder: ex Minimum rental 1 year
+      bathrooms_placeholder: ex 2, 3, etc
+
+    new_subdivision:
+      sell: Sale
+      rent: Rent
+      listing_type: Sale / Rent
+      price_type: Price in
+      square_meters: Square meters
+      price: Price
+      payment_options: Payment Options
+      date_listed: Date Listed
+      subdivision_type: Subdivision Type
+      subdivision_company: Subdivision Company
+      division_name: Division Name
+      subdivision_number: Subdivision Number
+      service_description: Service Description
+      m<sup>2</sup>: m<sup>2</sup> of Land
+      subdivision_use: Subdivision Use
+      subdivision_description: Subdivision description
+      location_description: Location Description
+      short_description: Listing subtitle
+      other_info: Other info
+      currency: Currency
+
+    new_fieldstay:
+      sell: Sale
+      rent: Rent
+      listing_type: Sale / Rent
+      price: Price
+      payment_options: Payment Options
+      date_listed: Date Listed
+      subdivision_type: Subdivision Type
+      field_stay_use: Fieldstay Use
+      hectares: Hectares (Quantity)
+      developed_hectares: Developed hectares
+      hectares_reservations: Reservations hectares
+      field_infrastructure_desc: Description / Infrastructure
+      access: Access
+      location_description: Location Description
+      short_description: Listing Subtitle
+      other_info: Other Info
+      price_type: Price in
+      currency: Currency
+
+
+    per_month: /mo
+    listing_saved:
+      listing_saved: Listing saved
+    save_listing:
+      save_listing: Save Listing
+    send_message_form:
+      contact_agent: Contact Agent
+      hi_i_found_you_on_miterra: Hi, I found you on MiTerra.
+      hi_i_found_your_listing_on_mi: Hi, I found your listing on MiTerra. Please send me more information about %{address}. Thank you.
+      message_sent!: Message sent!
+      send_message: Send Message
+      sending_message: Sending Message
+      your_email: Your Email
+      your_name: Your Name
+      your_phone: Your Phone
+      phone: Phone
+      sign: Sign
+      not_logged_msg: ", to be able to contact %{agent}"
+    rate:
+      rate_and_review: Rate and Review
+      rate_these_categories: Rate this Property
+      rate_this_listing: Rate this listing
+      overall_area_rating: Overall Area Rating
+      safety: Safety
+      price: Price
+      location: Location
+      public_services: Public Services
+      average: Avg
+      complete: Accurate and Complete Info
+      image_quality: Image Quality
+      quick_agile_response: Speed and Agility in Response
+      general_property: General Property
+      general_listing: General Listing
+    show:
+      asking_price: Asking Price
+      rent_price: Rental Price
+      description: Description
+      features: Features
+      other_properties_you_might_lik: Other properties you might like
+      pet-friendly: Pet-Friendly
+      "pet-friendly": Pet-Frieldly
+      recently_sold_homes_near: 'Recently sold properties near '
+      restaurant_&_shopping: Restaurant & Shopping
+      "restaurant_&_shopping": "Restaurant & Shopping"
+      user: user
+      save_listing: Save Listing
+      share_this_property: Share This Property
+      sold!: Sold!
+      "sold!": "SOLD"
+      "rented!": "RENTED"
+      walkability: Walkability
+      mansion: Mansion
+      dirt: Dirt
+      yes: Yes
+      no: No
+      laundry: Laundry
+      study: Study
+      den: Den
+      office: Office
+      dining: Dining
+      confirm: Yes
+      cancel: No
+      none: No
+      view_map: View Map
+      back: Back to the Top
+      average: Avg
+    step2:
+      add_property_photos: Add Property Photos
+      back: Back
+      continue: Continue
+      drag_photos_to_rearrange_their: drag photos to rearrange their order.
+      drop_pictures_here: Drop pictures here
+      note: note
+      remember,_the_higher_the_quali: Remember, the higher the quality the better. Drag photos into the box or click the box to select them from your computer.
+      upload_from_your_computer: Upload from your computer
+      your_browser_doesn't_have_flas: Your browser doesn't have Flash, Silverlight or HTML5 support.
+    step3:
+      back: Back
+      by_submitting_this_listing,_yo: By sending this listing, you agree to the General Terms and Conditions of %{link}.
+      review_and_submit_your_listing: Review and Submit Your Listing
+      sold: SOLD
+      submit: Submit
+      rented: RENTED
+    pin_modal:
+      full_map: See full map
+      open_map: Open Map
+      address: Address
+  real_state_directory:
+    index:
+      title: Real State Directory
+      filter: Filtro
+      name: Name
+      search: Search
+      clear: Clear
+  posts:
+    index:
+      all_news: All News
+      new: Add New
+    new:
+      title: New
+    edit:
+      title: Edit New
+    search:
+      date_from: From
+      date_to: To
+      title_cont: URL
+      clear: Clear Filters
+    list:
+      date: Date
+      title: URL
+  news:
+    index:
+      title: News from MiTerra
+
+  rent: Rentals
+  sale: For Sale
+  seller: Seller
+  type: Account Type
+  type: Account Type
+
+  message_mailer:
+    new_message:
+      greeting: Hello
+      message1: You have a new message from MiTerra! See below for message details.
+      message2: You can always visit your account on %{link} and see your past messages.
+      from: From
+      email: Email
+      phone: Phone
+      goodbye: With all regards, <b>MiTerra Team</b>
+  dictionary:
+    all: All
+    both: Both
+    no_result: No results matched
+    visits: Visits
+  multiselect:
+    nonSelectedText: No selected
+    nSelectedText: selected
+    selectAllText: All
+
+  helpers:
+    label:
+      post:
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        name: Name
+        phone_number: Phone number
+        type: Account Type
+    submit:
+      create: Create
+      update: Update
+  number:
+    currency:
+      format:
+        delimiter: ","
+        precision: 0
+        separator: "."

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Mi terra</title>
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- formstyler -->
+	<script type="text/javascript" src="js/jquery.formstyler.js"></script>
+	<script type="text/javascript">
+		(function($) {
+		$(function() {
+			$('input, select').styler();
+		});
+		})(jQuery);
+
+	</script>
+	
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="container">
+				<!-- navigation -->
+				 <nav>
+					  <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+					  </div>
+					  <div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="buy.html">Buy</a></li>
+							<li><a href="sell.html">Sell</a></li>
+							<li><a href="rent.html">Rent</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						<ul class="navbar-right">
+							<li class="visible-sm-block"><a href="#" title="Sign In"><span class="glyphicon glyphicon-user"></span></a></li>
+							<li class="hidden-sm"><a href="#">Sign In</a><span>or</span><a href="#">Join</a></li>						
+						</ul>
+					  </div><!--/.nav-collapse -->
+				  </nav>
+				<!-- /navigation -->
+			</div>
+		</header>
+		<!-- /header -->
+		<div class="container">
+			<div class="padding-block">
+				<!-- search-block -->
+				<div class="search-block">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="wrap">
+								<p>
+									<span class="sprites i-search"></span>
+									<input type="text" placeholder="Address, Neighborhood, or ZIP">
+								</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 text-center">
+							<a href="#">My Homes</a>
+							<a href="#">My Searches</a>
+							<div class="user-mini">
+								<div class="name">Marwin Maxwell</div>
+								<div class="wrap-photo"><img src="img/content/user-mini.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /search-block -->
+				<!-- viewing -->
+				<div class="viewing">
+					<strong>Viewing Your Own Profile</strong>
+					<div class="pull-right">
+						<ul class="list-inline separator">
+							<li><a href="#">Settings</a></li>
+							<li><a href="#">View your profile as others see it</a></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+					<hr>
+					<p><span>Your MiTerra profile URL:</span> <a href="#">www.miterra.com/marwin</a><a href="#" class="pull-right">get a peronalized URL</a></p>
+				</div>
+				<!-- /viewing -->
+				<div class="row">
+					<div class="col-sm-8">
+						<!-- user-info -->
+						<div id="user-info">
+							<section>
+								<div class="row">
+									<div class="col-sm-5"><div class="wrap-image"><img src="img/content/user.jpg" alt="" class="img-rounded img-responsive center-block"></div></div>
+									<div class="col-sm-7">
+										<!-- description -->
+										<div class="description">
+											<p class="name green-text">Marwin Maxwell<span class="pro">pro</span></p>
+											<p>No Reviews Yet</p>
+											<p><span class="big"><strong>(310) 651 - 7507</strong> Agent with ActBold</span></p>
+											<p>License Number(s): <span>#123456789</span> <a href="#" class="green-text">Edit</a></p>
+											<p><a href="#" class="share">Share Profile</a></p>
+										</div>
+										<!-- /description -->
+									</div>
+								</div>
+							</section>
+							<section>
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tabpanel" aria-expanded="false" aria-controls="tabpanel">
+									  <span class="sr-only">Toggle navigation</span>
+									  <span class="icon-bar"></span>
+									  <span class="icon-bar"></span>
+									  <span class="icon-bar"></span>
+									</button>
+								</div>
+								<div role="tabpanel">
+									<ul class="nav nav-tabs navbar-collapse nav-justified collapse standart" role="tablist" id="tabpanel" >
+										<li role="presentation" class="active"><a href="#Overview" aria-controls="Overview" role="tab" data-toggle="tab">Overview</a></li>
+										<li role="presentation"><a href="#Reviews" aria-controls="Reviews" role="tab" data-toggle="tab">Reviews (0)</a></li>
+										<li role="presentation"><a href="#Listings" aria-controls="Listings" role="tab" data-toggle="tab">Add Completed Listings</a></li>
+										<li role="presentation"><a href="#About" aria-controls="About" role="tab" data-toggle="tab">About</a></li>
+										<li role="presentation"><a href="#Activity" aria-controls="Activity" role="tab" data-toggle="tab">Activity (0)</a></li>
+									</ul>
+								  <div class="tab-content first">
+									<div role="tabpanel" class="tab-pane fade active in" id="Overview"><h2>Overview</h2></div>
+									<div role="tabpanel" class="tab-pane fade" id="Reviews">
+										<h2>Reviews Enabled</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										<button class="btn btn-danger">Disable Reviews</button>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Listings"><h2>Add Completed Listings</h2></div>
+									<div role="tabpanel" class="tab-pane fade" id="About"><h2>About</h2></div>
+									<div role="tabpanel" class="tab-pane fade" id="Activity"><h2>Activity</h2></div>
+								  </div>
+								</div>
+							</section>
+							<section>
+								<h2>Request or Add Reviews</h2>
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tabpanel-2" aria-expanded="false" aria-controls="tabpanel-2">
+									  <span class="sr-only">Toggle navigation</span>
+									  <span class="icon-bar"></span>
+									  <span class="icon-bar"></span>
+									  <span class="icon-bar"></span>
+									</button>
+								</div>
+								<div role="tabpanel">
+									<ul class="nav nav-tabs navbar-collapse collapse standart" role="tablist" id="tabpanel-2" >
+										<li role="presentation" class="active"><a href="#About-Requests" aria-controls="About-Requests" role="tab" data-toggle="tab">About Requests</a></li>
+										<li role="presentation"><a href="#Request-Email" aria-controls="Request-Email" role="tab" data-toggle="tab">Request via Email</a></li>
+										<li role="presentation"><a href="#Add-Reviews" aria-controls="Add-Reviews" role="tab" data-toggle="tab">Add Reviews</a></li>
+									</ul>
+								  <div class="tab-content">
+									<div role="tabpanel" class="tab-pane fade active in" id="About-Requests">
+										<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Request-Email"></div>
+									<div role="tabpanel" class="tab-pane fade" id="Add-Reviews"></div>
+								  </div>
+								</div>
+							</section>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<h2>Reviews Summary</h2>
+										<div class="stars-big">
+											Overall on MiTerra
+											<ul class="voting">
+												<li class="one"><a href="#">1</a></li>
+												<li class="two"><a href="#">2</a></li>
+												<li class="three"><a href="#">3</a></li>
+												<li class="four"><a href="#">4</a></li>
+												<li class="five"><a href="#">5</a></li>
+											</ul>
+										</div>
+										<div class="timer" id="timer"></div>
+										<div class="wrap-text">
+											<h5>Review Distribution</h5>
+											<p>25 Positive Reviews</p>
+											<p>16 Critical Reviews</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<h2>Skill Ratings</h2>
+										<div class="stars-small">
+											Honesty & Intregity
+											<ul class="voting">
+												<li class="one"><a href="#">1</a></li>
+												<li class="two"><a href="#">2</a></li>
+												<li class="three"><a href="#">3</a></li>
+												<li class="four"><a href="#">4</a></li>
+												<li class="five"><a href="#">5</a></li>
+											</ul>
+										</div>
+										<div class="stars-small">
+											Responsiveness
+											<ul class="voting">
+												<li class="one"><a href="#">1</a></li>
+												<li class="two"><a href="#">2</a></li>
+												<li class="three"><a href="#">3</a></li>
+												<li class="four"><a href="#">4</a></li>
+												<li class="five"><a href="#">5</a></li>
+											</ul>
+										</div>
+										<div class="stars-small">
+											Local Knowledge
+											<ul class="voting">
+												<li class="one"><a href="#">1</a></li>
+												<li class="two"><a href="#">2</a></li>
+												<li class="three"><a href="#">3</a></li>
+												<li class="four"><a href="#">4</a></li>
+												<li class="five"><a href="#">5</a></li>
+											</ul>
+										</div>
+										<div class="stars-small">
+											Negotiation
+											<ul class="voting">
+												<li class="one"><a href="#">1</a></li>
+												<li class="two"><a href="#">2</a></li>
+												<li class="three"><a href="#">3</a></li>
+												<li class="four"><a href="#">4</a></li>
+												<li class="five"><a href="#">5</a></li>
+											</ul>
+										</div>
+										<div class="stars-small">
+											Process Expertise
+											<ul class="voting">
+												<li class="one"><a href="#">1</a></li>
+												<li class="two"><a href="#">2</a></li>
+												<li class="three"><a href="#">3</a></li>
+												<li class="four"><a href="#">4</a></li>
+												<li class="five"><a href="#">5</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!--/user-info -->
+						
+					</div>
+					<div class="col-sm-4 hidden-xs">
+						<!-- question -->
+						<div class="question">
+							<div class="content">Lorem ipsum dolor sit amet, consectetur pisicing elit, sed do eiusmoempor incididunt ut ?</div>
+							<textarea name="answer" id="answer" placeholder="Your answer here ..."></textarea>
+							<p><small>17 questions left</small><button class="pull-right btn-default">Next</button></p>
+							<div class="clearfix"></div>
+							<hr>
+							<p>Profile Views in the past few days</p>
+							<p><span>27</span></p>
+							<hr>
+							<p>Lifetime Views</p>
+							<p><span>3</span></p>
+							<hr>
+						</div>
+						<!-- /question -->
+						<!-- areas -->
+						<div class="areas">
+							<h2>Service Areas</h2>
+							<p>Los Angeles, CA</p>
+							<p>90266</p>
+							<p>90049</p>
+						</div>
+						<!-- /areas -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /search-block -->
+		
+	</div>
+	<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1 copyright">© 2014</div>
+					<div class="col-sm-7">
+						<ul class="list-inline footer-nav">
+							<li><a href="about.html">About</a></li>
+							<li><a href="terms.html">Terms of Use</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="social list-inline">
+							<li>Follow us</li>
+							<li><a href="#" class="sprites i-twitter"></a></li>
+							<li><a href="#" class="sprites i-faceboock"></a></li>
+							<li><a href="#" class="sprites i-google"></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+		<!-- /footer -->
+</body>
+</html>

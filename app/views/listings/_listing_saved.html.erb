@@ -1,0 +1,3 @@
+<div class="green-text" id="listing_saved">
+  <span class="sprites i-saved"></span><%= t('.listing_saved') %> <%= link_to raw('<span class="glyphicon glyphicon-trash"></span>'), saved_listing_path(@saved_listing), method:"delete", remote:true, confirm: 'Delete?', data: {type: "script",message: 'Are you sure?', severity:'danger'} %>
+</div>

@@ -1,0 +1,4 @@
+<% user = @user %>
+$('.rate-container').html('<%= j render('account/rate', agent_profile: user.agent_profile) %>');
+$('.general-rate-container').html('<%= j render('account/rate_property', rate_property: 'general', agent_profile: user.agent_profile, readonly: true) %>');
+initstars();

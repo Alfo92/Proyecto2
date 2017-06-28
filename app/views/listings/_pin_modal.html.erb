@@ -1,0 +1,40 @@
+<div class="pin-container">
+  <div id="siteNotice"></div>
+    <%= link_to listing_path(listing) do %>
+      <div class="green-back pin-title">
+        <%= simple_format listing.quick_look.capitalize, {class: 'no-margin'}, {} %>
+        <% if listing.sold? %>
+            <span class='red-text' style="font-size: 20px;">
+              <%= listing.for_rent? ? t("listings.show.rented!") : t("listings.show.sold!") %>
+            </span>
+        <% end %>
+      </div>
+    <% end %>
+  <div class="row">
+    <div class="col-xs-5 text-center">
+      <%= link_to listing_path(listing) do %>
+        <%= image_tag(listing.primary_photo.try(:medium_url) || "house-holder.jpg", style: 'max-width: 100%; max-height: 100%; margin-top: 5px;', class:"img-responsive") %>
+      <% end %>
+    </div>
+    <div class="col-xs-7">
+      <div class="row">
+        <div class="price col-xs-12">
+          <div class="green-text"><%= t(listing.type) %> (<%= for_sale_or_rent(listing) %>) </div>
+          <p title="<%= listing_price(listing) %>">
+            <%= listing_price(listing) %><br>
+            <span class="smaller <%= listing.listing_properties.where(:key => :price_type.to_s) == :guarani ? "text-success" : "text-danger" %>">
+              <%= listing_other_price(listing) %>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <a target="_black" href="https://maps.google.com/?q=<%= listing.latitude %>,<%= listing.longitude %>" class="btn btn-success btn-sm">
+            <%= t('.open_map') %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

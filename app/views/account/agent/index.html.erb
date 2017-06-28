@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="padding-block top-padding">
+    <div class="row" role="tabpanel">
+      <div class="col-sm-3">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#left-menu" aria-expanded="false" aria-controls="left-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- left-menu -->
+        <ul class="account-navigation nav navbar-collapse collapse" role="tablist" id="left-menu">
+          <li class="active"><a href="#user-info" aria-controls="profile" role="tab" data-toggle="tab"><%= t(".profile") %></a></li>
+          <li><a href="#leads" aria-controls="leads" role="tab" data-toggle="tab"><%= t(".my_leads") %></a></li>
+          <li><a href="#listings" aria-controls="listings" role="tab" data-toggle="tab"><%= t(".my_listings") %></a></li>
+          <li><a href="#savedlistings" aria-controls="savedlistings" role="tab" data-toggle="tab"><%= t(".saved_listings") %></a></li>
+        </ul>
+        <!-- /left-menu -->
+
+      </div>
+      <div class="col-sm-9 tab-content">
+        <!-- user-info -->
+        <%= render partial:"profile" %>
+        <!-- /user-info -->
+        <!-- listings -->
+        <%= render partial:"listings" %>
+        <!-- /listings -->
+        <!-- listings -->
+        <%= render partial:"leads" %>
+        <!-- /listings -->
+        <%= render partial: "promote" %>
+         <!-- savedlistings -->
+         <div id="savedlistings" role="tabpanel" class="tab-pane" >
+          <h1 class="listing-title">
+            <span class="sprites i-listing"></span>
+            <%= t(".saved_listings") %>
+          </h1>
+        <% current_user.saved_listings.includes(:listing).each do |saved_listing| %>
+            <% listing = saved_listing.listing %>
+              <%= render partial:'account/agent/small_listing', locals:{listing:listing, edit_button: false} %>
+          <% end %>
+         <!-- /savedlistings -->
+         </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

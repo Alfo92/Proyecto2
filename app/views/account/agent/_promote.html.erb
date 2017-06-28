@@ -1,0 +1,35 @@
+<!-- promote-listing -->
+<div id="promote" class="collapse"> 
+  <div class="promote-listing">
+    <div class="promote-title"><span>Promote Listing</span></div>
+    <div class="row">
+      <div class="col-sm-4">
+        <a href="#" class="promote-links">
+          <span class="border-block">
+            <span class="sprites icons"></span>
+            <span class="tariff-name">silver</span>
+            <span class="cost green-text">100</span>
+            <span class="promote-text">
+              <span class="green-text">$</span><br>
+              per <br>month
+            </span>
+          </span>
+          <span class="promote-list">dolor sit amet </span>
+          <span class="promote-list">consectetur </span>
+          <span class="promote-list">adipisicing elit</span>
+        </a>
+      </div>
+      <form action="/charges" method="POST">        
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_EYBoEjUE1WImQGk4hXXXr1pu"
+          data-amount="10000"
+          data-name="Miterra"
+          data-description="Promote Listing ($100.00)"
+          data-image="/assets/logo-square.png">
+        </script>
+      </form>
+    </div>
+  </div>
+</div>
+            <!-- /promote -->

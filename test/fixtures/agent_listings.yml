@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: agent_listings
+#
+#  id         :integer          not null, primary key
+#  agent_id   :integer
+#  listing_id :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agent_id: 1
+  listing_id: 1
+
+two:
+  agent_id: 1
+  listing_id: 1

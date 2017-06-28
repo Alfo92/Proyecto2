@@ -1,0 +1,3 @@
+
+$('#search-container').html('<%= j(render 'real_state_directory/search', q: @q) %>');
+$('#list-container').html('<%= j(render "real_state_directory/profiles", users: @users) %>');

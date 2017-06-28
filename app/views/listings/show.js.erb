@@ -1,0 +1,38 @@
+<% if @listing.safety_average %>
+  $('.safety-summ small').html('(<%= "#{t('listings.rate.average')}: #{@listing.safety_average.avg.round(2)}" %><i class="fa fa-star-o"></i>, <%= @listing.safety_average.qty %><i class="fa fa-user-o"></i>)');
+<% end %>
+
+<% if @listing.price_average %>
+  $('.price-summ small').html('(<%= "#{t('listings.rate.average')}: #{@listing.price_average.avg.round(2)}" %><i class="fa fa-star-o"></i>, <%= @listing.price_average.qty %><i class="fa fa-user-o"></i>)');
+<% end %>
+
+<% if @listing.location_average %>
+  $('.location-summ small').html('(<%= "#{t('listings.rate.average')}: #{@listing.location_average.avg.round(2)}" %><i class="fa fa-star-o"></i>, <%= @listing.location_average.qty %><i class="fa fa-user-o"></i>)');
+<% end %>
+
+<% if @listing.public_services_average %>
+  $('.public-services-summ small').html('(<%= "#{t('listings.rate.average')}: #{@listing.public_services_average.avg.round(2)}" %><i class="fa fa-star-o"></i>, <%= @listing.public_services_average.qty %><i class="fa fa-user-o"></i>)');
+<% end %>
+
+<% if @listing.complete_info_average %>
+  $('.complete-summ small').html('(<%= "#{t('listings.rate.average')}: #{@listing.complete_info_average.avg.round(2)}" %><i class="fa fa-star-o"></i>, <%= @listing.complete_info_average.qty %><i class="fa fa-user-o"></i>)');
+<% end %>
+
+<% if @listing.image_quality_average %>
+  $('.image-quality-summ small').html('(<%= "#{t('listings.rate.average')}: #{@listing.image_quality_average.avg.round(2)}" %><i class="fa fa-star-o"></i>, <%= @listing.image_quality_average.qty %><i class="fa fa-user-o"></i>)');
+<% end %>
+
+<% if @listing.speed_agility_answer_average %>
+  $('.speed-agility-answer-summ small').html('(<%= "#{t('listings.rate.average')}: #{@listing.speed_agility_answer_average.avg.round(2)}" %><i class="fa fa-star-o"></i>, <%= @listing.speed_agility_answer_average.qty %><i class="fa fa-user-o"></i>)');
+<% end %>
+
+// summaries
+<% general_rate = @listing.property_general_rate %>
+$(".property-summ small").html('(<%= "#{t('listings.rate.average')}: #{general_rate.round(2)}" %> <i class="fa fa-star-o"></i>)');
+$(".general-property-star").html('<%= j (rating_for @listing, "general_property", enable_half: true, half_show: true, readonly: true, noRatedMsg: t('listings.rate.general_property'), targetScore: general_rate) %>');
+initOneStar($(".general-property-star .star"));
+
+<% general_rate = @listing.listing_general_rate %>
+$(".listing-summ small").html('(<%= "#{t('listings.rate.average')}: #{general_rate.round(2)}" %> <i class="fa fa-star-o"></i>)');
+$(".general-listing-star").html('<%= j (rating_for @listing, "general_listing", enable_half: true, half_show: true, readonly: true, noRatedMsg: t('listings.rate.general_listing'), targetScore: general_rate) %>');
+initOneStar($(".general-listing-star .star"));

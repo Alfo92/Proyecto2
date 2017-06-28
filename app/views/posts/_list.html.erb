@@ -1,0 +1,39 @@
+<div class="panel panel-success">
+  <div class="panel-body">
+    <table class="table table-condensed table-striped">
+      <thead>
+        <tr>
+          <th class="green-text"><%= t('.date') %></th>
+          <th class="green-text"><%= t('.title') %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="list-container">
+        <%= render 'posts/list_rows', posts: posts %>
+      </tbody>
+    </table>
+
+    <div id="paginator" class="text-right hide">
+      <%= paginate @posts, params: {q: params[:q]}, remote: true %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    var approachingBottomOfPage, loadNextPageAt;
+    loadNextPageAt = 200;
+
+    approachingBottomOfPage = function() {
+      return document.documentElement.clientHeight + $(document).scrollTop() + loadNextPageAt > document.body.offsetHeight;
+    };
+
+    $(window).scroll(function() {
+      console.log(approachingBottomOfPage());
+      if (approachingBottomOfPage()) {
+        $('#paginator .next a').click();
+      }
+    });
+
+  });
+</script>

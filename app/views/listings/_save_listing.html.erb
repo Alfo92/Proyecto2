@@ -1,0 +1,1 @@
+<%= link_to raw('<span class="sprites i-saved"></span>'+t(".save_listing")), saved_listings_path(saved_listing:{listing_id:@listing.id},:format => :js), remote:true, method:"post", class: "green-text", id:"save_listing_link", data: {type: "script"}  %>

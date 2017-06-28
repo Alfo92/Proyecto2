@@ -1,0 +1,1309 @@
+es:
+  es: ES
+  en: EN
+  country_code: PY
+  unnamed_road: Calle no definida
+  go_to_top: Ir Arriba
+  enumerize:
+    user:
+      language:
+        es: Español
+        en: Ingles
+  time:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d %b"
+      long: "%d %B, %Y"
+  datetime:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d %b"
+      long: "%d %B, %Y"  
+  Apartment: Departamento
+  CommercialBuilding: Local Comercial
+  Farm: Rural
+  House: Casa
+  Land: Terreno
+  Office: Oficina
+  Search: Buscar
+  Warehouse: Tinglado/Depósito
+  Subdivision: Loteamientos
+  Fieldstay: Campos / Estancias
+  Cottage: Casa de Campo / Casa Quinta
+  Duplex: Dúplex
+  account:
+    agent:
+      no_reviews_yet: No hay comentarios
+      saved_listing:
+        property_type: Tipo de propiedad
+        Apartment: Departamento
+        CommercialBuilding: Local Comercial
+        Farm: Rural
+        House: Casa
+        Land: Terreno
+        Office: Oficina
+        Search: Buscar
+        Warehouse: Tinglado/Depósito
+        Subdivision: Loteamientos
+        Fieldstay: Campos / Estancias
+        Cottage: Casa de Campo / Casa Quinta
+        Duplex: Dúplex
+      index:
+        feature_a_listing: Presentar una publicación
+        my_leads: Mis Interesados/Visitas
+        my_listings: Mis publicaciones
+        profile: Perfil
+        saved_listings: Publicaciones guardadas
+      leads:
+        my_leads: Mis Interesados/Visitas
+        profile_views: perfil visitas
+      listings:
+        add_listings: Agregar Publicación
+        as_of: a partir de
+        for_rent: Alquiler
+        for_sale: Venta
+        my_listings: Mis publicaciones
+        property_views: visitas a la propiedad
+        sold: Vendido
+        sold_rented: Vendido/Alquilado
+        summary: Resumen
+        toggle_navigation: navegación de palanca
+      profile:
+        current_password: Contraseña Actual
+        email: Correo electrónico
+        email_addresses: Dirección de correo electrónico
+        name: Nombre
+        new_password: Nueva contraseña
+        password: Contraseña
+        password_confirmation: Confirmar contraseña
+        phone_number: Número de teléfono
+        language: Idioma
+        update: Actualizar
+        view_profile: Ver el perfil
+        type: Tipo de cuenta
+        undefined: No definido
+        choose_file: elegir foto de perfil
+        no_file_chosen: no se eligió un archivo
+        my_account: Mi Cuenta
+        sure: ¿Estás seguro?.
+        destroy_my_account: Eliminar
+        destroy_my_account_msg: ¿Estás seguro?. Si eliminas tu cuenta, ya no podrás loguearte
+        disable_my_account: Desactivar  
+        disable_my_account_msg: ¿Estás seguro?. Si desactivas tu cuenta perderas todos tus privilegios 
+        enable_my_account: Activar  
+        enable_my_account_msg: ¿Deseas activar tu cuenta?  
+      show:
+        about: Sobre
+        phone: Número de teléfono
+        skill_ratings: Puntuaciones
+        sold_listings: Publicaciones Vendidas
+        specialties: Especialidades
+        user_available_listings: "Publicaciones de %{user}"
+        share_this_agent: Compartir información del Vendedor
+        share_profile: Compartir el perfil de %{name}
+        average: Prom.
+      small_listing:
+        photo: Foto
+        price: Precio
+        add_photos: Agregar fotos
+        are_you_sure_you_want_to_delet: ¿Estas seguro de que quieres eliminar ésta publicación?
+        are_you_sure_you_want_to_mark: ¿Está seguro que quiere marcar la publicación como vendido?
+        congratulations_on_selling_you: ¡Felicidades por la venta de tu %{listing_type}!
+        congratulations_on_renting_you: ¡Felicidades por el alquiler de tu %{listing_type}!
+        ask_sell_price: ¿Por cuanto se vendió el item de la publicación?
+        ask_rent_price: ¿Por cuanto se alquiló el item de la publicación?
+
+        delete_listing: Eliminar la publicación
+        edit_listing: Editar la publicación
+        edit_listing_detail: Editar los detalles de la publicación
+        mark_listing_as_sold: Marcar la publicación como vendido/alquilado
+        promote_listing: Promover la publicación
+        save_listing: Guardar
+
+    rate_property:
+      average: Prom.
+      honesty: Honestidad e Integridad
+      knowledge: Conocimiento Local
+      expertise: Experiencia en Procesos
+      agile_response: Rapidez y Agilidad en Respuesta
+      negotiation: Negociación
+      general: General
+
+    consumer:
+      index:
+        user_since: Usuario desde
+        Homebuyer: Comprador de vivienda
+        in: en
+        edit_profile: Editar perfil
+        view_your_public_profile: Ver perfil público
+        save_profile: Guardar perfil
+        account_settings: Configuración de cuenta
+        email: Correo electrónico
+        password: Contraseña
+        new_password: Nueva contraseña
+        password_confirmation: Confirmar contraseña
+        phone_number: Número de teléfono
+        saved_listings: Publicaciones guardadas
+        prohibited_this_record_from_being_saved: no permiten que este ítem sea guardado
+        profile: Perfil
+      saved_listing:
+        property_type: Tipo de propiedad
+  agent: Vendedor
+  both: Vendedor & Comprador
+  buyer: Comprador
+  content:
+    index:
+      buy_your_miterra: ¿Quiénes somos?
+      city: "Ciudad ej.: Asunción"
+      ubication: "Ubicación ej.:"
+      find_a: encontrar un
+      find_your_miterra: ¿Cómo Utilizar MiTerra?
+      find_your_new_home: Encontrá tu lugar
+      learn_more: Aprende Más
+      read_more: Leer Más
+      next: Próximo
+      previous: Previo
+      search: BUSCAR
+      select: Seleccionar
+      sell_your_miterra: Novedades MiTerra
+      search_200_more_agent_listed_homes_for_sale_updated_every_15_30_minutes: Es muy fácil utilizar el portal de MiTerra solo tiene que registrarse con un correo o con facebook luego podrá subir gratuitamente su propiedad, rellenando un cuestionario relacionado a la misma y listo. ¡Fácil y Rápido!
+      get_in_person_guidance_at_each_step_from_your_local_MiTerra_agent: Somos una empresa de tecnología que busca simplificar la búsqueda de información por medio de una plataforma con datos de inmuebles en Paraguay para todos los clientes. Buscamos generar el mejor servicio y para ello invertimos en el desarrollo de una aplicación y un sitio web, con una empresa Norteamericana situada en California.
+      picture_perfect_debut_online_marketing_to_all_the_right_buyers_for_a_1_5_listing_fee: Todas las noticias, notas y acontecimientos de último momento sobre el rubro inmobiliario del Paraguay.
+    about:
+      who_we_are_title: ¿quiénes somos?
+      who_we_are_body: Somos una empresa de tecnología que busca simplificar la búsqueda de información por medio de una plataforma con datos de inmuebles en Paraguay para todos los clientes. Buscamos generar el mejor servicio y para ello invertimos en el desarrollo de una aplicación y un sitio web, con una empresa Norteamericana situada en California. En MiTerra.com el usuario puede obtener información específica, completa y disfrutar de una gran variedad de propiedades y reseñas sobre las mismas y así tomar una decisión acertada. La plataforma es útil para el vendedor, sin disponer de una inversión puede publicar la propiedad que desee, poner en alquiler o venta de una manera rápida y eficaz. Pretendemos ser el camino más corto y dinámico entre el comprador y el vendedor de inmuebles.
+      mission_title: Misión
+      mission_body: Buscamos innovar por medio de la tecnología, brindando una plataforma inmobiliaria que dinamice la relación comercial entre los vendedores y compradores y así estar a la vanguardia en este rubro y ser un factor importante en el aumento de la generación de negocios inmobiliarios en nuestro país y el mundo.
+      vision_title: Visión
+      vision_body: Promover el rubro inmobiliario nacional e internacional utilizando un aporte tecnológico beneficiando así a los usuarios y prosperando a la empresa en calidad y dinamismo para la mayor y mejor generación de negocios inmobiliarios.
+      values_title: Valores
+      values_body: Innovación, Calidad, Desarrollo, Honestidad, Responsabilidad, Eficiencia
+    privacy:
+      privacy_policy_title: Política de Privacidad
+      privacy_policy_body: '<p>Estas Políticas de Privacidad son parte integrante de los Términos y Condiciones Generales de www.miterra.com (MiTerra.com). Mediante la aceptación de los Términos y Condiciones Generales el usuario acepta las políticas aquí contenidas. </p> <p>Como parte normal de nuestra actividad recogemos y, en algunos casos, revelamos información sobre nuestros usuarios y visitantes de nuestro sitio Web. Estas Políticas de Privacidad describen la información que MiTerra.com recoge sobre sus usuarios y visitantes y lo que puede hacerse con dicha información. Es muy importante que los usuarios y visitantes de este sitio web conozcan la política de privacidad porque al completar los formularios de consulta y/o navegar están prestando consentimiento para que MiTerra.com utilice los datos e información personal de acuerdo a las políticas que a continuación se detallan. </p> <p>La privacidad y adecuada utilización de la información de los usuarios es de vital importancia para MiTerra.com; en tal sentido se utilizan mecanismos de seguridad informática de razonable eficacia para la protección de esta información. </p>'
+      confidentiality_title: Confidencialidad
+      confidentiality_body: '<p>Una vez registrado, completado los formularios de consulta y/o navegado en su sitio Web, MiTerra.com no venderá, alquilará o compartirá la Información Personal excepto en las formas establecidas en estas políticas. Sin perjuicio de ello, el usuario consiente en forma expresa que MiTerra.com transfiera total o parcialmente la Información Personal a cualquiera de las sociedades controladas, controlantes y/o vinculadas con Rectora S.A.E, a cualquier título y en el momento, forma y condiciones que estime pertinentes, pudiendo utilizar esta información para cualquier unidad de negocios de Rectora S.A.E. Nos disponemos a realizar todo lo que esté a nuestro alcance para proteger la privacidad de la información personal que los usuarios nos brinden. Puede ocurrir que en virtud de disposiciones legales, órdenes judiciales MiTerra.com esté obligada a revelar información a las autoridades o terceras personas, o también puede suceder que terceros puedan acceder a información personal o a transmisiones de datos; en estos casos MiTerra.com no será responsable por la información revelada. </p>'
+      cookie_title: Políticas de cookies
+      cookie_body: '<p>El usuario y el visitante del sitio Web de www.miterra.com conoce y acepta que MiTerra.com podrá utilizar un sistema de seguimiento mediante la utilización de cookies (las "Cookies"). Las Cookies son pequeños archivos que se instalan en el disco rígido, con una duración limitada en el tiempo que ayudan a personalizar los servicios. También ofrecemos ciertas funcionalidades que sólo están disponibles mediante el empleo de Cookies. Las Cookies se utilizan con el fin de conocer los intereses y comportamiento como internautas de quienes visitan o son usuarios de nuestro Sitio Web y de esa forma, comprender mejor sus necesidades e intereses y darles un mejor servicio o proveerle información relacionada. También usaremos la información obtenida por intermedio de las Cookies para analizar las páginas navegadas por el visitante o usuario, las búsquedas realizadas, mejorar nuestras iniciativas comerciales y promocionales, mostrar publicidad o promociones, banners de interés, noticias sobre el mercado de Real State, perfeccionar nuestros servicios y personalizar los mismos.</p> <p>Utilizamos adicionalmente las Cookies para que el usuario no tenga que introducir su clave tan frecuentemente durante una sesión de navegación, también para contabilizar y corroborar las registraciones y la actividad del usuario, siempre teniendo como objetivo de la instalación de las Cookies, el beneficio del usuario que la recibe, y no será usado con otros fines ajenos a MiTerra.com. </p> <p>Se establece que la instalación, permanencia y existencia de las Cookies en el ordenador del usuario depende de su exclusiva voluntad y puede ser eliminada de su ordenador cuando el usuario así lo desee. Para saber como quitar las Cookies del sistema es necesario revisar la sección Ayuda (Help) del navegador.</p> <p>Adicionalmente, se pueden encontrar Cookies u otros sistemas similares instalados por terceros en ciertas páginas de nuestro sitio Web. Por ejemplo, al navegar por una página creada por un usuario, puede que exista una Cookie emplazada en tal página. </p> <p>Se aclara expresamente que estos Términos y Condiciones se relaciona con la utilización de Cookies por este sitio y no la utilización de Cookies por parte de terceros. MiTerra.com no controla el uso de Cookies por terceros.</p>'
+      info_title: ¿Qué hacemos con la información?
+      info_body: '<p>Para utilizar los servicios de MiTerra.com el usuario debe brindar cierta (información personal), como dirección de correo electrónico, número telefónico, domicilio etc. debiendo brindarla en forma completa y exacta; MiTerra.com puede corroborar esta información accediendo a información pública, centros de información de riesgos crediticios, para lo cual quedamos autorizados expresamente. MiTerra.com tratará esa información en forma confidencial.</p> <p>MiTerra.com queda expresamente autorizada a transmitir la información brindada por el usuario o visitante a las empresas que ofrecen sus productos y servicios en este sitio web, no siendo responsable por el tratamiento que estos terceros le den a dicha información.</p> <p>MiTerra.com puede almacenar automáticamente la actividad de los visitantes y usuarios dentro del sitio web. Tal información puede incluir la URL de la que provienen (estén o no en nuestro sitio web), a qué URL acceden seguidamente (estén o no en nuestro sitio web), qué navegador están usando, y sus direcciones IP. También las páginas visitadas, las búsquedas realizadas, entre otra información podrá ser almacenada y retenida. </p> <p><strong>En función de la autorización conferida MiTerra.com puede:</strong><br> <ul> <li><span class="enum"></span>  Generar las instancias de contacto entre las empresas que ofrecen sus productos y servicios y los interesados, potenciales clientes y clientes. Para estos casos MiTerra.com podrá suministrar los datos personales de los interesados, potenciales clientes y clientes a los prestadores de servicios al solo efecto de brindar información relativa a los productos y servicios ofrecidos.</li> <li><span class="enum"></span>  Utilizar la información para el mejoramiento de los procesos internos de MiTerra.com que permitan detectar intereses, necesidades y proveer información relacionada a estos, pudiendo utilizarlos para mejorar nuestras estrategias comerciales, personalizar ofertas y servicios.</li> <li><span class="enum"></span>  Enviar información o mensajes por correo electrónico sobre nuevos servicios.</li> <li><span class="enum"></span>  Mostrar publicidad o promociones, banners de interés para nuestros usuarios, además de la información expresamente autorizada en las preferencias.</li> <li><span class="enum"></span>  Enviar nuestra hoja informativa.</li> <li><span class="enum"></span>  Contactar con quienes publican la información generando un redireccionamiento de las consultas y/o solicitudes que el usuario realice.</li> <li><span class="enum"></span>  Enviar información o avisos por mensajes cortos de texto (SMS) al teléfono celular suministrado por el usuario a MiTerra.com. Los SMS podrán contener (sin limitarse a) información sobre los servicios de MiTerra.com y otras obligaciones adquiridas por el uso de tales servicios.</li> <li><span class="enum"></span>  Para el caso de que MiTerra.com organice concursos o promociones, los ganadores autorizan expresamente a difundir sus nombres, datos personales e imágenes y los de sus familias, por los medios y en las formas que consideren convenientes, con fines publicitarios y/o promocionales, sin derecho a compensación alguna.</li> <li><span class="enum"></span>  Compartir la información Personal (incluyendo dirección de correo electrónico) con los proveedores de servicios o las empresas de "Externalización" que contribuyan a mejorar o facilitar las operaciones a través de MiTerra.com, comprometiéndose a solicitar a estas empresas o proveedores el compromiso de velar por la privacidad de los datos de nuestros usuarios debiendo utilizar para ello mecanismos que cumplan estándares razonables de seguridad. MiTerra.com no se hace responsable por el uso indebido de la Información Personal del usuario que hagan estas compañías o sitios de Internet.</li> </ul> </p>'
+      underage_title: Menores de Edad
+      underage_body: '<p> Los servicios que se ofrecen en este sitio web solo lo son para personas mayores de edad con capacidad legal para contratar, debiendo abstenerse los menores de edad o incapaces de brindar datos personales para ser incluidas en nuestras bases de datos.- </p>'
+      personal_data_title: Acceso, cancelación y rectificación de los datos personales
+      personal_data_body: '<p>En función de lo establecido por la normativa vigente, MiTerra.com garantiza el derecho de los usuarios de acceder, cancelar y actualizar su Información Personal, incluyendo su dirección de correo electrónico. El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto. Este derecho lo puede ejercer vía Internet contactándonos en la siguiente dirección: info@miterra.com.py ingresando sus datos usted presta expreso consentimiento al tratamiento de sus datos por parte de MiTerra.com para los fines indicados precedentemente.</p> <p> Los usuarios garantizan y responden, en cualquier caso, de la veracidad, exactitud, vigencia y autenticidad de la Información Personal facilitada, y se comprometen a mantenerla debidamente actualizada. </p> <p> MiTerra.com podrá modificar en cualquier momento los términos y condiciones de estas Políticas de Privacidad y confidencialidad y/o las prácticas de envío de correos electrónicos. Si decidimos introducir algún cambio material a nuestras Políticas de Privacidad, te notificaremos publicando una versión actualizada de las Políticas en esta sección o mediante el envío de un correo electrónico o informándolo en la página principal u otras secciones del sitio para mantenerte actualizado de los cambios realizados. </p>'
+  date:
+    formats:
+      default: '%d/%m/%Y'
+      short: '%b %d'
+  devise:
+    sessions:
+      new:
+        "forgot_your_password?": "¿Olvidó su contraseña?"
+        sign_in: Ingresar
+        sign_up: Registrarse
+        remember_me: Recuérdame
+        dont_have_an_account_yet_join_now: ¿No tienes una cuenta? Regístrate ahora
+        please_sign_in: Por favor ingresar
+        email: Correo electrónico
+        email_address: Dirección de correo electrónico
+        password: Contraseña
+        already_have_an_account_login_now:  ¿Ya tienes una cuenta? Ingresá ahora
+        phone_number: Número de teléfono
+        confirm_password: Confirmar contraseña
+        type: Tipo de cuenta
+        choose_file: elegir foto de perfil
+    registrations:
+      new:
+        sign_in: Ingresar
+        sign_up: Registrarse
+        already_have_an_account_login_now:  ¿Ya tienes una cuenta? Ingresá ahora
+        name: Nombre
+        email_address: Dirección de correo electrónico
+        password: Contraseña
+        confirm_password: Confirmar contraseña
+        phone_number: Número de teléfono
+        type: Tipo de Cuenta
+        choose_file: elegir foto de perfil
+      edit:
+        edit: Editar
+        back: Atrás
+        cancel_my_account: Cancelar mi cuenta
+        unhappy_question: ¿Descontento?
+        sure: ¿Estás seguro?
+
+    passwords:
+      new:
+        "forgot_your_password?": "¿Olvidó su contraseña?"
+        send_me_reset_password_instructions: Enviarme instrucciones
+      edit:
+        change_your_password: Cambie tu contraseña
+        change_my_password: Cambiar mi contraseña
+    shared:
+      links:
+        log_in: Ingresar
+        sign_up: Registrarse
+        sign_in_with_Facebook: Ingresar con facebook
+        "didnt_receive_confirmation_instructions?": "¿No recibió la confirmacion de las instrucciones?"
+        "didnt_receive_unlock_instructions?": "¿No recibió las instrucciones de desbloqueo?"
+  registrations:
+    update:
+      success: Cambios guardados exitosamente
+      error: No se ha podido guardar los cambios. %{errors}
+  users:
+    set_language:
+      success: Se ha cambiado el idioma exitosamente
+      error: No se pudo cambiar el idioma
+      not_supported: Idioma no soportado
+    destroy:
+      success: Se ha eliminado tu cuenta
+      error: No se ha podido eliminar tu cuenta
+    disable:
+      success: Se ha desactivado tu cuenta
+      error: No se ha podido desactivar tu cuenta
+      info: Debes activar tu cuenta para poder publicar
+    enable:
+      success: Se ha activado tu cuenta
+      error: No se ha podido activar tu cuenta  
+  layouts:
+    application:
+      choose_file: Actualizar foto de perfil
+      no_file_chosen: no se eligió un archivo
+      select: Seleccionar
+    header:
+      about: "¿Quienes Somos?"
+      blog: Novedades MiTerra
+      buy: Compro
+      join: Registrarse
+      my_account: Mi Cuenta
+      rent: Alquilo
+      sell: Publica gratis
+      directory: Directorio Inmobiliario
+      sign_in: Ingresar
+      sign_out: Salir
+      or: o
+      posts: Administrar Novedades
+    registration:
+      login_with_facebook: Ingresar con Facebook
+      "already_have_an_account?": ¿Ya tiene una cuenta?
+      confirm_password: Confirmar contraseña
+      "dont_have_an_account_yet?": ¿No tiene una cuenta todavía?
+      email: Correo electrónico
+      email_address: Dirección de correo electrónico
+      join_now: Registrarse ahora
+      complete_form: Completar registro
+      name: Nombre
+      or: o
+      password: Contraseña
+      phone_number: Número de teléfono
+      register: Registrarse
+      sign_in: Ingresar
+      submit: Enviar
+      type: Tipo de cuenta
+      choose_file: elegir foto de perfil
+      no_file_chosen: no se eligió un archivo
+      password_confirmation: Confirmar contraseña
+      remember_me: Recordarme
+    footer:
+      about: Acerca de
+      terms_of_use: Términos y Condiciones Generales
+      privacy_policy: Política de Privacidad
+      follow_us: Síguenos
+      news: Novedades MiTerra
+  listings:
+    for_rent: Alquiler
+    for_sale: Venta
+    sell: Venta
+    rent: Alquiler
+    select: Seleccionar
+    dollars: Dólar
+    guarani: Guaraníes
+    dolares: Dólares
+    header:
+      listing_address: Propiedad e información
+      map_title: Utilice el mapa para llegar a la ubicación exacta
+      photos: Agregar fotos
+      review_submit: Revisar y enviar
+      step_1_header: Por favor, proporcione a continuación la dirección de la publicación. Una vez que verifiquemos la dirección, puede continuar con el proceso de envío.
+      step_2_header: Mayor cantidad de fotos generan más exposición para sus publicaciones.
+      step_3_header: ''
+    index:
+      city: "Ubicación ej.: Asunción"
+      results: resultados
+      featured_listings: Anuncios destacados
+      ubication: "Ubicación ej.:"
+      price_max: Precio Máx.
+      price_min: Precio Mín.
+      description: Descripción
+      from: Desde
+      to: Hasta
+      feature: Característica
+      property_type: Propiedad
+      listing: Publicación
+      search: Buscar
+    mortgage_calculator:
+      amount_to_be_financed: Cantidad a ser financiada
+      annual_interest_rate: Tasa de interés anual
+      calculate: CALCULAR
+      down_payment: Pago inicial
+      finance_calculator: CALCULADORA DE FINANCIAMIENTO
+      "loan_term_(months)": "Plazo del préstamo (meses)"
+      monthly_payment: Pago mensual
+    new: &listing_form
+      select: Seleccionar
+      'address:': 'Dirección:'
+      listing_information: Descripción y Precio
+      check_address: Fijarse en la dirección
+      'city:': 'Ciudad:'
+      'country:': 'País:'
+      "don't_publicy_display_listing": "No exhibir públicamente la dirección de la publicación"
+      'neighborhood:': 'Vecindario:'
+      please_enter_the_listing_infor: Por favor ingrese a continuación la información de la publicación. Cuanto más información usted proporcione en la descripción, tiene más probabilidades de recibir más ofertas.
+      'state:': 'Departamento:'
+      "success!": "¡Éxito!"
+      'zip:': 'Código Postal:'
+      property_type: Tipo de Propiedad
+      Next: Siguiente
+      country:
+        py: Paraguay
+        us: Estados Unidos
+    form:
+      <<: *listing_form
+    default_attributes: &default_attributes
+      payment_options_placeholder: ej solo al contado, mensual
+      building_state_placeholder: ej nuevo, renovado...
+      amenities_placeholder: ej piscina, gimnasio, guarderia, ninguno
+      bedrooms_placeholder: ej 2, 3, etc
+      bathrooms_placeholder:  ej 2, 3
+      parking_placeholder: ej 2 vehiculos, ninguno, etc
+      description_placeholder: ej Parrilla, Living, Dormitorio y baño de servicio, Lavadero, Cocina con comedor, amoblado, area de servicio
+      location_description_placeholder: ej Supermercado Espana a pasos, Zona Colegio Goethe, A minutos del Sanatorio La Costa
+      short_description_placeholder: ej Dpto. de 3 dormitorios a estrenar, barrio Ikua Sati
+      other_info_placeholder: ej Alquiler minimo 1 año
+
+    new_apartment:
+      <<: *default_attributes
+      amenities: Amenities
+      bathrooms: Baños
+      bedrooms: Dormitorios
+      'bedrooms:': Dormitorios
+      building_name: Nombre del edificio
+      building_state: Estado del edificio
+      buy: Comprar
+      "common_m<sup>2</sup>": "Metros Comunes"
+      date_listed: Fecha de la publicación
+      description: Descripción del departamento
+      enter_the_web_address_where_co: Ingresar la dirección de la Web donde los clientes puedan encontrar más información acerca de esta propiedad específica
+      floor: Piso
+      furnished: Amueblado
+      home_facts: Datos de la casa
+      listing_type: Tipo de publicación
+      location_description: Descripción de la Ubicación
+      "m<sup>2</sup>": "m<sup>2</sup>"
+      monthly_expenses: Expensas /mes
+      parking: Estacionamiento
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      rent: Alquiler
+      rooms: Dormitorios
+      service_area: Área de servicio
+      short_description: Subtítulo de la Publicación
+      year_built: Año en que se construyó
+      other_info: Otra Información
+      price_type: Precio en
+      square_meters_lot: m<sup>2</sup> del lote
+      square_meters: m<sup>2</sup>
+      square_meters_communal: m<sup>2</sup> comunes
+      front_square_meters: Metros de frente
+      back_square_meters: Metros de fondo
+      commercial_use: Uso comercial
+      on_site_construction: Sitio en construcción
+      sewage: Alcantarillado
+      electricity: Electricidad
+      water: Agua
+      roadway: Camino
+      nearby_centers: Centros cercanos
+      virtual_tour: Tour virtual
+      currency: Moneda
+
+    new_commercialbuilding:
+      <<: *default_attributes
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      a/c: A/A
+      amenities: Amenities
+      back_m: Metros de fondo
+      ceiling_type: Tipo de cielo raso
+      commercial_use: Uso comercial
+      description: Descripción y Usos del Local
+      electricity: Electricidad
+      floor: Piso
+      floor_type: Tipo de piso
+      front_m: Metros de Frente
+      home_facts: Datos de la casa
+      square_meters: m<sup>2</sup>
+      m<sup>2</sup>: Metros Local
+      date_listed: Fecha de la publicación
+      monthly_expenses: Expensas /mes
+      nearby_centers: Centros cercanos
+      parking: Estacionamiento
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      commercial_state: Estado del local
+      shopping_center_name: Nombre del centro comercial (Si se aplica)
+      location_description: Descripción de la Ubicación
+      short_description: Subtítulo de la Publicación
+      water: Agua
+      year_built: Año en que se construyó
+      other_info: Otra información
+      building_name: Nombre del centro comercial (Si se aplica)
+      currency: Moneda
+      front_square_meters: Metros de frente
+      front_meters: Metros de frente
+      back_meters: Metros de fondo
+      back_square_meters: Metros de fondo
+      price_type: Precio en
+    new_commercial:
+      <<: *default_attributes
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      a/c: A/A
+      amenities: Amenities
+      back_m: Metros de fondo
+      ceiling_type: Tipo de cielo raso
+      commercial_use: Uso comercial
+      description: Descripción y Usos del Local
+      electricity: Electricidad
+      floor: Piso
+      floor_type: Tipo de piso
+      front_m: Metros de Frente
+      home_facts: Datos de la casa
+      square_meters: m<sup>2</sup>
+      m<sup>2</sup>: Metros Local
+      date_listed: Fecha de la publicación
+      monthly_expenses: Expensas /mes
+      nearby_centers: Centros cercanos
+      parking: Estacionamiento
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      commercial_state: Estado del local
+      shopping_center_name: Nombre del centro comercial (Si se aplica)
+      location_description: Descripción de la Ubicación
+      short_description: Subtítulo de la Publicación
+      water: Agua
+      year_built: Año en que se construyó
+      other_info: Otra información
+      building_name: Nombre del centro comercial (Si se aplica)
+      currency: Moneda
+      front_square_meters: Metros de frente
+      front_meters: Metros de frente
+      back_meters: Metros de fondo
+      back_square_meters: Metros de fondo
+      price_type: Precio en
+
+      shopping_center_name_placeholder: ej Shopping Zuni, Paseo Carmelitas, etc
+      commercial_state_placeholder: ej Nuevo, Necesita reparaciones, Recientemente reformado, Etc
+      amenities_placeholder: ej Estacionamiento para 30 vehiculos, banos comunes, seguridad, etc
+      description_placeholder: ej preparado para ferreteria, local de gastronomia, local en paseo nocturno
+      location_description_placeholder: ej Zona Shopping Jesuitas Plaza, Zona Paseo carmelitas, etc
+      short_description_placeholder: ej Local comercial en Paseo nocturno, clientela formada
+      other_info_placeholder: ej Se negocia mobiliarios del local aparte, alquiler minimo 3 años
+
+    new_farm:
+      <<: *default_attributes
+      listing_type: Venta / Renta
+      annual_rainfall: Precipitación anual (cc)
+      price_type: Precio en
+      description: Descripción
+      enhancements: Mejoras
+      description_placeholder: Mejoras realizadas, Tipo de Hierba, cultivos incluidos, plantaciones, animales incluidos etc
+      short_description_placeholder: ej. Oferta estancia 24 ha
+      enter_the_web_address_where_co: Ingresar la dirección de la Web donde los clientes puedan encontrar más información acerca de esta propiedad específica
+      included_animals: Animales incluidos
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      short_description: Subtítulo de la Publicación
+      price: Precio
+      date_listed: Fecha de la publicación
+      property_name: Nombre de la propiedad
+      commercial_use: Uso comercial
+      monthly_expenses: Expensas /mes
+      hectors: Hectáreas
+      pasture_hectors: Hectáreas de pasto
+      grass_type: Tipo de Hierba
+      included_crops: Cultivos incluidos
+      plantations: Plantaciones
+      payment_options: Opciones de pago
+      currency: Moneda
+      property_name_placeholder: ej. Estancia Alborada
+      hectors_placeholder: ej. 24 ha
+      annual_rainfall_placeholder: ej. 3000mm
+      payment_options_placeholder: ej. contado
+    new_house:
+      <<: *default_attributes
+      square_meters_land: Terreno m<sup>2</sup>
+      square_meters_built: m<sup>2</sup> construidos
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      price: Precio
+      payment_options: Formas de Pago
+      date_listed: Fecha de publicación
+      neighborhood: Barrio
+      condominium_name: Nombre del Condominio o Barrio Cerrado (si se aplica)
+      condominium_desc: Descripción del Condominio (si se aplica)
+      "built_m<sup>2</sup>": Construcciones (m<sup>2</sup>)
+      "land_m<sup>2</sup>": Terreno (m<sup>2</sup>)
+      duplex_state: Estado de la casa
+      house_state: Estado de la casa
+      parking_number: Estacionamientos
+      bedrooms: Dormitorios
+      bathrooms: Baños
+      house_desc: Descripción de la casa
+      location_description: Descripción de la ubicación
+      short_description: Subtítulo de la Publicación
+      other_info: Otra Información
+      listing_type: Tipo de publicación
+      date_listed: Fecha publicación
+      amenities: Amenities
+      laundry: Lavanderia
+      dining: Comedor
+      study: Studio
+      den: Despacho
+      office: Oficina
+      pool: Piscina
+      gym: Gimnasio
+      waterfront: Frente al mar
+      elevator: Ascensor
+      playground: Patio de recreo
+      pond: Estanque
+      clubhouse: Casa club
+      bathrooms: Baños
+      building_state: Estado de la construcción
+      enter_the_web_address_where_co: Ingresar la dirección de la Web donde los clientes puedan encontrar más información acerca de esta propiedad específica
+      furnished: Amoblada
+      home_facts: Datos de la casa
+      "house_m<sup>2</sup>": Casa (m<sup>2</sup>)
+      "lot_size_m<sup>2</sup>": Dimensiones del Terreno (m<sup>2</sup>)
+      parking: Estacionamiento
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      rooms: Cuartos
+      service_area: Área de servicio
+      sewage: Alcantarillado
+      type_of_house: Tipo de casa
+      year_built: Año en que se construyó
+      virtual_tour: Tour Virtual
+      house_type: Tipo de casa
+      roadway: Carretera
+      bedrooms: Dormitorios
+      square_meters: m<sup>2</sup>
+      square_meters_lot: m<sup>2</sup> del lote
+      property_name: Nombre de la propiedad
+      commercial_use: Uso comercial
+      monthly_expenses : Expensas /mes
+      hectors: Hectáreas
+      pasture_hectors: Hectáreas de pasto
+      grass_type: Tipo de Hierba
+      included_crops: Cultivos incluidos
+      plantations: Plantaciones
+      annual_rainfall: Lluvia anual
+      included_livestock: Ganadería incluida
+      enhancements: Mejoras
+      short_description: Subtítulo de la Publicación
+      building_name: Nombre de la construcción
+      floor: Piso
+      square_meters_communal: m<sup>2</sup> comunes
+      price_type: Precio en
+      location_description: Descripción de la ubicación
+      front_square_meters: Metros de frente
+      back_square_meters: Metros de fondo
+      on_site_construction: Sitio en construcción
+      electricity: Electricidad
+      water: Agua
+      nearby_centers: Centros cercanos
+      description: Descripción
+      back_meters: Metros de fondo
+      front_meters: Metros de frente
+      currency: Moneda
+
+      neighborhood_placeholder: ej Los Laureles, Ikua Sati, etc
+      condominium_name_placeholder: ej Parana Country Club
+      condominium_desc_placeholder: ej amenities, quincho, etc
+      house_desc_placeholder: ej Parrilla, Living, Dormitorio y baño de servicio, Piscina, Lavadero, Cocina con comedor
+      location_description_placeholder: ej Puntos de referencia, Zona Shopping Multiplaza
+      short_description_placeholder: ej Casa en oferta de 3 dormitorios en Barrio Los Laureles
+      other_info_placeholder: ej Precio de oferta por viaje
+      house_state_placeholder: ej Nuevo, Necesita reparaciones, Recientemente reformado
+      parking_number_placeholder: ej 2 vehiculos, etc
+      payment_options_placeholder: ej Financiacion propia 130 meses, 60 meses, plan contado
+
+    new_land:
+      <<: *default_attributes
+      price_type: Precio en
+      square_meters_lot: m<sup>2</sup> del terreno
+      front_square_meters: Metros de frente
+      back_square_meters: Metros de fondo
+      on_site_construction: Sitio en construcción
+      other_info: Otra información
+      back_m<sup>2</sup>: Metros de fondo
+      commercial_use: Uso comercial
+      construction: Construcción
+      description: Descripción del terreno
+      electricity: Electricidad
+      enter_the_web_address_where_co: Ingresar la dirección de la web donde los clientes puedan encontrar más información acerca de esta propiedad específica
+      front_m<sup>2</sup>: Metros de frente
+      lot_size_m<sup>2</sup>: Metros cuadrados
+      nearby_centers: Centros cercanos
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      short_description: Subtítulo de la publicación
+      water: Agua
+      listing_type: Venta / Renta
+      date_listed: Fecha de la publicación
+      sewage: Alcantarillado
+      land_stay_use: Tipo de terreno
+      land_name: Nombre de la Urbanización (Si aplica)
+      land_description: Descripción de la Urbanización (Si aplica)
+      ubication_description: Descripción de la Ubicación
+      currency: Moneda
+
+      payment_options_placeholder: ej Financiacion propia 130 meses, 60 meses, plan contado
+      land_stay_use_placeholder: ej Agricola mecanizado,  Ganaderia, Reforestacion, etc
+      land_name_placeholder: ej Fraccion Ikua Naranja, Las Mercedes, etc
+      land_description_placeholder: ej, Calle Empedrada, Luz electrica, Servicios  etc
+      commercial_use_placeholder: ej, propiedad para lotear, parque logistico, Residencia, estacion de Servicio, supermercad, centro comercial, etc.
+      construction_placeholder: ej., Pequena casa de 2 dormitorios, Tinglado para taller, etc.
+      description_placeholder: ej., Terreno alto, Arboles, Terreno bajo, cantera, etc.
+      ubication_description_placeholder: ej,. Propiedad de 4 hectareas en zona urbanizada para loteamiento o barrio cerrado.
+      short_description_placeholder: ej,. Propiedad de 4 hectareas en zona urbanizada para loteamiento o barrio cerrado.
+      other_info_placeholder: ej, Unica propiedad en la zona, oportunidad.
+
+    new_office:
+      <<: *default_attributes
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      price_type: Precio en
+      a/c: A/A
+      amenities: Amenities
+      back_m: Metros de fondo
+      front_meters: Metros de frente
+      back_meters: Metros de fondo
+      ceiling_type: Tipo de cielo raso
+      commercial_use: Uso comercial
+      description: Descripción de la oficina
+      electricity: Electricidad
+      floor: Piso
+      floor_type: Tipo de piso
+      front_m: Metros de Frente
+      home_facts: Datos de la casa
+      m<sup>2</sup>: Metros Oficina
+      square_meters: m<sup>2</sup>
+      date_listed: Fecha de la publicación
+      monthly_expenses: Expensas /mes
+      nearby_centers: Centros cercanos
+      parking: Estacionamiento
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      office_state: Estado de la oficina
+      building_name: Nombre del edificio (Si se aplica)
+      location_description: Descripción de la Ubicación
+      short_description: Subtítulo de la Publicación
+      water: Agua
+      year_built: Año en que se construyó
+      other_info: Otra información
+      square_meters_lot: m<sup>2</sup> del lote
+      square_meters: Metros cuadados
+      square_meters_communal: m<sup>2</sup> comunes
+      common_square_meters: m<sup>2</sup> comunes
+      virtual_tour: Tour Virtual
+      roadway: Camino
+      building_state: Estado de la oficina
+      currency: Moneda
+      bathrooms: Baños
+
+      building_name_placeholder: ej Shopping Zuni, Paseo Carmelitas, etc
+      office_state_placeholder: ej Nuevo, Necesita reparaciones, Recientemente reformado, Etc
+      amenities_placeholder: ej Estacionamiento para 30 vehiculos, banos comunes, seguridad, etc
+      description_placeholder: ej Boveda para sucursal financiera, baño privado, Divisorias para 4 escritorios, recepcion,etc
+      location_description_placeholder: ej Zona Shopping del Sol, Centro Asuncion, etc
+      short_description_placeholder: ej Oficina a la venta en pozo frente al Shopping del Sol
+      other_info_placeholder: ej Se proyecta alquiler las oficinas en 20 USD el m2, excelente inversion
+
+    new_warehouse:
+      <<: *default_attributes
+      price_type: Precio en
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      a/c: A/A
+      amenities: Amenities
+      back_m: Metros de fondo
+      ceiling_type: Tipo de cielo raso
+      commercial_use: Uso comercial
+      description: Descripción del Tinglado/Depósito
+      electricity: Electricidad
+      floor: Piso
+      floor_type: Tipo de piso
+      front_m: Metros de Frente
+      home_facts: Datos de la casa
+      build_m<sup>2</sup>: Metros Edificado
+      field_m<sup>2</sup>: m<sup>2</sup> del Terreno
+      date_listed: Fecha de la publicación
+      monthly_expenses: Expensas /mes
+      nearby_centers: Centros cercanos
+      parking: Estacionamiento
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      building_state: Estado de la Edificación
+      building_name: Nombre del edificio (Si se aplica)
+      location_description: Descripción de la Ubicación
+      short_description: Subtítulo de la Publicación
+      water: Agua
+      year_built: Año en que se construyó
+      other_info: Otra información
+      bathrooms: Baños
+      parking_number: Estacionamientos
+      build_square_meters: m<sup>2</sup> construidos
+      field_square_meters: m<sup>2</sup> de campo
+      currency: Moneda
+
+      building_state_placeholder: ej Nuevo, Necesita reparaciones, Recientemente reformado
+      parking_number_placeholder: ej 2 vehiculos, etc
+      description_placeholder: ej patio con quincho, Cocina, dormitorio, caseta de seguridad, amplio patio
+      location_description_placeholder: ej Cercania Puerto Fenix, GICAL
+      short_description_placeholder: ej Tinglado de 600 m2, ubicacion estrategica cerca de los puertos
+      other_info_placeholder: ej Alquiler minimo 1 año
+
+    new_subdivision:
+      <<: *default_attributes
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      price_type: Precio en
+      square_meters: Metros cuadrados
+      price: Precio
+      payment_options: Formas de Pago
+      date_listed: Fecha de Publicación
+      subdivision_type: Tipo de Loteamiento
+      subdivision_company: Empresa Loteadora
+      division_name: Nombre de la Fracción
+      subdivision_number: Cantidad de Lotes
+      service_description: Descripción de los Servicios
+      m<sup>2</sup>: m<sup>2</sup> del Terreno
+      subdivision_use: Uso de los lotes
+      subdivision_description: Descripción de los lotes
+      location_description: Descripción de la ubicación
+      short_description: Subtítulo de la Publicación
+      other_info: Otra Información
+      currency: Moneda
+    new_fieldstay:
+      <<: *default_attributes
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      price: Precio
+      payment_options: Formas de Pago
+      date_listed: Fecha de Publicación
+      subdivision_type: Tipo de Loteamiento
+      field_stay_use: Uso de Campo / Estancia
+      hectares: Hectáreas (Cantidad)
+      developed_hectares: Hectáreas Desarrolladas
+      hectares_reservations: Hectáreas de Reserva
+      field_infrastructure_desc: Descripción del Campo / Infraestructura
+      access: Accesos
+      location_description: Descripción de la ubicación
+      short_description: Subtítulo de la Publicación
+      other_info: Otra Información
+      price_type: Precio en
+      currency: Moneda
+    new_cottage:
+      <<: *default_attributes
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      price: Precio
+      payment_options: Formas de Pago
+      date_listed: Fecha de Publicación
+      condominium_name: Nombre del Condominio o Barrio Cerrado (si se aplica)
+      condominium_desc: Descripción del Condominio (si se aplica)
+      "built_m<sup>2</sup>": m<sup>2</sup> construidos
+      "land_m<sup>2</sup>": m<sup>2</sup> del Terreno
+      building_state: Estado de la construcción
+      parking_number: Estacionamientos
+      bedrooms: Dormitorios
+      bathrooms: Baños
+      house_desc: Descripción de la Casa
+      location_description: Descripción de la ubicación
+      short_description: Subtítulo de la Publicación
+      other_info: Otra Información
+      currency: Moneda
+    new_duplex:
+      <<: *default_attributes
+      square_meters_land: Terreno m<sup>2</sup>
+      square_meters_built: m<sup>2</sup> construidos
+      sell: Venta
+      rent: Alquiler
+      listing_type: Venta / Renta
+      price: Precio
+      payment_options: Formas de Pago
+      date_listed: Fecha de publicación
+      neighborhood: Barrio
+      condominium_name: Nombre del Condominio o Barrio Cerrado (si se aplica)
+      condominium_desc: Descripción del Condominio (si se aplica)
+      "built_m<sup>2</sup>": Construcciones (m<sup>2</sup>)
+      "land_m<sup>2</sup>": Terreno (m<sup>2</sup>)
+      duplex_state: Estado del dúplex
+      parking_number: Estacionamientos
+      bedrooms: Dormitorios
+      bathrooms: Baños
+      duplex_desc: Descripción del dúplex
+      location_description: Descripción de la ubicación
+      short_description: Subtítulo de la Publicación
+      other_info: Otra Información
+      listing_type: Tipo de publicación
+      date_listed: Fecha publicación
+      amenities: Amenities
+      laundry: Lavanderia
+      dining: Comedor
+      study: Studio
+      den: Despacho
+      office: Oficina
+      pool: Piscina
+      gym: Gimnasio
+      waterfront: Frente al mar
+      elevator: Ascensor
+      playground: Patio de recreo
+      pond: Estanque
+      clubhouse: Casa club
+      bathrooms: Baños
+      building_state: Estado de la construcción
+      enter_the_web_address_where_co: Ingresar la dirección de la Web donde los clientes puedan encontrar más información acerca de esta propiedad específica
+      furnished: Amoblada
+      home_facts: Datos del dúplex
+      "house_m<sup>2</sup>": Dúplex (m<sup>2</sup>)
+      "lot_size_m<sup>2</sup>": Dimensiones del Terreno (m<sup>2</sup>)
+      parking: Estacionamiento
+      payment_options: Opciones de pago
+      price: Precio
+      property_listing_url: URL de la publicación de la propiedad
+      road: Camino
+      rooms: Cuartos
+      service_area: Área de servicio
+      sewage: Alcantarillado
+      type_of_house: Tipo del dúplex
+      year_built: Año en que se construyó
+      virtual_tour: Tour Virtual
+      house_type: Tipo del dúplex
+      roadway: Carretera
+      bedrooms: Dormitorios
+      square_meters: m<sup>2</sup>
+      square_meters_lot: m<sup>2</sup> del lote
+      property_name: Nombre de la propiedad
+      commercial_use: Uso comercial
+      monthly_expenses : Expensas /mes
+      hectors: Hectáreas
+      pasture_hectors: Hectáreas de pasto
+      grass_type: Tipo de Hierba
+      included_crops: Cultivos incluidos
+      plantations: Plantaciones
+      annual_rainfall: Lluvia anual
+      included_livestock: Ganadería incluida
+      enhancements: Mejoras
+      short_description: Subtítulo de la Publicación
+      building_name: Nombre de la construcción
+      floor: Piso
+      square_meters_communal: m<sup>2</sup> comunes
+      price_type: Precio en
+      location_description: Descripción de la ubicación
+      front_square_meters: Metros de frente
+      back_square_meters: Metros de fondo
+      on_site_construction: Sitio en construcción
+      electricity: Electricidad
+      water: Agua
+      nearby_centers: Centros cercanos
+      description: Descripción
+      back_meters: Metros de fondo
+      front_meters: Metros de frente
+      currency: Moneda
+
+      neighborhood_placeholder: ej Los Laureles, Ikua Sati, etc
+      condominium_name_placeholder: ej Parana Country Club
+      condominium_desc_placeholder: ej amenities, quincho, etc
+      duplex_state_placeholder: ej Nuevo, Necesita reparaciones, Recientemente reformado
+      parking_number_placeholder: ej 2 vehiculos, etc
+      duplex_desc_placeholder: ej Parrilla, Living, Dormitorio y baño de servicio, Piscina, Lavadero, Cocina con comedor
+      location_description_placeholder: ej Puntos de referencia, Zona Shopping Multiplaza
+      short_description_placeholder: ej Casa en oferta de 3 dormitorios en Barrio Los Laureles
+      other_info_placeholder: ej Precio de oferta por viaje
+      payment_options_placeholder: ej Financiacion propia 130 meses, 60 meses, plan contado
+
+    per_month: /mes
+    listing_saved:
+      listing_saved: Publicación Guardada
+    save_listing:
+      save_listing: Guardar Publicación
+    send_message_form:
+      contact_agent: Contactar al Vendedor
+      hi_i_found_you_on_miterra: Hola, lo encontré a usted en MiTerra.
+      hi_i_found_your_listing_on_mi: Hola, yo encontré su publicación en MiTerra. Por favor, envíeme más información acerca %{dirección}. Gracias.
+      "message_sent!": "¡Mensaje enviado!"
+      send_message: Enviar mensaje
+      sending_message: Enviando mensaje
+      your_email: Su correo electrónico
+      your_name: Su nombre
+      your_phone: Su teléfono
+      phone: Teléfono
+      sign: Regístrate
+      not_logged_msg: ", para poder contactar a %{agent}"
+    rate:
+      rate_and_review: Calificación y Reseña
+      rate_these_categories: Califica esta Propiedad
+      rate_this_listing: Califica esta Publicación
+      overall_area_rating: Calificación del área en general
+      safety: Seguridad
+      price: Precio
+      location: Ubicación
+      average: Prom.
+      public_services: Servicios Públicos
+      complete: Información Precisa y Completa
+      image_quality: Calidad de Imágenes
+      quick_agile_response: Rapidez y Agilidad en Respuesta
+      general_property: Propiedad en General
+      general_listing: Publicación en General
+    show:
+      asking_price: Precio de venta
+      rent_price: Precio de alquiler
+      description: Descripción
+      other_properties_you_might_lik: Otras propiedades que te podrían interesar
+      "pet-friendly": "Se aceptan animales"
+      recently_sold_homes_near: Propiedades vendidas recientemente cerca de
+      "restaurant_&_shopping": "Restaurantes y centros comerciales"
+      user: usuario
+      save_listing: Guardar la publicación
+      share_this_property: Compartir esta propiedad
+      "sold!": "VENDIDO"
+      "rented!": "ALQUILADO"
+      walkability: Transitabilidad
+      mansion: Mansión
+      dirt: Arena
+      yes: Si
+      no: No
+      laundry: Lavandería
+      study: Estudio
+      den: Despacho
+      office: Oficina
+      dining: Comedor
+      confirm: Si
+      cancel: No
+      none: No
+      view_map: Ver Mapa
+      back: Volver Arriba
+    step2:
+      add_property_photos: Agregar Imágenes de la Propiedad
+      back: Atrás
+      continue: Continuar
+      drag_photos_to_rearrange_their: Mover las Imágenes para cambiar el orden
+      drop_pictures_here: Agregar las Imágenes aquí
+      note: info
+      remember,_the_higher_the_quali: Recuerde, cuanto mayor sea la calidad, mejor. Arrastre las fotos en la caja o haga clic en el cuadro para seleccionarlas desde el ordenador.
+      upload_from_your_computer: Subir desde tu ordenador
+      your_browser_doesn't_have_flas: Su navegador no tiene Flash, Silverlight o soporte HTML5.
+    step3:
+      back: Regresar
+      by_submitting_this_listing,_yo: Al enviar esta publicación, estás de acuerdo con los Términos y Condiciones Generales de %{link}
+      review_and_submit_your_listing: Revise y envíe su publicación
+      sold: VENDIDO
+      rented: ALQUILADO
+      submit: Enviar
+    pin_modal:
+      full_map: Ver mapa completo
+      open_map: Abrir mapa
+      address: Direcciones
+  real_state_directory:
+    index:
+      title: Directorio Inmobiliario
+      filter: Filtro
+    search:
+      name: Nombre
+      search: Buscar
+      clear: Limpiar
+  posts:
+    index:
+      all_news: Todas las Novedades
+      new: Nueva Novedad
+    new:
+      title: Nueva Novedad
+    edit:
+      title: Editar Novedad
+    search:
+      date_from: Desde
+      date_to: Hasta
+      title_cont: URL
+      clear: Borrar Filtros
+    list:
+      date: Fecha
+      title: URL
+  news:
+    index:
+      title: Novedades de MiTerra
+
+  rent: Alquiler
+  sale: Venta
+  select: Seleccionar
+  seller: Vendedor
+  confirm_password: Confirmar contraseña
+  name: Nombre
+  Name: Nombre
+  phone_number: Número de Teléfono
+  type: Tipo de cuenta
+  already_have_an_account_login_now:  ¿Ya tienes una cuenta? Ingresá ahora
+  parking: Estacionamiento
+  furnished: Amoblado
+  sewage: Alcantarillado
+  roadway: Carretera
+  bedrooms: Dormitorios
+  bathrooms: Baños
+  amenities: Instalaciones
+  payment_options: Opciones de pago
+  house_type: Tipo de casa
+  year_built: Año de construcción
+  building_state: Estado del edificio
+  square_meters: "Metros Cuadrados"
+  price_type: Precio en
+  square_meters_lot: m<sup>2</sup> del Terreno
+  service_area: Área de servicio
+  short_description: Subtítulo de la Publicación
+  monthly_expenses: Expensas /mes
+  floor: Piso
+  "square_meters_communal": "m<sup>2</sup> comunes"
+  location_description: Descripción de la Ubicación
+  other_info: Otra información
+  front_meters: Metros de frente
+  back_meters: Metros de fondo
+  commercial_state: Estado del local
+  property_name: Nombre de la propiedad
+  commercial_use: Uso comercial
+  hectors: Hectáreas
+  pasture_hectors: Hectáreas de pasto
+  grass_type: Tipo de Hierba
+  included_crops: Cultivos incluidos
+  plantations: Plantaciones
+  annual_rainfall: Precipitación anual
+  included_livestock: Ganadería incluida
+  enhancements: Mejoras
+  condominium_name: Nombre de Condominio
+  condominium_desc: Descripción de condominio
+  square_meters_build: m<sup>2</sup> construidos
+  square_meters_built: m<sup>2</sup> construidos
+  square_meters_land: m<sup>2</sup> del Terreno
+  parking_number: Estacionamientos
+  neighborhood: Vecindario
+  square_meters_build: m<sup>2</sup> construidos
+  duplex_state: Estado
+  field_stay_use: Uso del Campo / Estancia
+  developed_hectares: Hectáreas utilizadas
+  hectares_reservations: Hectáreas en reserva
+  access: Accesos
+  front_square_meters: Metros de frente
+  back_square_meters: Metros de fondo
+  on_site_construction: Sitio en construcción
+  electricity: Electricidad
+  water: Agua
+  nearby_centers: Centros cercanos
+  office_state: Estado
+  buid_square_meters: m<sup>2</sup> construidos
+  field_square_meters: Metros cuadrados de campo
+  subdivision_company: Empresa
+  division_name: Nombre de la Fracción
+  subdivision_number: Numero de lotes
+  service_description: Descripción de servicios
+  subdivision_use: Uso de los lotes
+  building_name: Nombre de edificio
+  land_stay_use: Tipo del terreno
+  land_name: Nombre de la Urbanización (Si aplica)
+  land_description: Descripción de la Urbanización (Si aplica)
+  ubication_description: Descripción de la Ubicación
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: no concuerda con la contraseña
+            password:
+              too_short: muy corta
+            name: Nombre
+            phone_number: Número de teléfono
+            type: Tipo de cuenta
+            email:
+              blank: no puede estar en blanco
+              taken: ya se encuentra registrado
+        listing:
+          attributes:
+            accepts_terms:
+              accepted: 'Para hacer una publicación debes estar de acuerdo con los términos de la licencia de MiTerra'
+
+      user:
+        email:
+          blank: "Ingrese su correo electrónico"
+    models:
+      user: Usuario
+      listing: Publicación
+      listing_photo: Foto de la Publicación
+      agent_listing: Agente de la Publicación
+      agent_profile: Perfíl del Agente
+      listing_property: Característica de la Publicación
+      listing_type: Tipo de Publicación
+      message: Mensaje
+      rate: Calificación
+      saved_listing: Publicación Guardada
+      search_history: Historíal de Búsqueda
+      view: Visita
+      post: Novedad
+    attributes:
+        user:
+          email: Correo electrónico
+          password: Contraseña
+          password_confirmation: Confirmar contraseña
+          name: Nombre
+          phone_number: Número de teléfono
+          type: Tipo de cuenta
+        listing:
+          latitude: Latitud
+          longitude: Longitud
+          accepts_terms: "Aceptar Licencia. "
+          list_price: Precio
+          type: Tipo
+          listing_type: Tipo de Propiedad
+          featured:
+          description: Descripción
+          property_url: Dirección URL de la propiedad
+          step: Paso
+          location_id: Localización
+          agent_id: Vendedor
+          status_id: Estado
+          list_price: Precio
+          list_date: Fecha de Anuncio
+          primary_photo_id: Foto Principal
+          hide_address: Dirección
+          sold: Vendido/a
+          address1: Dirección
+          address2: Dirección
+          city: Ciudad
+          state: Departamento
+          postal_code: Código Postal
+          country: País
+          latitude: Latitud
+          longitude: Longitud
+          created_at: Creado el
+          updated_at: Actualizado el
+          views_count: Contador de visitas
+          price_type: Moneda
+        post:
+          title: URL
+          content: Contenido
+          created_at: Creado el (fecha)
+  helpers:
+    label:
+      post:
+        email: Correo electrónico
+        password: Contraseña
+        password_confirmation: Confirmar contraseña
+        name: Nombre
+        phone_number: Número de teléfono
+        type: Tipo de cuenta
+    submit:
+      create: Crear
+      update: Actualizar
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      present: debe estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser un número par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor o igual que %{count}
+      inclusion: no está incluido en la lista
+      invalid: es inválido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor o igual que %{count}
+      model_invalid: "La validación falló: %{errors}"
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser un número non
+      required: debe existir
+      taken: ya ha sido tomado
+      too_long:
+        one: es demasiado largo (máximo 1 caracter)
+        other: es demasiado largo (máximo %{count} caracteres)
+      too_short:
+        one: es demasiado corto (mínimo 1 caracter)
+        other: es demasiado corto (mínimo %{count} caracteres)
+      wrong_length:
+        one: longitud errónea (debe ser de 1 caracter)
+        other: longitud errónea (debe ser de %{count} caracteres)
+      other_than: debe ser diferente a %{count}
+    template:
+      body: 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: "%{model} no pudo guardarse debido a 1 error"
+        other: "%{model} no pudo guardarse debido a %{count} errores"
+
+
+    user:
+      email:
+        blank: "Ingrese su correo electrónico"
+
+  message_mailer:
+    new_message:
+      greeting: Hola
+      message1: Tienes un nuevo mensaje desde MiTerra! Vea a continuación para detalles de mensaje
+      message2: Puedes siempre visitar tu cuenta en %{link} para ver los mensajes anteriores
+      from: Desde
+      email: Email
+      phone: Teléfono
+      goodbye: Saludos, <b>MiTerra Team</b>
+
+
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " y "
+      last_word_connector: " y "
+  dictionary:
+    all: Todos
+    both: Ambos
+    no_result: Sin resultados
+    visits: Visitas
+  multiselect:
+    nonSelectedText: Sin seleccionar
+    nSelectedText: seleccionados
+    selectAllText: Todos
+  number:
+    currency:
+      format:
+        delimiter: "."
+        precision: 0
+        separator: ","

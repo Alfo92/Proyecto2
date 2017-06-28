@@ -1,0 +1,51 @@
+<div class="container">
+<%= form_for(@user || User.new, url: registration_path(User.new), html: { method: :post, id:"signupform", role:"form",  multipart:true, class:"form-signup" }) do |f| %>
+  <%= f.hidden_field :provider %>
+  <%= f.hidden_field :uid %>
+  <h2 class="form-signin-heading green-text"><%= t(".sign_up") %></h2>
+  <%= devise_error_messages! %>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="wrap-image text-center">
+        <%= image_tag(User.new.avatar.url(:medium) || 'thumb-avatar-missing.png', class:"img-responsive img-avatar", id: 'preview') %>
+        <label class="btn btn-success btn-sm btn-file">
+          <%= t(".choose_file") %><%= f.file_field :avatar, class: "edit-profile hide user-avatar", data: {preview: '#preview'} %>
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="form-group">
+       <%= f.label :email, t('layouts.registration.email') %>
+       <%= f.text_field :email, autofocus: true, class:"form-control", placeholder: t(".email_address") %>
+      </div>
+     <div class="form-group">
+      <%= f.label :password, t('layouts.registration.password') %>
+      <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder: t(".password") %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation, t('layouts.registration.password_confirmation') %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", placeholder: t(".confirm_password") %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :name, t('layouts.registration.name') %>
+        <%= f.text_field :name, autofocus: true, class:"form-control", placeholder: t(".name") %>
+      </div>
+      <div class="form-group">
+        <%= f.label :phone_number, t('layouts.registration.phone_number') %>
+        <%= f.text_field :phone_number, autofocus: true, class:"form-control", placeholder: t(".phone_number") %>
+      </div>
+      <div class="form-group">
+        <%= f.label :type, t('layouts.registration.type') %>
+        <%= f.select :type, account_types_select, class:"form-control" %>
+      </div>
+
+    <button class="btn btn-lg btn-success btn-block" type="submit"><%= t(".sign_up") %></button>
+    <%= link_to t("already_have_an_account_login_now"), "#", class:"toggler" %><br />
+    </div>
+  </div>
+
+
+  <% end %>
+</div>

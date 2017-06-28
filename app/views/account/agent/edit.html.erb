@@ -1,0 +1,201 @@
+<div class="container">
+      <div class="padding-block">
+        <!-- viewing -->
+        <div class="viewing">
+          <strong>Viewing Your Own Profile</strong>
+          <div class="pull-right">
+            <ul class="list-inline separator">
+              <li><a href="#">Settings</a></li>
+              <li><a href="<%= account_agent_path(current_user) %>">View your profile as others see it</a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <p><span>Your MiTerra profile URL:</span> <a href="#">www.miterra.com/marwin</a><a href="#" class="pull-right">get a peronalized URL</a></p>
+        </div>
+        <!-- /viewing -->
+        <div class="row">
+          <div class="col-sm-8">
+            <!-- user-info -->
+            <div id="user-info">
+              <section>
+                <div class="row">
+                  <div class="col-sm-5"><div class="wrap-image">
+                    <%= image_tag current_user.avatar.url(:medium), class:"img-rounded img-responsive center-block" %>
+                    </div></div>
+                  <div class="col-sm-7">
+                    <!-- description -->
+                    <div class="description">
+                      <p class="name green-text"><%= current_user.name %><span class="pro">pro</span></p>
+                      <p><%= show_reviews(current_user) %></p>
+                      <p><span class="big"><strong><%= current_user.phone_number %></strong> Agent with ActBold</span></p>
+                      <p><a href="#" class="share">Share Profile</a></p>
+                    </div>
+                    <!-- /description -->
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tabpanel" aria-expanded="false" aria-controls="tabpanel">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div role="tabpanel">
+                  <ul class="nav nav-tabs navbar-collapse nav-justified collapse standart" role="tablist" id="tabpanel" >
+                    <li role="presentation" class="active"><a href="#Overview" aria-controls="Overview" role="tab" data-toggle="tab">Overview</a></li>
+                    <li role="presentation"><a href="#Reviews" aria-controls="Reviews" role="tab" data-toggle="tab">Reviews (0)</a></li>
+                    <li role="presentation"><a href="#Listings" aria-controls="Listings" role="tab" data-toggle="tab">Add Completed Listings</a></li>
+                    <li role="presentation"><a href="#About" aria-controls="About" role="tab" data-toggle="tab">About</a></li>
+                    <li role="presentation"><a href="#Activity" aria-controls="Activity" role="tab" data-toggle="tab">Activity (0)</a></li>
+                  </ul>
+                  <div class="tab-content first">
+                  <div role="tabpanel" class="tab-pane fade active in" id="Overview"><h2>Overview</h2></div>
+                  <div role="tabpanel" class="tab-pane fade" id="Reviews">
+                    <h2>Reviews Enabled</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <button class="btn btn-danger">Disable Reviews</button>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="Listings"><h2>Add Completed Listings</h2></div>
+                  <div role="tabpanel" class="tab-pane fade" id="About"><h2>About</h2></div>
+                  <div role="tabpanel" class="tab-pane fade" id="Activity"><h2>Activity</h2></div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <h2>Request or Add Reviews</h2>
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tabpanel-2" aria-expanded="false" aria-controls="tabpanel-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div role="tabpanel">
+                  <ul class="nav nav-tabs navbar-collapse collapse standart" role="tablist" id="tabpanel-2" >
+                    <li role="presentation" class="active"><a href="#About-Requests" aria-controls="About-Requests" role="tab" data-toggle="tab">About Requests</a></li>
+                    <li role="presentation"><a href="#Request-Email" aria-controls="Request-Email" role="tab" data-toggle="tab">Request via Email</a></li>
+                    <li role="presentation"><a href="#Add-Reviews" aria-controls="Add-Reviews" role="tab" data-toggle="tab">Add Reviews</a></li>
+                  </ul>
+                  <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade active in" id="About-Requests">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="Request-Email"></div>
+                  <div role="tabpanel" class="tab-pane fade" id="Add-Reviews"></div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Reviews Summary</h2>
+                    <div class="stars-big">
+                      Overall on MiTerra
+                      <ul class="voting">
+                        <li class="one"><a href="#">1</a></li>
+                        <li class="two"><a href="#">2</a></li>
+                        <li class="three"><a href="#">3</a></li>
+                        <li class="four"><a href="#">4</a></li>
+                        <li class="five"><a href="#">5</a></li>
+                      </ul>
+                    </div>
+                    <div class="timer" id="timer"></div>
+                    <div class="wrap-text">
+                      <h5>Review Distribution</h5>
+                      <p>25 Positive Reviews</p>
+                      <p>16 Critical Reviews</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h2>Skill Ratings</h2>
+                    <div class="stars-small">
+                      Honesty & Intregity
+                      <ul class="voting">
+                        <li class="one"><a href="#">1</a></li>
+                        <li class="two"><a href="#">2</a></li>
+                        <li class="three"><a href="#">3</a></li>
+                        <li class="four"><a href="#">4</a></li>
+                        <li class="five"><a href="#">5</a></li>
+                      </ul>
+                    </div>
+                    <div class="stars-small">
+                      Responsiveness
+                      <ul class="voting">
+                        <li class="one"><a href="#">1</a></li>
+                        <li class="two"><a href="#">2</a></li>
+                        <li class="three"><a href="#">3</a></li>
+                        <li class="four"><a href="#">4</a></li>
+                        <li class="five"><a href="#">5</a></li>
+                      </ul>
+                    </div>
+                    <div class="stars-small">
+                      Local Knowledge
+                      <ul class="voting">
+                        <li class="one"><a href="#">1</a></li>
+                        <li class="two"><a href="#">2</a></li>
+                        <li class="three"><a href="#">3</a></li>
+                        <li class="four"><a href="#">4</a></li>
+                        <li class="five"><a href="#">5</a></li>
+                      </ul>
+                    </div>
+                    <div class="stars-small">
+                      Negotiation
+                      <ul class="voting">
+                        <li class="one"><a href="#">1</a></li>
+                        <li class="two"><a href="#">2</a></li>
+                        <li class="three"><a href="#">3</a></li>
+                        <li class="four"><a href="#">4</a></li>
+                        <li class="five"><a href="#">5</a></li>
+                      </ul>
+                    </div>
+                    <div class="stars-small">
+                      Process Expertise
+                      <ul class="voting">
+                        <li class="one"><a href="#">1</a></li>
+                        <li class="two"><a href="#">2</a></li>
+                        <li class="three"><a href="#">3</a></li>
+                        <li class="four"><a href="#">4</a></li>
+                        <li class="five"><a href="#">5</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!--/user-info -->
+            
+          </div>
+          <div class="col-sm-4 hidden-xs">
+            <!-- question -->
+            <div class="question">
+              <div class="content">Lorem ipsum dolor sit amet, consectetur pisicing elit, sed do eiusmoempor incididunt ut ?</div>
+              <textarea name="answer" id="answer" placeholder="Your answer here ..."></textarea>
+              <p><small>17 questions left</small><button class="pull-right btn-default">Next</button></p>
+              <div class="clearfix"></div>
+              <hr>
+              <p>Profile Views in the past few days</p>
+              <p><span><%= current_user.recent_profile_views %></span></p>
+              <hr>
+              <p>Lifetime Views</p>
+              <p><span><%= current_user.total_profile_views %></span></p>
+              <hr>
+            </div>
+            <!-- /question -->
+            <!-- areas -->
+            <div class="areas">
+              <h2>Service Areas</h2>
+              <p>Los Angeles, CA</p>
+              <p>90266</p>
+              <p>90049</p>
+            </div>
+            <!-- /areas -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /search-block -->

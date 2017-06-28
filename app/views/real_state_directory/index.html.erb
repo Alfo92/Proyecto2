@@ -1,0 +1,32 @@
+<div class="wrap-box results-search-page real-state-directory">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="green-heading"><strong><%= t(".title") %></strong></h2>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div id="search-container">
+            <%= render 'real_state_directory/search', q: @q %>
+          </div>
+        </div>
+      </div>
+
+      <div id="list-container" class="">
+        <%= render "real_state_directory/profiles", users: @users %>
+      </div>
+
+      <div>
+        <a class="go-to-top" title="<%= t('go_to_top') %>">
+          <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    goToTop();    
+  });
+</script>

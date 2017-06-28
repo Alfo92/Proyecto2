@@ -1,0 +1,28 @@
+<div class="listing-mini saved-block <%= listing.featured? ? "green" : "" %>">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <%= link_to image_tag(listing.primary_photo.try(:medium_url) || "house-holder.jpg", class:"img-responsive", style: 'width: 100%;'), listing  %>
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="price">
+            <div class="green-text"> <%= for_sale_or_rent(listing) %> </div>
+            <p title="<%= listing_price(listing) %>"><%= listing_price(listing) %></p>
+            <span class="smaller <%= listing.listing_properties.where(:key => :price_type.to_s) == :guarani ? "text-success" : "text-danger" %>">
+          <%= listing_other_price(listing) %>
+        </span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="big"><%= listing.search_address %></p>
+          <p><%= listing.quick_look.gsub(/\\n/, '<br/>').html_safe.capitalize %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,112 @@
+
+<div id="new_commercialbuilding" class="listing_types">
+  <div class="row">
+    <div class="col-sm-3">
+      <label class="required"><%= t(".listing_type") %>:</label>
+        <%= f.select :listing_type, [[t("listings.sell"),Listing::LISTING_TYPE.index(:sale)],[t("listings.rent"),Listing::LISTING_TYPE.index(:rent)]], {include_blank: t("select") }, class: 'validate[required]' %>
+    </div>
+    <div class="col-sm-3">
+      <p>
+        <label class="required"><%= t(".currency") %>:</label>
+        <%= p.select :price_type, Listing::PRICE_TYPE.collect{|price_type| [t('listings.'+price_type.to_s), price_type.to_s] }, {selected: @listing.price_type}, class: 'validate[required]' %>
+      </p>
+    </div>
+    <input type="hidden" value="<%= @listing.price_type %>" id="listing[price_type]" name="listing[price_type]">
+    <div class="col-sm-3">
+      <p>
+        <label class="required"><%= t(".price") %>:</label>
+        <% if browser.device.mobile? && browser.chrome? %>
+            <%= f.number_field :list_price, class: 'validate[required]', step: 1, value: number_with_precision(f.object.list_price, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: '') %>
+        <% else %>
+            <%= f.text_field :list_price, class: 'validate[required]  money', value: number_with_precision(f.object.list_price, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: t('number.currency.format.delimiter')), autocorrect: 'off', autocomplete: "off", spellcheck: 'false' %>
+        <% end %>
+      </p>
+    </div>
+    <div class="col-sm-3">
+      <p>
+        <label><%= t(".payment_options") %>:</label>
+        <%= p.text_field :payment_options, value: @listing.properties["payment_options"] %>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p>
+       <label><%= t(".shopping_center_name") %></label>
+       <%= p.text_field :building_name, value: @listing.properties["building_name"], placeholder: t(".shopping_center_name_placeholder") %>
+      </p>
+    </div>
+    <div class="col-sm-3 col-md-3">
+      <p>
+       <label><%= t(".monthly_expenses") %></label>
+       <%= p.text_field :monthly_expenses, value: @listing.properties["monthly_expenses"] %>
+      </p>
+    </div>
+    <div class="col-sm-3">
+     <p>
+        <label class="required"><%= t(".date_listed") %>:</label>
+        <%= f.text_field :list_date, value: f.object.list_date ? l(f.object.list_date) : l(Date.today), class: 'validate[required] datepicker' %>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-4 col-md-4">
+      <p>
+        <label class="required"><%=raw  t(".m<sup>2</sup>") %>:</label>
+        <%= p.text_field :square_meters, value: @listing.properties["square_meters"], class: 'validate[required]'%>
+      </p>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <p>
+        <label><%=raw  t(".front_m") %>:</label>
+        <%= p.text_field :front_meters, value: @listing.properties["front_meters"]%>
+      </p>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <p>
+        <label><%=raw  t(".back_m") %>:</label>
+        <%= p.text_field :back_meters, value: @listing.properties["back_meters"]%>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p>
+        <label><%= t(".commercial_state") %></label>
+        <%= p.text_field :commercial_state, placeholder: t(".commercial_state_placeholder"), value: @listing.properties["commercial_state"] %>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p>
+        <label><%= t(".amenities") %></label>
+        <%= p.text_field :amenities, placeholder: t(".amenities_placeholder"), value: @listing.properties["amenities"] %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".description") %>:</label>
+        <%= f.text_area :description, placeholder: t(".description_placeholder"), value: @listing.description %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".location_description") %>:</label>
+        <%= p.text_field :location_description, placeholder: t(".location_description_placeholder"), value: @listing.properties["location_description"] %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <label class="required"><%= t(".short_description") %>:</label>
+        <%= p.text_field :short_description, placeholder: t(".short_description_placeholder"), value: @listing.properties["short_description"], class: 'validate[required] maxSize[40]', maxlength: 40 %>
+      </p>
+    </div>
+
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".other_info") %>:</label>
+        <%= p.text_field :other_info, placeholder: t(".other_info_placeholder"), value: @listing.properties["other_info"] %>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+
+<% if params[:page].blank? %>
+  $("#list").html("<%= j(render 'posts/list', posts: @posts) %>");
+<% else %>
+  $('#paginator').html("<%= j(paginate @posts, params: {q: params[:q]}, remote: true) %>");
+  $("#list-container").append("<%= j(render 'posts/list_rows', posts: @posts) %>");
+<% end %>
+
+$("#search").html("<%= j(render 'posts/search', search: @search) %>");
+
+initDatepicker();

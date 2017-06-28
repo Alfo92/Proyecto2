@@ -1,0 +1,10 @@
+<% target_score ||=  agent_profile.send("#{rate_property}_average").avg
+   target_score = target_score.round(2)
+   readonly ||= false %>
+
+(<%= "#{t('account.rate_property.average')}: #{target_score}" %>
+<% if readonly %>
+    )
+<% else %>
+  <i class="fa fa-star-o"></i>, <%= agent_profile.send("#{rate_property}_average").qty %><i class="fa fa-user-o"></i>)
+<% end %>

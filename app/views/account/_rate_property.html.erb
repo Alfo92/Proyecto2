@@ -1,0 +1,36 @@
+<% readonly ||= false %>
+
+<% if readonly %>
+
+    <p><strong><%= t(".#{rate_property}") %></strong></p>
+    <p class="<%= rate_property %>-summary">
+        <small>
+          <% general_rate = agent_profile.general_rate %>
+          <% if general_rate %>
+              <%= render 'account/rate_property_summary', agent_profile: agent_profile, rate_property: rate_property, target_score: general_rate, readonly: readonly %>
+          <% end %>
+        </small>
+    </p>
+    <div class="stars-small-sharp">
+      <%= rating_for agent_profile, rate_property, enable_half: true, half_show: true, readonly: true, noRatedMsg: t(".#{rate_property}"), targetScore: general_rate %>
+    </div>
+
+<% else %>
+
+  <p><strong><%= t(".#{rate_property}") %></strong></p>
+  <div class="<%= rate_property %>-summary">
+      <small>
+        <% if agent_profile.send("#{rate_property}_average") %>
+            <%= render 'account/rate_property_summary', agent_profile: agent_profile, rate_property: rate_property %>
+        <% end %>
+      </small>
+  </div>
+  <div class="stars-small-sharp">
+    <% if current_user %>
+        <%= rating_for_user agent_profile, current_user, rate_property, enable_half: true, half_show: true, disable_after_rate: false %>
+    <% else %>
+        <%= rating_for agent_profile, rate_property, enable_half: true, half_show: true, disable_after_rate:false %>
+    <% end %>
+  </div>
+
+<% end %>

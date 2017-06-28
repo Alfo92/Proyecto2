@@ -1,0 +1,18 @@
+<p style="font-size: 40px; color:#53B50A; margin:0 0 16px"> <%= t('.greeting') %> <%= @user.name.split(" ")[0] %>,</p>
+<p style="padding-left: 2px; color:#707070; line-height:25px; font-size:14px">
+  <%= t(".message1") %>
+  <%= t(".message2", link: link_to('MiTerra', account_agent_index_path, style: "text-decoration: underline; color: #53B50A;")).html_safe %>
+</p>
+
+<p><%= t(".from") %>:  <%= @message.from_name %></p>
+<p><%= t(".email") %>: <%= @message.from_email %></p>
+<p><%= t(".phone") %>: <%= @message.from_phone %></p>
+
+<br>
+  <p>
+    <%= @message.message %>
+  </p>
+</p>
+
+<p style="text-align: right; margin:25px 18px 50px 0; color:#707070; font-size:14px"><%= t(".goodbye").html_safe %>.</p>
+

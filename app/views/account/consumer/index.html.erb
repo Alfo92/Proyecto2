@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="padding-block top-padding">
+    <div class="row" role="tabpanel">
+      <div class="col-sm-3">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#left-menu" aria-expanded="false" aria-controls="left-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- left-menu -->
+        <ul class="account-navigation nav navbar-collapse collapse" role="tablist" id="left-menu">
+          <li class="active"><a href="#user-info" aria-controls="profile" role="tab" data-toggle="tab"><%= t(".profile") %></a></li>
+          <li><a href="#saved-listings" aria-controls="savedlistings" role="tab" data-toggle="tab"><%= t(".saved_listings") %></a></li>
+        </ul>
+        <!-- /left-menu -->
+
+      </div>
+      <div class="col-sm-9 tab-content">
+        <%= render partial:"account/agent/profile" %>
+
+        <div id="saved-listings" role="tabpanel" class="tab-pane" >
+          <h2 class="saved-title">
+            <span class="sprites i-saved"></span>
+            <%=t(".saved_listings")%>
+          </h2>
+          <% current_user.saved_listings.includes(:listing).each do |saved_listing| %>
+              <% listing = saved_listing.listing %>
+              <%= render partial:'saved_listing', locals:{listing:listing} %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="saved-block">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="wrapped">
+        <%= link_to image_tag(listing.primary_photo.try(:medium_url) || "house-holder.jpg", class:"img-responsive"), listing %>
+        <div class="price"><span></span><%= for_sale_or_rent(listing) %> <p class="green-text"><strong><%= listing_price(listing) %></strong></p></div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="wrapped">
+        <h2><%= link_to listing.short_address, listing %></h2>
+        <div class="big"><%= simple_format listing.quick_look %></div >
+        <p><span><%= t(".property_type") %>:</span> <%= t(listing.type) %></p>
+      </div>
+    </div>
+    <div id="map-<%= listing.id %>" class="col-sm-4 map<%=listing.id%>" style="height:270px;" style="display:block; position:relative; width:auto; height:400px;padding:40px"></div>
+  </div>
+</div>

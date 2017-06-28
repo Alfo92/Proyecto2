@@ -1,0 +1,68 @@
+<div class="container no-styler">
+  <%= form_for(@listing, as: :listing, url: listing_path(@listing), html: {class: 'validate'}) do |f| %>
+      <%= f.hidden_field :step, value: 3 %>
+      <div class="padding-block">
+        <%= render :partial => "steps", locals: {step: 3} %>
+        <!-- panel -->
+        <div class="panel panel-default review-listing">
+          <div class="panel-heading">
+            <h3><%= t(".review_and_submit_your_listing") %></h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-12 col-md-6"><%= image_tag @listing.primary_photo.try(:xlarge_url), class: 'img-responsive' %></div>
+              <div class="col-sm-12 col-md-6">
+                <div class="listing-text content">
+                  <% if @listing.sold? %>
+                      <% if @listing.for_rent? %>
+                          <div class="red-text"><%= t(".rented") %>!</div>
+                      <%else%>
+                          <div class="red-text"><%= t(".sold") %>!</div>
+                      <%end%>
+                  <% end %>
+                  <div class="green-text"><%= listing_price(@listing) %></div>
+                  <div class="title"><%= @listing.full_address %></div>
+                  <p><%= @listing.quick_look %></p>
+                  <p> <%= t(@listing.type) %> </p>
+                  <br>
+                  <table class="table table-condensed">
+                    <% @listing.properties.each_with_index do |(key, val), index| %>
+                        <tr>
+                          <td>
+                            <%= t("listings.new_#{@listing.type.downcase}.#{key}").html_safe %>
+                          </td>
+                          <td class="text-right">
+                            <% if val.is_a?(Array) %>
+                              <%= val.join(", ") %>
+                            <% elsif !val.blank? %>
+                              <%= t("listings.#{val}", default: val.capitalize) %>
+                            <% else %>
+                              <%= val %>
+                            <% end %>
+                          </td>
+                        </tr>
+                    <% end %>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /panel -->
+        <p class="text-center">
+          <%= f.hidden_field :status_id, value: Listing::STATUS.index(:active) %>
+          <label>
+            <%= f.check_box :accept_terms, class: 'validate[required]' %><%= t(".by_submitting_this_listing,_yo", link: link_to('MiTerra.com', terms_path)).html_safe %>
+          </label>
+        </p>
+        <!-- buttons-wrap -->
+        <div class="buttons-wrap text-center">
+          <p>
+            <a href="<%= step2_listing_path(@listing) %>" class="dark-text"><span class="sprites i-left-arrow"></span><%= t(".back") %></a>
+            <a class="btn btn-success" href="#" onclick="$(this).closest('form').submit()"><%= t(".submit") %></a>
+          </p>
+        </div>
+      </div>
+  <% end %>
+  <!-- /buttons-wrap -->
+</div>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Mi terra</title>
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- formstyler -->
+	<script type="text/javascript" src="js/jquery.formstyler.js"></script>
+	<script type="text/javascript">
+		(function($) {
+		$(function() {
+			$('input, select').styler();
+		});
+		})(jQuery);
+
+	</script>
+	
+	<!-- datepicker -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript">
+	  $(function() {
+		$( "#date" ).datepicker({
+		  defaultDate: "+1w",
+		  numberOfMonths: 1,
+		  onClose: function( selectedDate ) {
+			$( "#to1" ).datepicker( "option", "minDate", selectedDate );
+		  }
+		});
+		$( "#date-2" ).datepicker({
+		  defaultDate: "+1w",
+		  numberOfMonths: 1,
+		  onClose: function( selectedDate ) {
+			$( "#to1" ).datepicker( "option", "minDate", selectedDate );
+		  }
+		});
+	  });
+	</script>
+	
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="container">
+				<!-- navigation -->
+				 <nav>
+					  <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+					  </div>
+					  <div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="buy.html">Buy</a></li>
+							<li><a href="sell.html">Sell</a></li>
+							<li><a href="rent.html">Rent</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						<ul class="navbar-right">
+							<li class="visible-sm-block"><a href="#" title="Sign In"><span class="glyphicon glyphicon-user"></span></a></li>
+							<li class="hidden-sm"><a href="#">Sign In</a><span>or</span><a href="#">Join</a></li>						
+						</ul>
+					  </div><!--/.nav-collapse -->
+				  </nav>
+				<!-- /navigation -->
+			</div>
+		</header>
+		<!-- /header -->
+		<div class="container">
+			<!-- blog-title -->
+			<div id="blog-title">
+				<div class="row">
+					<div class="col-md-6 col-sm-6"><h1>Blog</h1></div>
+					<div class="col-md-6 col-sm-6">
+						<div class="input-group pull-right">
+						  <input type="text" class="form-control" placeholder="Search by keyword">
+						  <span class="input-group-btn">
+							<button type="button"><span class="sprites i-search-blog"></span></button>
+						  </span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /blog-title -->
+			<div class="row">
+				<div class="col-sm-8 col-md-9">
+					<div class="content blog">
+						<!-- blog-block -->
+						<div class="blog-block">
+							<p><img src="img/content/blog.png" alt="" class="img-responsive"></p>
+							<h4 class="green-text">New Website Goes Live</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula turpis, fringilla quis lacus ut, porttitor blandit dolor. Nulla facilisi. Cras maximus, sapien vel pretium fermentum, tortor orci ultricies risus, varius posuere sapien quam.</p>
+							<!-- soc-links -->
+							<ul class="soc-links list-inline">
+								<li><a href="#" class="sprites faceboock"></a></li>
+								<li><a href="#" class="sprites twitter"></a></li>
+								<li><a href="#" class="sprites google"></a></li>
+								<li><a href="#" class="sprites i-in"></a></li>
+								<li><a href="#" class="sprites mail"></a></li>
+							</ul>
+							<!-- /soc-links -->
+							<strong><a href="#">Read More</a></strong>
+						</div>
+						<!-- /blog-block -->
+						<!-- blog-block -->
+						<div class="blog-block">
+							<h4 class="green-text">New Website Goes Live</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula turpis, fringilla quis lacus ut, porttitor blandit dolor. Nulla facilisi. Cras maximus, sapien vel pretium fermentum, tortor orci ultricies risus, varius posuere sapien quam vitae lorem. <strong><a href="#">Read More</a></strong></p>
+							<!-- soc-links -->
+							<ul class="soc-links list-inline">
+								<li><a href="#" class="sprites faceboock"></a></li>
+								<li><a href="#" class="sprites twitter"></a></li>
+								<li><a href="#" class="sprites google"></a></li>
+								<li><a href="#" class="sprites i-in"></a></li>
+								<li><a href="#" class="sprites mail"></a></li>
+							</ul>
+							<!-- /soc-links -->
+						</div>
+						<!-- /blog-block -->
+						<!-- blog-block -->
+						<div class="blog-block">
+							<h4 class="green-text">New Website Goes Live</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula turpis, fringilla quis lacus ut, porttitor blandit dolor. Nulla facilisi. Cras maximus, sapien vel pretium fermentum, tortor orci ultricies risus, varius posuere sapien quam vitae lorem. <strong><a href="#">Read More</a></strong></p>
+							<!-- soc-links -->
+							<ul class="soc-links list-inline">
+								<li><a href="#" class="sprites faceboock"></a></li>
+								<li><a href="#" class="sprites twitter"></a></li>
+								<li><a href="#" class="sprites google"></a></li>
+								<li><a href="#" class="sprites i-in"></a></li>
+								<li><a href="#" class="sprites mail"></a></li>
+							</ul>
+							<!-- /soc-links -->
+						</div>
+						<!-- /blog-block -->
+					</div>
+					<!-- banners -->
+					<div class="banners"><p><a href="#"><img src="img/content/banner.png" alt="" class="img-responsive center-block"></a></p></div>
+					<!-- /banners -->
+				</div>
+				<div class="col-sm-4 col-md-3">
+					<!-- blog-sidebar -->
+					<div id="blog-sidebar">
+						<p class="green-text">Don’t miss anything, stay up to date with email</p>
+						<p><input type="text" placeholder="Email Address"></p>
+						<h3 class="green-text">Recent Posts</h3>
+						<ul class="recent">
+							<li><a href="#">New Website Goes Live</a></li>
+							<li><a href="#">New Website Goes Live</a></li>
+							<li><a href="#">New Website Goes Live</a></li>
+							<li><a href="#">New Website Goes Live</a></li>
+							<li><a href="#">New Website Goes Live</a></li>
+							<li><a href="#">New Website Goes Live</a></li>
+						</ul>
+						<h3 class="green-text">Archives</h3>
+						<ul class="archives">
+							<li><a href="#">APRIL</a></li>
+							<li><a href="#">MAY</a></li>
+							<li><a href="#">JUNE</a></li>
+							<li><a href="#">JULY</a></li>
+							<li><a href="#">AUGUST</a></li>
+						</ul>
+					</div>
+					<!-- /blog-sidebar -->
+					<!-- banners -->
+					<div class="banners"><p><a href="#"><img src="img/content/banner-square.png" alt="" class="img-responsive center-block"></a></p></div>
+					<!-- /banners -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1 copyright">© 2014</div>
+					<div class="col-sm-7">
+						<ul class="list-inline footer-nav">
+							<li><a href="about.html">About</a></li>
+							<li><a href="terms.html">Terms of Use</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="social list-inline">
+							<li>Follow us</li>
+							<li><a href="#" class="sprites i-twitter"></a></li>
+							<li><a href="#" class="sprites i-faceboock"></a></li>
+							<li><a href="#" class="sprites i-google"></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+		<!-- /footer -->
+</body>
+</html>

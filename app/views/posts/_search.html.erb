@@ -1,0 +1,24 @@
+<div class="panel panel-success">
+  <div class="panel-body">
+    <%= search_form_for @search, remote: true do |f| %>
+        <div class="row">
+          <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <%= f.search_field :title_cont, class: 'form-control', placeholder: t('.title_cont') %>
+          </div>
+
+          <div class="form-group col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <%= f.search_field :created_at_gteq, class: 'form-control datepicker', placeholder: t('.date_from'), value: datetime(@search.created_at_gteq) %>
+          </div>
+
+          <div class="form-group col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <%= f.search_field :created_at_lteq, class: 'form-control datepicker', placeholder: t('.date_to'), value: datetime(@search.created_at_lteq) %>
+          </div>
+
+          <div class="actions text-right col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <%= link_to t('.clear'), posts_path, class: 'btn btn-default', remote: true %>
+            <%= f.submit class: 'btn btn-success'%>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

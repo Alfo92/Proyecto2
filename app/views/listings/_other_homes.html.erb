@@ -1,0 +1,9 @@
+<% #todo: %>
+<% Listing.interesting.each do |listing|  %>
+  <div class="other-block">
+    <div class="green-heading"><strong><%= listing.short_address %></strong></div>
+    <%= link_to image_tag(listing.primary_photo.try(:xlarge_url), class: 'lazy', lazy: true), listing %>
+    <div class="green"><%= for_sale_or_rent(listing) %>: <%= listing_price(listing) %></div>
+    <%= listing.quick_look %>
+  </div>
+<% end %>

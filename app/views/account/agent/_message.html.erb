@@ -1,0 +1,15 @@
+<div class="col-sm-3">
+  <div class="wrap-image">
+    <%= link_to image_tag(message.from_user && message.from_user.avatar ? message.from_user.avatar.url(:medium) : "medium-avatar-missing.png", class: "img-rounded img-responsive"), message.from_user || "#" %>
+  </div>
+</div>
+<div class="col-sm-5">
+  <div class="wrap-text">
+    <p><strong><%= message.from_name %></strong> (<%= message.from_email %>)</p>
+    <p><%= message.message %></p>
+    <p><%= message.from_phone %></p>
+  </div>
+</div>
+<div class="col-sm-4">
+
+</div>

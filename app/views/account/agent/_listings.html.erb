@@ -1,0 +1,88 @@
+<div id="listings" role="tabpanel" class="tab-pane" >
+  <!-- listing-title -->
+  <h1 class="listing-title">
+    <span class="sprites i-listing"></span>
+    <%= t(".my_listings") %>
+    <a href="<%= new_listing_path %>" class="btn btn-success green-text"><span>+</span><%= t(".add_listings") %></a>
+  </h1>
+  <!-- /listing-title -->
+  <!-- listing-block -->
+  <div class="listing-inform">
+    <p><strong><%= t(".summary") %></strong> <%= t("account.agent.listings.as_of") %> <%=l Date.today %></p>
+    <hr>
+  </div>
+  <!-- /listing-block -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tabpanel-3" aria-expanded="false" aria-controls="tabpanel-3">
+      <span class="sr-only"><%= t(".toggle_navigation") %></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div id="listing_types" role="tabpanel">
+    <ul class="nav nav-tabs navbar-collapse collapse standart" role="tablist" id="tabpanel-3" >
+      <li role="presentation" class="active"><a href="#Sale" aria-controls="Sale" role="tab" data-toggle="tab"><%= t(".for_sale") %></a></li>
+      <li role="presentation"><a href="#Rent" aria-controls="For Rent" role="tab" data-toggle="tab"><%= t(".for_rent") %></a></li>
+      <li role="presentation"><a href="#Sold" aria-controls="Sold" role="tab" data-toggle="tab"><%= t(".sold_rented") %></a></li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active in" id="Sale">
+        <!-- panel-listing -->
+        <div class="panel panel-default panel-listing">
+          <div class="panel-body">
+            <% @listings.for_sale.each do |listing| %>
+            <div class="row">
+              <%= render partial:'small_listing', locals:{listing:listing, edit_button: true} %>
+            </div>
+            <% end %>
+          </div>
+          <div class="panel-footer">
+            <p>
+              <span class="sprites i-view"></span><%= @listings.for_sale.sum(:views_count) %> <%= t(".property_views") %>
+              <!--<span class="pull-right"><strong>Open house:</strong> <a href="#">None scheduled</a></span>-->
+            </p>
+          </div>
+        </div>
+        <!-- /panel-listing -->
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="Rent">
+        <div class="panel panel-default panel-listing">
+          <div class="panel-body">
+            <% @listings.for_rent.each do |listing| %>
+            <div class="row">
+              <%= render partial:'small_listing', locals:{listing:listing, edit_button: true} %>
+            </div>
+            <% end %>
+          </div>
+          <div class="panel-footer">
+            <p>
+              <span class="sprites i-view"></span><%= @listings.for_rent.sum(:views_count) %> <%= t(".property_views") %>
+              <!--<span class="pull-right"><strong>Open house:</strong> <a href="#">None scheduled</a></span>-->
+            </p>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="Sold">
+        <div class="panel panel-default panel-listing">
+          <div class="panel-body">
+            <% @listings.sold.each do |listing| %>
+            <div class="row">
+              <%= render partial:'small_listing', locals:{listing:listing, edit_button: true} %>
+            </div>
+            <% end %>
+          </div>
+          <div class="panel-footer">
+            <p>
+              <span class="sprites i-view"></span><%= @listings.sold.sum(:views_count) %> <%= t(".property_views") %>
+              <!--<span class="pull-right"><strong>Open house:</strong> <a href="#">None scheduled</a></span>-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

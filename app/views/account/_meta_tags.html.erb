@@ -1,0 +1,15 @@
+<% content_for :social_networks do %>
+    <!--Facebook, Google +-->
+    <meta property="fb:app_id" content="1314896315219946" />
+    <meta property="og:image" content="<%= user.avatar.url(:medium) %>" />
+    <meta property="og:description" content="<%= user.profile_summary.join(', ') %>" />
+    <meta property="og:url"content="<%= account_agent_url(user) %>" />
+    <meta property="og:title" content="<%= user.name %>" />
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MiTerraOnline">
+    <meta name="twitter:creator" content=="@MiTerraOnline">
+    <meta name="twitter:title" content="<%= user.name %>">
+    <meta name="twitter:description" content="<%= user.profile_summary.join(', ') %>">
+    <meta name="twitter:image" content="<%= user.avatar.url(:medium) %>">
+<% end %>

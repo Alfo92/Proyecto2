@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'form-signin' }) do |f| %>
+      <h2 class="form-signin-heading green-text"><%= t(".forgot_your_password?")%></h2>
+      <%= devise_error_messages! %>
+
+
+
+      <%= f.label :email, t('layouts.registration.email') %>
+      <%= f.text_field :email, autofocus: true, class:"form-control", required:true,autofocus:true %>
+      <br>
+
+      <button class="btn btn-lg btn-success btn-block" type="submit"><%= t(".send_me_reset_password_instructions") %></button>
+
+      <%= render "devise/shared/links" %>
+
+  <% end %>
+
+
+</div> <!-- /container -->

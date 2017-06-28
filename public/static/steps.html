@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Mi terra</title>
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- formstyler -->
+	<script type="text/javascript" src="js/jquery.formstyler.js"></script>
+	<script type="text/javascript">
+		(function($) {
+		$(function() {
+			$('input, select').styler();
+		});
+		})(jQuery);
+
+	</script>
+	
+</head>
+<body>
+	<!-- pop-up -->
+	<!-- addPhoto -->
+	<div class="modal fade" id="addPhoto" tabindex="-1" role="dialog" aria-labelledby="addPhoto" aria-hidden="true">
+	  <div class="modal-dialog text-center">
+		<div class="modal-content padded">
+			<button type="button" class="i-close" data-dismiss="modal" aria-label="Close"></button>		
+			<p><span class="sprites i-photo-modal"></span></p>
+			<div class="title green-text">Upload Your Own Photo</div>
+			<p><input type="file"></p>
+			<div class="mini-description">
+				<p>- 4MB limit per photo</p>
+				<p>- Accepted files include: jpg, gif, bmp, png</p>
+			</div>
+			<p class="green-text">or select one from the options below:</p>
+			<p><a class="sprites i-male" href="#"></a><a href="#" class="sprites i-female"></a></p>
+			<p><button type="button" class="btn btn-success">done</button></p>
+		</div>
+	  </div>
+	</div>
+	<!-- /addPhoto -->
+	<!-- noPhoto -->
+	<div class="modal fade" id="noPhoto" tabindex="-1" role="dialog" aria-labelledby="noPhoto" aria-hidden="true">
+	  <div class="modal-dialog text-center">
+		<div class="modal-content padded">
+			<button type="button" class="i-close" data-dismiss="modal" aria-label="Close"></button>		
+			<p><span class="sprites i-no-photo"></span></p>
+			<div class="title green-text">No Photo?</div>
+			<hr>
+			<p>Agents with profile photos get</p>
+			<p>10 times more clicks</p>
+			<hr>
+			<p><button type="button" class="btn btn-success">done</button></p>
+		</div>
+	  </div>
+	</div>
+	<!--/noPhoto -->
+	<!-- /pop-up -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="container">
+				<!-- navigation -->
+				 <nav>
+					  <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+					  </div>
+					  <div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="buy.html">Buy</a></li>
+							<li><a href="sell.html">Sell</a></li>
+							<li><a href="rent.html">Rent</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						<ul class="navbar-right">
+							<li class="visible-sm-block"><a href="#" title="Sign In"><span class="glyphicon glyphicon-user"></span></a></li>
+							<li class="hidden-sm"><a href="#">Sign In</a><span>or</span><a href="#">Join</a></li>						
+						</ul>
+					  </div><!--/.nav-collapse -->
+				  </nav>
+				<!-- /navigation -->
+			</div>
+		</header>
+		<!-- /header -->
+		<div class="container">
+			<div class="padding-block">
+				<!-- started-bock -->
+				<div id="started-bock" class="content">
+					<div class="row">
+						<div class="col-sm-5">
+							<div id="started-left">
+								<div class="title text-center">Get Started in 4 Easy Steps</div>
+								<div role="tabpanel">
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#step-1" aria-controls="step-1" role="tab" data-toggle="tab"><span class="circle i-ok">1</span>Verify your account info</a></li>
+										<li role="presentation"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab"><span class="circle">2</span>Set up lead preferences</a></li>
+										<li role="presentation"><a href="#step-3" aria-controls="step-3" role="tab" data-toggle="tab"><span class="circle">3</span>Set up Instant Leads</a></li>
+										<li role="presentation"><a href="#step-4" aria-controls="step-4" role="tab" data-toggle="tab"><span class="circle">4</span>Review your listings</a></li>
+									</ul>
+								</div>
+								<div id="started-info">
+									<p>Need Help or have questions?</p>
+									<p class="green-text"><span class="circle"><span class="sprites i-phone"></span></span>888-565-3652</p>
+									<p>Monday through Friday</p>
+									<p>9am-7pm EST</p>
+									<p>Saturday</p>
+									<p>11am-3pm EST</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-7">
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="step-1">
+									<p>To ensure buyers can contact you about listings on MiTERRA, review your basic account info. Click any item to edit.</p>
+									<form action="">
+										<p>
+											<label>Photo</label><button type="button" id="photo" data-toggle="modal" data-target="#addPhoto">
+												<span>add photo</span>
+											</button>
+										</p>
+										<p><label>Name</label><input type="text" placeholder="Edo Cohen"></p>
+										<p><label>Email</label><input type="text" placeholder="edo@actbold.com"></p>
+										<p><label>Location</label><input type="text" placeholder="Los Angeles, CA"></p>
+										<p>
+											<label>Pro Type</label><select name="" id="">
+												<option value="">Select...</option>
+												<option value="">Agent</option>
+											</select>
+										</p>
+										<p><label>Phone</label><input type="text" placeholder="(310) 294 - 433"></p>
+										<p><label></label><button class="btn btn-success">next</button></p>
+									</form>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="step-2">
+									<p><strong>Locations</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<form action="">
+										<p class="small">You’ve added <strong>1 of 3</strong> active locations</p>
+										<p><input type="text" placeholder="Enter Zip code"><button class="btn-default pull-right">Add</button></p>
+										<div class="wrap-location">
+											<div class="location-title">Location <a href="#" class="sprites i-close-mini pull-right"></a></div>
+											<p>Los Angeles, CA</p>
+										</div>
+										<p><strong>Price</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+										<p>
+											<select name="" id="">
+												<option value="">Select...</option>
+												<option value="">Any</option>
+											</select>
+											to
+											<select name="" id="" class="pull-right">
+												<option value="">Select...</option>
+												<option value="">Any</option>
+											</select>
+										</p>
+										<p><button class="btn btn-success btn-block">next</button></p>
+									</form>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="step-3">
+									<div class="text-center">
+										<p><span class="sprites i-phone-big"></span></p>
+										<p><strong>Your Mobile Number</strong></p>
+										<p class="green-text">(310) 294 - 4333 <a href="#" class="btn green-text">Edit</a></p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									</div>
+									<p><button class="btn btn-success btn-block">next</button></p>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="step-4"><button class="btn btn-success btn-lg center-block">Create Listing <span class="sprites i-arrow-big"></span></button></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- started-bock -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1 copyright">© 2014</div>
+					<div class="col-sm-7">
+						<ul class="list-inline footer-nav">
+							<li><a href="about.html">About</a></li>
+							<li><a href="terms.html">Terms of Use</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="social list-inline">
+							<li>Follow us</li>
+							<li><a href="#" class="sprites i-twitter"></a></li>
+							<li><a href="#" class="sprites i-faceboock"></a></li>
+							<li><a href="#" class="sprites i-google"></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+		<!-- /footer -->
+</body>
+</html>

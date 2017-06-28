@@ -1,0 +1,14 @@
+.middle{
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .xs-only{
+    display: block !important;
+  }
+}
+@media (max-width: 768px){
+  .xs-only{
+    display: none !important;
+  }
+}

@@ -1,0 +1,40 @@
+<!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1 copyright">© <%= Date.today.year %></div>
+          <div class="col-sm-7">
+            <ul class="list-inline footer-nav">
+              <li><a href="/about"><%= t('.about') %></a></li>
+              <li><a href="/privacy"><%= t('.privacy_policy') %></a></li>
+               <li><a href="/terms"><%= t('.terms_of_use') %></a></li>
+              <li><a href="/news"><%= t('.news') %></a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul class="social list-inline">
+              <li><%= t('.follow_us') %></li>
+              <li><a href="https://www.facebook.com/www.miterra.com.py/" class="fa fa-lg fa-facebook" style="color: black;" title="Facebook"></a></li>
+              <li><a href="https://www.instagram.com/miterra.py/?hl=es" class="fa fa-lg fa-instagram" style="color: black;" title="Instagram"></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+    <!-- /footer -->
+
+<script>
+var elements = document.getElementsByTagName("INPUT");
+for (var i = 0; i < elements.length; i++) {
+  if (elements[i].id=="user_email"){
+    elements[i].oninvalid = function(e) {
+
+          e.target.setCustomValidity("");
+          e.target.setCustomValidity("Debe ingresar una dirección de correo electrónico, con '@' y una extensión válida");
+
+        //e.target.checkValidity();
+    };
+  }
+}
+</script>

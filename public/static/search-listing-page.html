@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Mi terra</title>
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- formstyler -->
+	<script type="text/javascript" src="js/jquery.formstyler.js"></script>
+	<script type="text/javascript">
+		(function($) {
+		$(function() {
+			$('input, select').styler();
+		});
+		})(jQuery);
+
+	</script>
+	
+</head>
+<body>
+	<!-- pop-up -->
+	<!-- addPhoto -->
+	<div class="modal fade" id="listingModal" tabindex="-1" role="dialog" aria-labelledby="addPhoto" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content padded">
+			<button type="button" class="i-close" data-dismiss="modal" aria-label="Close"></button>
+			<img src="img/content/gallery/2.jpg" alt="" class="img-responsive">
+			<div class="title">456 Nanawa Road, Los Angeles, CA 90032</div>
+			<div class="price">Asking Price: <span>$130,000.00</span> <a href="#" class="green-text"><strong>View Full Listing</strong></a></div>
+			<ul class="list-inline">
+				<li><p><a href="#" class="green-text"><span class="sprites i-saved"></span>Save Listing</a></p></li>
+				<li><p><a href="#" class="green-text"><span class="sprites i-notify"></span>Notify Me With Similiar Listings</a></p></li>
+			</ul>
+			<h2><strong class="green-text">Details</strong> for 456 Nanawa Road</h2>
+			<p>1750 Westridge Rd An exceptional Brentwood home on lower Westridge Road is newly remodeled and transformed into a light filled calming contemporary retreat. Previously owned by American Musical composer and lyricist, Meredith Willson. Exquisite design fused with quality materials create clean lines, chic style and a flexible open floor plan. Gated drive w large motor court. Banks of Fleetwood doors retract for seamless access to balconies and patios with bucolic canyon to ocean views, verdant landscaped lawn, grounds, swimmers pool and spa dramatically lit with LED in evening hours. <strong><a href="#">Read More</a></strong></p>
+		</div>
+	  </div>
+	</div>
+	<!-- /addPhoto -->
+	<!-- /pop-up -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="container">
+				<!-- navigation -->
+				 <nav>
+					  <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+					  </div>
+					  <div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="buy.html">Buy</a></li>
+							<li><a href="sell.html">Sell</a></li>
+							<li><a href="rent.html">Rent</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						<ul class="navbar-right">
+							<li class="visible-sm-block"><a href="#" title="Sign In"><span class="glyphicon glyphicon-user"></span></a></li>
+							<li class="hidden-sm"><a href="#">Sign In</a><span>or</span><a href="#">Join</a></li>						
+						</ul>
+					  </div><!--/.nav-collapse -->
+				  </nav>
+				<!-- /navigation -->
+			</div>
+		</header>
+		<!-- /header -->
+		<div class="wrap-box">
+			<div class="row">
+				<div class="col-lg-7 col-md-6">
+					<!-- banners -->
+					<div class="banners"><p><a href="#"><img src="img/content/banner.png" alt="" class="img-responsive"></a></p></div>
+					<!-- /banners -->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2246.690078360306!2d37.764058!3d55.729138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab565d5cf3b99%3A0x5e659fd0a87489ed!2z0YPQuy4g0JrQvtC90L7QstCw0LvQvtCy0LAsIDE2LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTA5NDI4!5e0!3m2!1sru!2sua!4v1421938278801" width="100%" height="500px" frameborder="0" style="border:0"></iframe>
+					<!-- banners -->
+					<div class="banners"><p><a href="#"><img src="img/content/banner.png" alt="" class="img-responsive"></a></p></div>
+					<!-- /banners -->
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<div id="search-page">
+						<h1 class="green-text">Rentals <span>50 results</span>
+							<div class="wrap">
+								<p>
+									<span class="sprites i-search"></span>
+									<input type="text" placeholder="Address, Neighborhood, or ZIP">
+								</p>
+							</div>
+						</h1>
+						<ul class="list-inline separator">
+							<li>
+								<select name="" id="">
+									<option value="">Select...</option>
+									<option value="">Featured</option>
+								</select>
+							</li>
+							<li>
+								<select name="" id="">
+									<option value="">Select...</option>
+									<option value="">Property Type</option>
+								</select>
+							</li>
+							<li>
+								<select name="" id="">
+									<option value="">Select...</option>
+									<option value="">Newest</option>
+								</select>
+							</li>
+							<li>
+								<select name="" id="">
+									<option value="">Select...</option>
+									<option value="">Price</option>
+								</select>
+							</li>
+						</ul>
+						<p>
+							<button class="btn-default">Save Search</button>
+							<button class="btn-default">Share Search</button>
+						</p>
+						<div class="green title"><span class="sprites i-star"></span>Featured Listings</div>
+						<div class="listing-mini green">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="wrap">
+										<a href="#listingModal" data-toggle="modal"><img src="img/content/house-1.jpg" alt="" class="img-responsive"></a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="price">
+										For Rent
+										<p>$1,300/mo</p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<p class="big">456 Nanawa Road</p>
+									<p>2 beds, 2.5 baths</p>
+									<p>1940 sqft</p>
+									<p>Built in 1975</p>
+								</div>
+							</div>
+							<hr>
+						</div>
+						<div class="listing-mini green">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="wrap">
+										<a href="#"><img src="img/content/house-2.jpg" alt="" class="img-responsive"></a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="price">
+										For Rent
+										<p>$780/mo</p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<p class="big">456 Nanawa Road</p>
+									<p>2 beds, 2.5 baths</p>
+									<p>1940 sqft</p>
+									<p>Built in 1975</p>
+								</div>
+							</div>
+							<hr>
+						</div>
+						<div class="listing-mini">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="wrap">
+										<a href="#"><img src="img/content/house-3.jpg" alt="" class="img-responsive"></a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="price">
+										For Rent
+										<p>$1,300/mo</p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<p class="big">456 Nanawa Road</p>
+									<p>2 beds, 2.5 baths</p>
+									<p>1940 sqft</p>
+									<p>Built in 1975</p>
+								</div>
+							</div>
+							<hr>
+						</div>
+						<div class="listing-mini">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="wrap">
+										<a href="#"><img src="img/content/house-4.jpg" alt="" class="img-responsive"></a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="price">
+										For Rent
+										<p>$650/mo</p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<p class="big">456 Nanawa Road</p>
+									<p>2 beds, 2.5 baths</p>
+									<p>1940 sqft</p>
+									<p>Built in 1975</p>
+								</div>
+							</div>
+							<hr>
+						</div>
+						<div class="listing-mini">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="wrap">
+										<a href="#"><img src="img/content/house-5.jpg" alt="" class="img-responsive"></a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="price">
+										For Rent
+										<p>$1,300/mo</p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<p class="big">456 Nanawa Road</p>
+									<p>2 beds, 2.5 baths</p>
+									<p>1940 sqft</p>
+									<p>Built in 1975</p>
+								</div>
+							</div>
+							<hr>
+						</div>
+						<div class="listing-mini">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="wrap">
+										<a href="#"><img src="img/content/house-6.jpg" alt="" class="img-responsive"></a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="price">
+										For Rent
+										<p>$2,300/mo</p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<p class="big">456 Nanawa Road</p>
+									<p>2 beds, 2.5 baths</p>
+									<p>1940 sqft</p>
+									<p>Built in 1975</p>
+								</div>
+							</div>
+							<hr>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1 copyright">© 2014</div>
+					<div class="col-sm-7">
+						<ul class="list-inline footer-nav">
+							<li><a href="about.html">About</a></li>
+							<li><a href="terms.html">Terms of Use</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="social list-inline">
+							<li>Follow us</li>
+							<li><a href="#" class="sprites i-twitter"></a></li>
+							<li><a href="#" class="sprites i-faceboock"></a></li>
+							<li><a href="#" class="sprites i-google"></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+		<!-- /footer -->
+</body>
+</html>

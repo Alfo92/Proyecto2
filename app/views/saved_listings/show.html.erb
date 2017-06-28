@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @saved_listing.user_id %>
+</p>
+
+<p>
+  <strong>Listing:</strong>
+  <%= @saved_listing.listing_id %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @saved_listing.sort_order %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @saved_listing.notes %>
+</p>
+
+<%= link_to 'Edit', edit_saved_listing_path(@saved_listing) %> |
+<%= link_to 'Back', saved_listings_path %>

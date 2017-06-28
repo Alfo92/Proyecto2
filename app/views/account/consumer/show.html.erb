@@ -1,0 +1,43 @@
+<div class="container">
+  <!-- agent-info -->
+  <div id="agent-info">
+    <div class="row wrap-user">
+      <div class="col-sm-3">
+        <div class="wrap-image">
+          <p><%= image_tag current_user.avatar.url(:medium),  class:"img-rounded img-responsive center-block img-avatar" %></p>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <!-- description -->
+        <div class="description">
+          <p class="name green-text"><%= @user.name %></p>
+          <p><span class="big">Usuario desde: <%= @user.created_at.strftime("%Y") %></span></p>              
+        </div>
+        <!-- /description -->
+      </div>
+    </div>
+
+    <section>
+      <h2 class="saved-title">
+        <span class="sprites i-saved"></span>
+        <%= t('account.consumer.index.saved_listings') %>
+      </h2>
+      <% @user.saved_listings.includes(:listing).each do |saved_listing| %>
+      <% listing_s = saved_listing.listing %>
+        <%= render partial:'saved_listing', locals:{listing:listing_s} %>
+      <% end %>
+      </section>          
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+
+   <% @user.saved_listings.includes(:listing).each do |saved_listing| %>
+   <% listing_s = saved_listing.listing %>
+    SetupMapForSavedListing(".map<%=listing_s.id%>", <%= raw({lat: listing_s.latitude, lng: listing_s.longitude}.to_json) %>)
+  <% end %>
+});
+
+</script>

@@ -1,0 +1,60 @@
+<!-- calculator
+<div class="title">FINANCE CALCULATOR</div>
+  <p><select name="" id="">
+    <option value="">Select...</option>
+    <option value="">Select your Currency</option>
+  </select></p>
+  <p><input type="text" value="Amount to be Financed?" onBlur="if(value==''){value='Amount to be Financed?'}" onFocus="if(value=='Amount to be Financed?'){value=''}" value="Amount to be Financed?"></p>
+  <p><input type="text" value="Term (Months)" onBlur="if(value==''){value='Term (Months)'}" onFocus="if(value=='Term (Months)'){value=''}" value="Term (Months)"></p>
+  <p><input type="text" value="Annual Interest rate" onBlur="if(value==''){value='Annual Interest rate'}" onFocus="if(value=='Annual Interest rate'){value=''}" value="Annual Interest rate"></p>
+  <p><button>CALCULATE <span class="sprites i-right-big"></span></button></p>-->
+
+  <div id="calculator" class="green">
+    <div class="title"><%= t(".finance_calculator") %></div>
+    <p>
+      <label><%= t(".amount_to_be_financed") %></label>
+      <% if browser.device.mobile? && browser.chrome? %>
+        <input class="" type="number" name="price" value="<%= number_with_precision(@listing.list_price || 275000, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: '') %>">
+      <% else %>
+          <input class="money" type="text" name="price" value="<%= number_with_precision(@listing.list_price, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: t('number.currency.format.delimiter')) || 275000 %>">
+      <% end %>
+    </p>
+    <p>
+      <label><%= t(".down_payment") %> (<span id="down_payment_rate">10</span>%)</label>
+      <% if browser.device.mobile? && browser.chrome? %>
+          <input class="" type="number" name="down_payment" value="<%= number_with_precision(@listing.list_price/10 || 27500, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: '') %>">
+      <% else %>
+          <input class="money" type="text" name="down_payment" value="<%= number_with_precision(@listing.list_price/10, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: t('number.currency.format.delimiter')) || 27500 %>">
+      <% end %>
+    </p>
+    <p>
+      <label><%= t(".loan_term_(months)") %>:</label>
+      <input type="text" name="loan_term" value="120">
+    </p>
+    <p>
+      <label><%= t(".annual_interest_rate") %></label>
+      <input type="text" name="interest_rate" value="13.5">
+    </p>
+    <p id="monthly-payment-container" style="font-weight: bold;" class="">
+        <label style="font-weight: bold;"><%= t(".monthly_payment") %>:</label>
+        <span class="money" id="monthly_payment"></span>
+    </p>
+    <p>
+      <button name="calculate"><%= t(".calculate") %> <span class="sprites i-right-big"></span></button>
+    </p>
+  </div>
+<!-- /calculator -->
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  maskMoney();
+  // Your code here
+  var params = {
+    price: <%= price.to_i %>,
+    down_payment: <%= price.to_i / 10 %>
+  }
+  $('#calculator').mortgagecalc(params);
+});
+
+</script>

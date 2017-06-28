@@ -1,0 +1,29 @@
+<%= form_for(@view) do |f| %>
+  <% if @view.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@view.errors.count, "error") %> prohibited this view from being saved:</h2>
+
+      <ul>
+      <% @view.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :viewable_type %><br>
+    <%= f.text_field :viewable_type %>
+  </div>
+  <div class="field">
+    <%= f.label :viewable_id %><br>
+    <%= f.number_field :viewable_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_address %><br>
+    <%= f.text_field :ip_address %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

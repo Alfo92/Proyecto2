@@ -1,0 +1,121 @@
+
+<div id="new_cottage" class="listing_types">
+  <div class="row">
+    <div class="col-sm-3">
+      <label class="required"><%= t(".listing_type") %>:</label>
+        <%= f.select :listing_type, [[t("listings.sell"),Listing::LISTING_TYPE.index(:sale)],[t("listings.rent"),Listing::LISTING_TYPE.index(:rent)]], {include_blank: t("select")}, class: 'validate[required]'  %>
+    </div>
+    <div class="col-sm-3">
+      <p>
+        <label class="required"><%= t(".currency") %>:</label>
+        <%= p.select :price_type, Listing::PRICE_TYPE.collect{|price_type| [t('listings.'+price_type.to_s), price_type.to_s] }, {selected: @listing.price_type}, class: 'validate[required]'  %>
+      </p>
+    </div>
+     <input type="hidden" value="<%= @listing.price_type %>" id="listing[price_type]" name="listing[price_type]">
+    <div class="col-sm-3">
+      <p>
+        <label class="required"><%= t(".price") %>:</label>
+        <% if browser.device.mobile? && browser.chrome? %>
+            <%= f.number_field :list_price, class: 'validate[required]', step: 1, value: number_with_precision(f.object.list_price, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: '') %>
+        <% else %>
+            <%= f.text_field :list_price, class: 'validate[required]  money', value: number_with_precision(f.object.list_price, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: t('number.currency.format.delimiter')), autocorrect: 'off', autocomplete: "off", spellcheck: 'false' %>
+        <% end %>
+      </p>
+    </div>
+    <div class="col-sm-3">
+      <p>
+        <label><%= t(".payment_options") %>:</label>
+        <%= p.text_field :payment_options, value: @listing.properties["payment_options"], placeholder: "ej Financiacion propia 130 meses, 60 meses, plan contado" %>
+      </p>
+    </div>
+    <div class="col-sm-3">
+     <p>
+        <label class="required"><%= t(".date_listed") %>:</label>
+        <%= f.text_field :list_date, value: f.object.list_date ? l(f.object.list_date) : l(Date.today), class: 'validate[required] datepicker'  %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".condominium_name") %>:</label>
+        <%= p.text_field :condominium_name, placeholder: "ej Carlos Franco Country & Golf Club, Casa del Monte, Aquavillage, Ninguno" , value: @listing.properties["condominium_name"] %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".condominium_desc") %>:</label>
+        <%= p.text_field :condominium_desc, placeholder: "ej amenities, quincho, Campo de Golf, Canchas de Tenis, Ninguno" , value: @listing.properties["condominium_desc"] %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-4 col-md-4">
+      <p>
+        <label><%= raw t(".built_m<sup>2</sup>") %>:</label>
+        <%= p.text_field :square_meters_built, value: @listing.properties["square_meters_built"] %>
+      </p>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <p>
+        <label><%= raw t(".land_m<sup>2</sup>") %>:</label>
+        <%= p.text_field :square_meters_land, value: @listing.properties["square_meters_land"] %>
+      </p>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-3 col-md-12">
+      <p>
+        <label><%= t(".building_state") %></label>
+        <%= p.text_field :building_state, value:@listing.properties["building_state"], placeholder: "ej Nuevo, Necesita reparaciones, Recientemente reformado" %>
+      </p>
+    </div>
+    <div class="col-sm-3 col-md-3">
+      <p>
+       <label><%= t(".parking_number") %>:</label>
+       <%= p.text_field :parking_number, value: @listing.properties["parking_number"], placeholder: "2 vehiculos, etc" %>
+      </p>
+    </div>
+    <div class="col-sm-3 col-md-3">
+      <p>
+       <label class="required"><%= t(".bedrooms") %>:</label>
+       <%= p.text_field :bedrooms, value: @listing.properties["bedrooms"], placeholder: "5" , class: 'validate[required]' %>
+      </p>
+    </div>
+    <div class="col-sm-3 col-md-3">
+      <p>
+       <label class="required"><%= t(".bathrooms") %>:</label>
+       <%= p.text_field :bathrooms, value: @listing.properties["bathrooms"], placeholder: "3", class: 'validate[required]'  %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".house_desc") %>:</label>
+        <%= f.text_area :description, placeholder: "ej Parrilla, Living, Piscina, Lavadero, Cocina con comedor, Amoblado" , value: @listing.description %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".location_description") %>:</label>
+        <%= p.text_field :location_description, placeholder: "ej Puntos de referencia, Salto Cristal, Parque Nacional San Rafael, Laguna Blanca" , value: @listing.properties["location_description"] %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <label class="required"><%= t(".short_description") %>:</label>
+        <%= p.text_field :short_description, placeholder: "ej Alquiler por el verano en el exclusivo Aquavillage de San Bernardino", value: @listing.properties["short_description"], class: 'validate[required] maxSize[40]', maxlength: 40  %>
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <p>
+        <label><%= t(".other_info") %>:</label>
+        <%= p.text_field :other_info, placeholder: "ej Alquiler valido de diciembre a Febrero" , value: @listing.properties["other_info"] %>
+      </p>
+    </div>
+  </div>
+</div>

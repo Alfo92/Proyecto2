@@ -1,0 +1,148 @@
+<% unless user_signed_in? %>
+
+    <%= render partial: "layouts/registration" %>
+
+    <script>
+        window.onload = function () {
+            $(".btnRegister").click(function (event) {
+                event.preventDefault();
+                $("#registration").modal('show');
+                activaTab('join');
+              /*$("#reg_log_modal_header_text").css()*/
+            });
+            $(".btnSign").click(function (event) {
+                event.preventDefault();
+                $("#registration").modal('show');
+                activaTab('sign-in');
+              /*$("#reg_log_modal_header_text").css()*/
+            });
+            
+            function activaTab(tab_id) {
+              $('#join').removeClass('active');
+              $('#sign-in').removeClass('active');
+              $('#' + tab_id).addClass('active');
+            };
+        }
+    </script>
+<% end %>
+<!-- header -->
+<header>
+    <!-- navigation -->
+  <nav class="navbar" style="margin: 0;">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Mobile flag to change language -->
+        <%= link_to "#", class: "navbar-toggle show-mobile dropdown-toggle", data: {toggle: :dropdown} do %>
+            <%= image_tag("#{get_language}-flag.png", width: 25) %>
+        <% end %>
+        <ul class="dropdown-menu pull-right">
+          <% User.language.options.each do |option| %>
+              <li>
+                <%= link_to set_language_users_path(language: option[1]), method: :put do %>
+                    <%= image_tag("#{option[1]}-flag.png", width: 25) %>
+                    <%= option[0] %>
+                <% end %>
+              </li>
+          <% end %>
+        </ul>
+
+        <a class="navbar-brand" href="/"><%= image_tag "logo.png" %></a>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+          <!-- Mobile only -->
+          <% if user_signed_in? %>
+              <li class="show-mobile"><a href="<%= user_root_path %>"><%= t(".my_account") %></a></li>
+          <% else %>
+              <li class="show-mobile">
+                <a href="#" id="btnSign" class="btnSign"><%= t(".sign_in") %></a>
+              </li>
+              <li class="show-mobile">
+                <a href="#" id="btnRegister" class="btnRegister"><%= t(".join") %></a>
+              </li>
+          <% end %>
+
+          <li><%= link_to t(".buy"), for_sale_path %></li>
+          <li><%= link_to t(".rent"), for_rent_path %></li>
+          <% if current_user && current_user.is_agent? %>
+            <li><%= link_to t(".sell"), new_listing_path %></li>
+          <% elsif !current_user %> 
+            <li><%= link_to t(".sell"), "#",onclick:"$('#btnRegister').trigger('click')" %></li>
+          <% end %>
+          <li><%= link_to t(".directory"), real_state_directory_index_path %></li>
+          <li><a href="/about"><%= t(".about") %></a></li>
+          <li><a href="/news"><%= t(".blog") %></a></li>
+
+          <!-- Mobile section -->
+          <% if user_signed_in? %>
+              <% if can? :manage, Post %>
+                  <li class="show-mobile"><%= link_to t('.posts'), posts_path %></li>
+              <% end %>
+              <li class="show-mobile"><%= link_to t(".sign_out"), destroy_user_session_path, :method => :delete %></li>
+          <% end %>
+
+        </ul>
+
+        <ul class="navbar-right hide-mobile">
+          <li>
+            <%= link_to "#", class: "dropdown-toggle", data: {toggle: :dropdown} do %>
+                <%= image_tag("#{get_language}-flag.png", width: 25) %>
+            <% end %>
+            <ul class="dropdown-menu">
+              <% User.language.options.each do |option| %>
+                  <li>
+                    <%= link_to set_language_users_path(language: option[1]), method: :put do %>
+                        <%= image_tag("#{option[1]}-flag.png", width: 25) %>
+                        <%= option[0] %>
+                    <% end %>
+                  </li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="navbar-right hide-mobile">
+          <% if user_signed_in? %>
+              <li>
+                <div class="user-mini">
+                  <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" class="avatar circle" title="<%= current_user.name %>">
+                    <div class="truncate inline-block"><%= current_user.name %></div>
+                    <div class="wrap-photo"><%= image_tag current_user.avatar.url(:mini) %></div>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="<%= user_root_path %>"><%= t(".my_account") %></a></li>
+                    <% if can? :manage, Post %>
+                        <li><%= link_to t('.posts'), posts_path %></li>
+                    <% end %>
+                    <li><%= link_to t(".sign_out"), destroy_user_session_path, :method => :delete %></li>
+                  </ul>
+                </div>
+              </li>
+          <% else %>
+              <li class="visible-sm-block">
+                <a href="#" title="Sign In" data-toggle="modal" data-target="#registration">
+                  <span class="glyphicon glyphicon-user"></span>
+                </a>
+              </li>
+              <li class="hidden-sm">
+                <a href="#" id="btnSign" class="btnSign"><%= t(".sign_in") %></a>
+                <span><%= t(".or") %></span>
+                <a href="#" id="btnRegister" class="btnRegister"><%= t(".join") %></a>
+              </li>
+          <% end %>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+    <!-- /navigation -->
+</header>

@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Mi terra</title>
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/elastislide.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- formstyler -->
+	<script type="text/javascript" src="js/jquery.formstyler.js"></script>
+	<script type="text/javascript">
+		(function($) {
+		$(function() {
+			$('input, select').styler();
+		});
+		})(jQuery);
+
+	</script>
+	
+	<!-- gallery -->
+	<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+	<script type="text/javascript" src="js/gallery.js"></script>
+	<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+		<div class="rg-image-wrapper">
+			{{if itemsCount > 1}}
+				<div class="rg-image-nav">
+					<a href="#" class="rg-image-nav-prev">Previous Image</a>
+					<a href="#" class="rg-image-nav-next">Next Image</a>
+				</div>
+			{{/if}}
+			<div class="rg-image"></div>
+			<div class="rg-loading"></div>
+			<div class="rg-caption-wrapper">
+				<div class="rg-caption" style="display:none;">
+					<p></p>
+					
+				</div>
+				<div class="wrap"><a href="#" class="map"><img src="img/map.png" alt=""><span class="green"><span class="sprites i-map"></span>View Map</span></a></div>
+			</div>
+		</div>
+	</script>
+	
+</head>
+<body>
+	<!-- pop-up -->
+	<!-- addPhoto -->
+	<div class="modal fade" id="addPhoto" tabindex="-1" role="dialog" aria-labelledby="addPhoto" aria-hidden="true">
+	  <div class="modal-dialog text-center">
+		<div class="modal-content padded">
+			<button type="button" class="i-close" data-dismiss="modal" aria-label="Close"></button>		
+
+		</div>
+	  </div>
+	</div>
+	<!-- /addPhoto -->
+	<!-- /pop-up -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="container">
+				<!-- navigation -->
+				 <nav>
+					  <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+					  </div>
+					  <div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="buy.html">Buy</a></li>
+							<li><a href="sell.html">Sell</a></li>
+							<li><a href="rent.html">Rent</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						<ul class="navbar-right">
+							<li class="visible-sm-block"><a href="#" title="Sign In"><span class="glyphicon glyphicon-user"></span></a></li>
+							<li class="hidden-sm"><a href="#">Sign In</a><span>or</span><a href="#">Join</a></li>						
+						</ul>
+					  </div><!--/.nav-collapse -->
+				  </nav>
+				<!-- /navigation -->
+			</div>
+		</header>
+		<!-- /header -->
+		<div class="container home-listing">
+			<div class="row">
+				<div class="col-sm-8">
+					<div id="rg-gallery" class="rg-gallery">
+					<div class="rg-thumbs">
+						<div class="es-carousel-wrapper">
+							<div class="es-nav">
+								<span class="es-nav-prev">Previous</span>
+								<span class="es-nav-next">Next</span>
+							</div>
+							<div class="es-carousel">
+								<ul>
+									<li><a href="#"><img src="img/content/gallery/thumbs/2.jpg" data-large="img/content/gallery/2.jpg" alt="image02" data-description="" /></a></li>
+									<li><a href="#"><img src="img/content/gallery/thumbs/1.jpg" data-large="img/content/gallery/1.jpg" alt="image01" data-description="" /></a></li>
+									<li><a href="#"><img src="img/content/gallery/thumbs/2.jpg" data-large="img/content/gallery/2.jpg" alt="image02" data-description="" /></a></li>
+									<li><a href="#"><img src="img/content/gallery/thumbs/1.jpg" data-large="img/content/gallery/1.jpg" alt="image01" data-description="" /></a></li>
+									<li><a href="#"><img src="img/content/gallery/thumbs/2.jpg" data-large="img/content/gallery/2.jpg" alt="image02" data-description="" /></a></li>
+									<li><a href="#"><img src="img/content/gallery/thumbs/2.jpg" data-large="img/content/gallery/2.jpg" alt="image02" data-description="" /></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="title">456 Nanawa Road Los Angeles, CA 90032</div>
+					<div class="price">Asking Price: <p>$130,000.00</p></div>
+					<p><a href="#" class="green-text"><span class="sprites i-saved"></span>Save Listing</a></p>
+					<p><a href="#" class="green-text"><span class="sprites i-notify"></span>Notify Me With Similiar Listings</a></p>
+					<p><a href="#" class="green-text"><span class="sprites i-share-big"></span>Share This Property</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8">
+					<section>
+						<h2><strong class="green-text">Details </strong>for 456 Nanawa Road	</h2>
+						<p>1750 Westridge Rd An exceptional Brentwood home on lower Westridge Road is newly remodeled and transformed into a light filled calming contemporary retreat. Previously owned by American Musical composer and lyricist, Meredith Willson. Exquisite design fused with quality materials create clean lines, chic style and a flexible open floor plan. Gated drive w large motor court. Banks of Fleetwood doors retract for seamless access to balconies and patios with bucolic canyon to ocean views, verdant landscaped lawn, grounds, swimmers pool and spa dramatically lit with LED in evening hours.</p>
+					</section>
+					<section>
+						<h4><strong class="green-text">Features </strong>at 456 Nanawa Road	</h5>
+						<div class="row">
+							<div class="col-sm-5 col-md-3">
+								<ul>
+									<li>Price: $6,500,000</li>
+									<li>5 Bedrooms</li>
+									<li>6 full Bathrooms</li>
+									<li>Single-Family Home</li>
+									<li>Fireplace</li>
+									<li>Desc</li>
+								</ul>
+							</div>
+							<div class="col-sm-6 col-md-4 col-sm-offset-1">
+								<ul>
+									<li>Status: For Sale</li>
+									<li>Contemporary Architecture</li>
+									<li>Built in 1947</li>
+									<li>Neighborhood: <span class="blue-text">Brentwood</span></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h4><strong class="green-text">Public Records</strong> at 456 Nanawa Road</h4>
+						<div class="row">
+							<div class="col-sm-5 col-md-3">
+								<ul>
+									<li>Single Family Residential</li>
+									<li>Tax Rate Code Area: 0-067</li>
+								</ul>
+							</div>
+							<div class="col-sm-6 col-md-4 col-sm-offset-1">
+								<ul>
+									<li>Lot Size: 4,368 sqft</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h4><strong class="green-text">Real Estate Trends	</strong></h4>
+						<table class="prices">
+							<tr>
+								<th>Listing price for 5237 Senford Ave</th>
+								<th>$260,000</th>
+							</tr>
+							<tr>
+								<td>Average Listing price for similar homes</td>
+								<td>$963,336</td>
+							</tr>
+							<tr>
+								<td>Average Listing price for similar homes<</td>
+								<td>$276,283</td>
+							</tr>
+							<tr>
+								<td>Median sale price for all homes in <span class="blue-text">this area</span></td>
+								<td>$1,000,500</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h4><strong class="green-text">Rate and Review</strong></h4>
+						<div class="row">
+							<div class="col-md-6 wrap-rating">
+								<p><strong>Rate this area:</strong></p>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div><div></div>
+								<p><strong>Rate these categories:</strong></p><div></div>
+								<p>Safety</p>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div><div></div>
+								<p>Pet-Friendly</p>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div><div></div>
+								<p>Walkability</p>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div><div></div>
+								<p>Restaurant & Shopping</p>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div><div></div>
+							</div>
+							<div class="col-md-6 wrap-rating">
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#" class="cur">5</a></li>
+									</ul>
+								</div>
+								<p><strong>Overall Area Rating:</strong></p>
+								<div></div>
+								<div class="stars-small-sharp"></div>
+								<p><strong>Top Rated Categories:</strong></p>
+								<div></div>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#" class="cur">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div>
+								<p>Safety</p>
+								<div></div>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#" class="cur">5</a></li>
+									</ul>
+								</div>
+								<p>Pet-Friendly</p>
+								<div></div>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#" class="cur">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div>
+								<p>Walkability</p>
+								<div></div>
+								<div class="stars-small-sharp">
+									<ul class="voting">
+										<li class="one"><a href="#" class="cur">1</a></li>
+										<li class="two"><a href="#">2</a></li>
+										<li class="three"><a href="#">3</a></li>
+										<li class="four"><a href="#">4</a></li>
+										<li class="five"><a href="#">5</a></li>
+									</ul>
+								</div>
+								<p>Restaurant & Shopping</p>
+								<div></div>
+							</div>
+						</div>
+						<button class="btn btn-warning">Rate and Review</button>
+					</section>
+				</div>
+				<div class="col-sm-4">
+					<!-- callback -->
+					<div class="callback">
+						<h3>Contact Agent</h3>
+						<p><strong>Agent: Matt Fonda</strong>     <span><strong>Phone: (000) 000-0000</strong></span></p>
+						<form action="">
+							<p><input type="text" placeholder="Your Name"></p>
+							<p><input type="text" placeholder="Your Email"></p>
+							<p><input type="text" placeholder="Your Phone"></p>
+							<p><textarea placeholder="Hi, I found your listing on MiTerra. Please send me more information about 456 Nanawa Road, Los Angeles, CA 90049. Thank you.  "></textarea></p>
+							<p><button class="btn btn-success btn-block">Request More Information</button></p>
+						</form>
+					</div>
+					<!-- /callback -->
+					<!-- banners -->
+					<div class="banners"><p><a href="#"><img src="img/content/banner-square.png" alt="" class="img-responsive center-block"></a></p></div>
+					<!-- /banners -->
+					<!-- calculator -->
+					<div id="calculator" class="green">
+						<div class="title">FINANCE CALCULATOR</div>
+						<p><select name="" id="">
+							<option value="">Select...</option>
+							<option value="">Select your Currency</option>
+						</select></p>
+						<p><input type="text" value="Amount to be Financed?" onBlur="if(value==''){value='Amount to be Financed?'}" onFocus="if(value=='Amount to be Financed?'){value=''}" value="Amount to be Financed?"></p>
+						<p><input type="text" value="Term (Months)" onBlur="if(value==''){value='Term (Months)'}" onFocus="if(value=='Term (Months)'){value=''}" value="Term (Months)"></p>
+						<p><input type="text" value="Annual Interest rate" onBlur="if(value==''){value='Annual Interest rate'}" onFocus="if(value=='Annual Interest rate'){value=''}" value="Annual Interest rate"></p>
+						<p><button>CALCULATE <span class="sprites i-right-big"></span></button></p>
+					</div>
+					<!-- /calculator -->
+				</div>
+			</div>
+			<section>
+				<h2>Other homes you might like</h2>
+				<div class="text-center">
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline  text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Recently sold homes near 456 Nanawa Road</h2>
+				<div class="text-center">
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline  text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+					<div class="other-block">
+						<div class="green-text"><strong>428 Main Street</strong></div>
+						<a href="#"><img src="img/content/home-2.jpg" alt="" class=""></a>
+						<div class="green">For Sale: $120,000</div>
+						<ul class="list-inline text-center center-block">
+							<li>5<span>Beds</span></li>
+							<li>6<span>Baths</span></li>
+							<li>4,400<span>Sq.Ft.</span></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- banners -->
+			<div class="banners"><p><a href="#"><img src="img/content/banner.png" alt="" class="img-responsive"></a></p></div>
+			<!-- /banners -->
+		</div>
+	</div>
+	<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1 copyright">© 2014</div>
+					<div class="col-sm-7">
+						<ul class="list-inline footer-nav">
+							<li><a href="about.html">About</a></li>
+							<li><a href="terms.html">Terms of Use</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="social list-inline">
+							<li>Follow us</li>
+							<li><a href="#" class="sprites i-twitter"></a></li>
+							<li><a href="#" class="sprites i-faceboock"></a></li>
+							<li><a href="#" class="sprites i-google"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	<!-- /footer -->
+</body>
+</html>

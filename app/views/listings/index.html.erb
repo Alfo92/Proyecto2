@@ -1,0 +1,170 @@
+<% if params[:type] == nil then
+     params[:type] = ["House", "Apartment", "Duplex", "Cottage", "Land", "CommercialBuilding", "Office", "Fieldstay", "Warehouse", "Subdivision"]
+   end
+   if params[:price_range] == nil then
+     params[:price_range]= "0-1000"
+   end
+
+   if params[:listing] 
+    listing_type_id = params[:listing][:listing_type_eq]
+   elsif params[:listing_type]
+    listing_type_id = params[:listing_type]
+   else
+     listing_type_id = nil
+   end 
+%>
+<div class="container-fluid results-search-page">
+
+  <div class="row map-no-margin">
+
+    <div class="col-xs-12 col-md-8 mapcolumn  active" id="map">
+      <div class="map-panel" onload="GetMap();">
+        <div class="map address-picker" style="position:relative; height: 800px"></div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4" id="info">
+      <div id="search-page" class="no-styler">
+        <div class="row">
+          <h1 class="col-xs-12 green-text"><%= @heading %> <span><%= @listings.count %> <%= t(".results") %></span></h1>
+          <%= form_tag search_listings_path, :method => :get do %>
+              <div class="row">
+                <div class="form-group col-sm-12">
+                    <%= label_tag "listing[full_info_unnacent_cont]", t(".city"), class: 'text-capitalize' %>
+                    <%= text_field_tag "listing[full_info_unnacent_cont]",  params[:listing] ? params[:listing][:full_info_unnacent_cont] : nil, class: 'form-control' %>
+                </div>
+                <div class="form-group col-sm-4">
+                  <%= label_tag "listing[listing_type_eq]", t('.listing'), class: 'text-capitalize' %>
+                  <%= select_tag "listing[listing_type_eq]", options_for_select(Listing::LISTING_TYPE.collect { |l| [t(l), Listing::LISTING_TYPE.index(l)] } + [[t('dictionary.both'), '']], listing_type_id), class: 'form-control' %>
+                </div>
+                <div class="form-group col-sm-4">
+                  <%= label_tag "listing[type_in]", t('.property_type'), class: 'text-capitalize' %>
+                  <div class="wrap-select multiple-select-content custom-multiple-select-content">
+                    <%= select_tag "listing[type_in]", options_for_select(ListingType.all.collect.sort_by { |l| l.SortValue }.collect { |l| [t(l.name.classify), l.name.classify] }, selected: params[:listing] ? params[:listing][:type_in] : nil), onchange: "disableAttributesSection(this);", class: 'form-control', multiple: true %>
+                  </div>  
+                </div> 
+
+                <div class="form-group col-sm-4">
+                  <%= label_tag "listing[price_type_eq]", t('listings.new_house.price_type'), class: 'text-capitalize' %>
+                  <%= select_tag "listing[price_type_eq]", options_for_select(Listing::PRICE_TYPE.collect { |price_type| [t("listings.#{price_type}"), price_type.to_s] }, params[:listing] ? params[:listing][:price_type_eq] : nil), prompt: t('dictionary.both'), id: 'currency-type', class: 'form-control' %>
+                </div>
+              </div>
+
+              <div class="row" id="price-range">
+                <div class="form-group col-xs-6">
+                  <%= label_tag "listing[list_price_gteq]", t('.from'), class: 'text-capitalize' %>
+
+                  <% if browser.device.mobile? && browser.chrome? %>
+                    <%= number_field_tag("listing[list_price_gteq]", params[:listing] ? params[:listing][:list_price_gteq] : nil, class: 'form-control no-search') %>
+                  <% else %>
+                    <%= text_field_tag("listing[list_price_gteq]", params[:listing] ? params[:listing][:list_price_gteq] : nil, class: 'form-control no-search money') %>
+                  <% end %>
+                </div>
+                <div class="form-group col-xs-6">
+                  <%= label_tag "listing[list_price_lteq]", t('.to'), class: 'text-capitalize' %>
+
+                  <% if browser.device.mobile? && browser.chrome? %>
+                    <%= number_field_tag("listing[list_price_lteq]", params[:listing] ? params[:listing][:list_price_lteq] : nil, class: 'form-control no-search') %>
+                  <% else %>
+                    <%= text_field_tag("listing[list_price_lteq]", params[:listing] ? params[:listing][:list_price_lteq] : nil, class: 'form-control no-search money') %>
+                  <% end %>
+                </div>
+              </div>
+
+              <div id="attributes-section">
+                  <% valid_listing_types = %w(Apartment CommercialBuilding Cottage Duplex Farm Fieldstay House Land Office Subdivision Warehouse)
+                     if params[:listing] && params[:listing][:type_eq] && valid_listing_types.include?(params[:listing][:type_eq]) && !eval(params[:listing][:type_eq])::ADVANCED_SEARCH_PROPERTIES.blank? %>
+                      <div class="form-group col-sm-6 col-xs-12">
+                        <%= select_tag "listing[listing_properties_key_cont]", options_for_select(eval(params[:listing][:type_eq])::ADVANCED_SEARCH_PROPERTIES.collect { |property| [t("listings.new_#{params[:listing][:type_eq].downcase}.#{property}").html_safe, property] }, params[:listing] ? params[:listing][:listing_properties_key_cont] : nil), class: 'form-control' %>
+                      </div>
+                      <div class="form-group col-sm-6 col-xs-12 text-right">
+                        <%= text_field_tag("listing[listing_properties_value_cont]", params[:listing] ? params[:listing][:listing_properties_value_cont] : nil,
+                                           class: 'no-search', class: 'form-control') %>
+                      </div>
+                  <% end %>
+              </div>
+
+              <div id="row">
+                <div class="col-xs-12">
+                  <%= submit_tag t('.search'), class: 'btn btn-success' %>
+                </div>
+              </div>
+
+          <% end %>
+        </div>
+        <div class="green title">
+          <!-- <span class="sprites i-star"></span><%#= t(".featured_listings") %> -->
+        </div>
+        <% @listings.each do |listing| %>
+            <%= render partial: 'listings/search_mini', locals: {listing: listing} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript">
+    var markers = new Array(<%= @listings.count %>);
+    var contentString = new Array(<%= @listings.count %>);
+    var infowindow = new Array(<%= @listings.count %>);
+    var openedWindow = null;
+    SetupMapForListings({
+        lng:<%= @listings[0].try(:longitude).presence || "-57.5980891"%>,
+        lat:<%= @listings[0].try(:latitude).presence || "-25.2968526" %>
+    });
+    <% @listings.each_with_index do |listing, index| %>
+    markers[<%= index %>] = addPin(<%=raw({lng:listing.longitude.presence, lat:listing.latitude.presence}.to_json)  %>, '<%= asset_path("#{listing.type.underscore}-pin.png") %>');
+    contentString[<%= index %>] = '<%= j(render 'listings/pin_modal', listing: listing) %>';
+
+    infowindow[<%= index %>] = new google.maps.InfoWindow({
+        content: contentString[<%= index %>], maxWidth: 250
+    });
+
+    markers[<%= index %>].addListener('click', function () {
+        if(openedWindow != null){
+          openedWindow.close();
+        }
+        infowindow[<%= index %>].open(map, markers[<%= index %>]);
+        openedWindow = infowindow[<%= index %>];
+    });
+
+    //google.maps.event.addListener(markers[i], 'click', openInfoWindow(i, listings[i], markers[i]));
+    <% end %>
+    $(window).scroll(function () {
+      /*if ($(window).scrollTop() < $('#search-page').height() + $('#search-page').offset().top - $('.mapcolumn').height() ) {
+       $(".mapcolumn")
+       .stop()
+       .animate({"marginTop": (Math.max(0, $(window).scrollTop())) + "px"}, 0 );
+       }*/
+    });
+
+    $(document).ready(function () {
+        $('#listing_type_in').multiselect({
+            numberDisplayed: 1,
+            includeSelectAllOption: true,
+            nonSelectedText: I18n.t('multiselect.nonSelectedText'),
+            nSelectedText: I18n.t('multiselect.nSelectedText'),
+            selectAllText: I18n.t('multiselect.selectAllText')
+        });          
+
+        if (document.getElementById("where") != null) {
+
+            document.getElementById("where").placeholder = '<%= t(".ubication") %> ' + GetCity('json');
+
+
+        }
+
+        var priceRange = $("#price-range");
+        var currency = $("#currency-type");
+        if (currency.val() != '') {
+            priceRange.removeClass('hide');
+        }
+    });
+
+    var disableAttributesSection = function(elem){
+        $("#attributes-section input, #attributes-section select").attr('disabled', true);
+        $('.money').inputmask('remove');
+        elem.form.submit();
+    }
+
+</script>
+

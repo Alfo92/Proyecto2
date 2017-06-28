@@ -1,0 +1,3 @@
+$('#listing_saved').replaceWith(function() {
+  return $('<%=escape_javascript render partial:"listings/save_listing" %>').hide().fadeIn();
+});

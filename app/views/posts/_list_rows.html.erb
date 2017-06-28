@@ -1,0 +1,11 @@
+<% posts.each do |post| %>
+    <tr>
+      <td><%= link_to l(post.created_at.to_date), edit_post_path(post) %></td>
+      <td style="word-break: break-all;"><%= post.title %></td>
+      <td>
+        <%= link_to post, class: 'btn btn-danger btn-sm', method: :delete do %>
+            <i class="fa fa-times"></i>
+        <% end %>
+      </td>
+    </tr>
+<% end %>

@@ -1,0 +1,16 @@
+<section>
+  <h2><%= t("account.agent.show.skill_ratings") %></h2>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 wrap-rating">
+      <%= render 'account/rate_property', rate_property: 'honesty', agent_profile: agent_profile %>
+      <%= render 'account/rate_property', rate_property: 'knowledge', agent_profile: agent_profile %>
+      <%= render 'account/rate_property', rate_property: 'expertise', agent_profile: agent_profile %>
+    </div>
+    <div class="col-xs-12 col-sm-6 wrap-rating">
+      <%= render 'account/rate_property', rate_property: 'agile_response', agent_profile: agent_profile %>
+      <%= render 'account/rate_property', rate_property: 'negotiation', agent_profile: agent_profile %>
+      <%= render 'account/rate_property', rate_property: 'general', agent_profile: agent_profile, readonly: true %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</section>

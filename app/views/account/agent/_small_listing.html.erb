@@ -1,0 +1,102 @@
+<div class="col-sm-3 col-xs-12">
+  <div class="wrap-image">
+    <%= link_to image_tag(listing.primary_photo.try(:medium_url), class: "img-rounded img-responsive", style: 'width: 100%;'), listing %>
+  </div>
+</div>
+<div class="col-sm-5 col-xs-12">
+  <div class="wrap-text">
+    <p><%= simple_format listing.quick_look.capitalize, {}, sanitize: true, wrapper_tag: :strong %></p>
+    <p><%= link_to listing.short_address, listing  %></p>
+    <p><strong><%= listing_price(listing) %></strong></p>
+    <p>
+      <%= photos_count = listing.listing_photos.count %>
+      <%= t(".photo").pluralize(photos_count) %>
+    </p>
+  </div>
+</div>
+<% if edit_button %>
+  <div class="col-sm-4 col-xs-12 text-center">
+    <% if !listing.sold? %>
+      <div class="dropdown button">
+        <button id="dLabel" class="btn btn-success btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-pencil"></i></span> <%= t(".edit_listing") %>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="<%= edit_listing_path(listing) %>"><%= t(".edit_listing_detail") %></a></li>
+          <li><a href="<%= step2_listing_path(listing) %>"><%= t(".add_photos") %></a></li>
+          <li><a href="#promote" aria-controls="promote" data-toggle="collapse" data-promote="<%= listing.id %>"><%= t(".promote_listing") %></a></li>
+          <li><%= link_to t(".mark_listing_as_sold"), "#sold-home_#{listing.id}", :"data-toggle"=>"modal", :"data-target" => "#sold-home_#{listing.id}" %></li>
+          <li><%= link_to t(".delete_listing"), listing, remote:true, method:'delete', :data => {:confirm => t(".are_you_sure_you_want_to_delet")}  %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<div class="row">
+  <div class="col-xs-12">
+    <hr><br>
+  </div>
+</div>
+
+<div class="modal fade" id="sold-home_<%=listing.id%>" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
+  <%= form_for listing, :class => "form-horizontal" do |f| %>
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!--Modal header-->
+      <div class="modal-header text">
+        <button data-dismiss="modal" class="close" type="button">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        <h2 class="modal-title green-text text-center">
+          <% if listing.for_rent? %>
+              <%= t(".congratulations_on_renting_you", listing_type: t(listing.type).downcase ) %>
+          <% else %>
+            <%= t(".congratulations_on_selling_you", listing_type: t(listing.type).downcase ) %>
+          <% end %>
+        </h2>
+      </div>
+
+      <!--Modal body-->
+      <div class="modal-body no-styler">
+         <div class="bootbox-body">
+            <div class="row">
+               <div class="col-md-12">
+                    <%= f.hidden_field :sold, :value => true %>
+                    <p>
+                      <% if listing.for_rent? %>
+                          <%= t(".ask_rent_price", listing_type: t(listing.type).downcase ) %>
+                      <% else %>
+                          <%= t(".ask_sell_price", listing_type: t(listing.type).downcase ) %>
+                      <% end %>
+                    </p>
+                     <br>
+                     <div class="form-group">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="control-label" for="name"><%= t('.price') %></label>
+
+                            <% if browser.device.mobile? && browser.chrome? %>
+                                <%= f.number_field :list_price, class: 'validate[required]', id: 'something', step: 1, value: number_with_precision(f.object.list_price, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: '') %>
+                            <% else %>
+                                <%= f.text_field :list_price, class: 'form-control money', id: 'something', value: number_with_precision(f.object.list_price, precision: t('number.currency.format.precision'), separator: t('number.currency.format.separator'), delimiter: t('number.currency.format.delimiter')), autocorrect: 'off', autocomplete: "off", spellcheck: 'false' %>
+                            <% end %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.select :price_type, Listing::PRICE_TYPE.collect{|price_type| [t('listings.'+price_type.to_s), price_type.to_s] }, {selected: listing.price_type}, class: 'form-control no-styler' %>
+                          </div>
+                        </div>
+                     </div>
+               </div>
+            </div>
+          </div>
+        </div>
+
+      <!--Modal footer-->
+      <div class="modal-footer">
+        <%= f.submit t('.save_listing'), class: 'btn btn-success' %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

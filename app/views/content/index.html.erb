@@ -1,0 +1,86 @@
+<!-- home -->
+<div class="home">
+  <%= render "slider" %>
+
+  <div class="home-title"><%= t(".find_your_new_home") %></div>
+  <div class="container-fluid">
+    <div class="container-home">
+      <!-- home-search -->
+      <div id="home-search">
+        <%= form_tag search_listings_path, :method => :get do %>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-2">
+            <div class="wrap-select">
+              <%= select_tag "listing[listing_type_eq]", options_for_select(Listing::LISTING_TYPE.collect{|l| [t(l), Listing::LISTING_TYPE.index(l)] } + [[t('dictionary.both'), '']])  %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="wrap-select multiple-select-content">
+              <select name="listing[type_in][]" id="type" multiple="multiple">
+                <%=  options_for_select(ListingType.all.collect.sort_by{|l| l.SortValue }.collect{|l| [t(l.name.classify), l.name.classify] })  %>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4">
+            <%= text_field_tag "listing[full_info_unnacent_cont]", "", placeholder: t(".city")  %>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-3">
+            <p><button class="button-search"><%= t(".search") %></button></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <!-- /home-search -->
+    </div>
+  </div>
+</div>
+<!-- /home -->
+<!-- home-list -->
+<div class="clearfix"></div>
+<div class="container home-list">
+  <div class="row">
+    <div class="col-sm-4 text-center">
+      <h3><%= t(".find_your_miterra") %></h3>
+      <a href="/how_use">
+        <%= image_tag("content/home-how-use-#{I18n.locale}.gif") %>
+      </a>
+      <p><%= t(".search_200_more_agent_listed_homes_for_sale_updated_every_15_30_minutes") %>.</p>
+      <p><a href="/how_use" class="green-text"><%= t(".read_more") %></a></p>
+    </div>
+    <div class="col-sm-4 text-center">
+      <h3><%= t(".buy_your_miterra") %></h3>
+      <a href="/about">
+        <%= image_tag("content/home-about-#{I18n.locale}.gif") %>
+      </a>
+      <p><%= t(".get_in_person_guidance_at_each_step_from_your_local_MiTerra_agent") %>.</p>
+      <p><a href="/about" class="green-text"><%= t(".read_more") %></a></p>
+    </div>
+    <div class="col-sm-4 text-center">
+      <h3><%= t(".sell_your_miterra") %></h3>
+      <a href="/news">
+        <%= image_tag("content/home-news-#{I18n.locale}.gif") %>
+      </a>
+      <p><%= t(".picture_perfect_debut_online_marketing_to_all_the_right_buyers_for_a_1_5_listing_fee") %>.</p>
+      <p><a href="/news" class="green-text"><%= t(".read_more") %></a></p>
+    </div>
+  </div>
+</div>
+<!-- /home-list -->
+<!-- Initialize the plugin: -->
+
+<script type="text/javascript">
+   $(document).ready(function() {
+    $('#type').multiselect({
+      numberDisplayed: 1,
+      includeSelectAllOption: true,
+      nonSelectedText: I18n.t('multiselect.nonSelectedText'),
+      nSelectedText: I18n.t('multiselect.nSelectedText'),
+      selectAllText: I18n.t('multiselect.selectAllText'),
+      allSelectedText: I18n.t('multiselect.selectAllText')
+    });
+
+    if (document.getElementById("where") != null){
+        document.getElementById("where").placeholder = '<%= t(".ubication") %> ' + GetCity('json');
+      }
+  });
+</script>

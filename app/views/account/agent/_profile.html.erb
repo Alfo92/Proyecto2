@@ -1,0 +1,111 @@
+<div id="user-info" role="tabpanel" class="tab-pane active" >
+  <%= form_for(current_user, url: user_registration_path, html: { method: :put, class:"form-horizontal" }) do |f| %>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="wrap-image text-center">
+        <%= image_tag current_user.avatar.url(:medium), class:"img-rounded img-responsive center-block img-avatar" %>
+        <label class="btn btn-success btn-sm btn-file">
+          <%= t(".choose_file") %>
+          <%= f.file_field :avatar, class: "edit-profile hide" %>
+        </label>
+        <button id="user_avatar_submit" type="submit" class="btn btn-success" style="display:none; margin-left: 60px; margin-top: 40px;">
+          <%= t(".update") %>
+        </button>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <!-- description -->
+      <div class="description settings">
+        <p class="name green-text">
+          <%= current_user.name %>
+        </p>
+        <p><%= show_reviews(current_user) %></p>
+        <p><span class="big"><strong><%= current_user.phone_number %></strong> <%= current_user.type ? t(current_user.type.downcase) : t(".undefined") %></span>
+        </p>
+
+        <%= link_to t(".view_profile"), account_agent_path(current_user), class:"btn btn-success"  %>
+        <div class="dropdown button">
+          <button id="dLabel" class="btn btn-success btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= t(".my_account") %>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">                     
+            <li><%= link_to t(".destroy_my_account"), account_consumer_path(current_user), data: {confirm: t(".destroy_my_account_msg") }, method: :delete  %></li>
+            <li>
+              <% if current_user.disabled_at %>
+                <%= link_to t(".enable_my_account"), enable_account_consumer_path(current_user), data: {confirm: t(".enable_my_account_msg")}, method: :post %></li>
+              <% else %>
+                <%= link_to t(".disable_my_account"), disable_account_consumer_path(current_user), data: {confirm: t(".disable_my_account_msg")}, method: :post %></li>
+              <% end %> 
+            </li>                
+          </ul>
+        </div>
+      </div>
+      <!-- /description -->
+    </div>
+  </div>
+  <h4><a data-toggle="collapse" href="#Email-Connect" aria-expanded="false" aria-controls="Email-Connect"><%= t(".email_addresses") %><span class="pull-right plus"></span></a></h4>
+  <div class="collapse user-setting in" id="Email-Connect">
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-4 control-label"><%= t(".name") %></label>
+      <div class="col-sm-6">
+        <%= f.text_field :name, class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-4 control-label"><%= t(".email") %></label>
+      <div class="col-sm-6">
+        <%= f.text_field :email, class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-4 control-label"><%= t(".phone_number") %></label>
+      <div class="col-sm-6">
+        <%= f.text_field :phone_number, class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :type, class: 'col-sm-4 control-label' %>
+      <div class="col-sm-6">
+        <%= f.select :type, account_types_select, class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-4 control-label"><%= t(".language") %></label>
+      <div class="col-sm-6">
+        <%= f.select :language, User.language.options, prompt: "", class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-5  col-sm-offset-4 text-right">
+        <button type="submit" class="btn btn-success"><%= t(".update") %></button>
+      </div>
+    </div>
+  </div>
+  <h4><a data-toggle="collapse" href="#Password" aria-expanded="false" aria-controls="Password"><%= t(".password") %><span class="pull-right plus"></span></a></h4>
+  <div class="collapse user-setting" id="Password">
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-4 control-label"><%= t(".current_password") %></label>
+      <div class="col-sm-6">
+        <%= f.password_field :current_password, autocomplete: "off", class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-4 control-label"><%= t(".new_password") %></label>
+      <div class="col-sm-6">
+        <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-4 control-label"><%= t(".password_confirmation") %></label>
+      <div class="col-sm-6">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-5  col-sm-offset-4 text-right">
+        <button type="submit" class="btn btn-success"><%= t(".update") %></button>
+      </div>
+    </div>
+  </div>      
+  <% end %>
+</div>
