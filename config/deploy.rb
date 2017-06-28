@@ -11,7 +11,7 @@ set :repo_url, 'git@github.com:Alfo92/Proyecto2.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/deploy/miterra'
+set :deploy_to, '/home/deploy/Proyecto2'
 
 set :deploy_user, 'deploy'
 # Default value for :scm is :git
